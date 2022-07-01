@@ -1,19 +1,23 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import {  Routes, Route  } from 'react-router-dom';
 import { routeConstants } from '../services/constants/route-constants';
 
 
 const UserModule = lazy(() => import("../layout/user/user-module"));
+const HomePage = lazy(() => import("../pages/user/home/home"));
+const AboutPage = lazy(() => import("../pages/user/about/about"));
 
 function UserRoute() {
   return (
-    <Routes>
-      <Route path={routeConstants.all} element={<UserModule/>}>
-        <Route path={routeConstants.all} element={<h1>Home</h1>}></Route>
-        <Route path={routeConstants.userLogin} element={<h1>Signup</h1>}></Route>
-        <Route path={routeConstants.about} element={<h1>About</h1>}></Route>
-      </Route>
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path={routeConstants.all} element={<UserModule/>}>
+          <Route path={routeConstants.all} element={<HomePage/>}></Route>
+          <Route path={routeConstants.userLogin} element={<h1>Signup</h1>}></Route>
+          <Route path={routeConstants.about} element={<AboutPage/>}></Route>
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }
 

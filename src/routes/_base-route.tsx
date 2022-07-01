@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 // import AdminRoutes from './admin-route';
+// import UserRoutes from './user-route';
 
 
 const AdminRoutes = lazy(() => import("./admin-route"));

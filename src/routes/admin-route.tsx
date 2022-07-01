@@ -1,18 +1,22 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import { Routes, Route  } from 'react-router-dom';
 import { routeConstants } from '../services/constants/route-constants';
 
 const AdminModule = lazy(() => import("../layout/admin/admin-module"));
+const AdminLogin = lazy(() => import("../pages/admin/login/login"));
+const AdminSignup = lazy(() => import("../pages/admin/signup/signup"));
 
 function AdminRoute() {
   return (
-    <Routes>
-      <Route path={routeConstants.all} element={<AdminModule/>}>
-        <Route path={routeConstants.all} element={<h1>Login</h1>}></Route>
-        <Route path={routeConstants.register} element={<h1>Signup</h1>}></Route>
-        <Route path={routeConstants.dashboard} element={<h1>Dashboard</h1>}></Route>
-      </Route>
-    </Routes>
+    <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path={routeConstants.all} element={<AdminModule/>}>
+            <Route path={routeConstants.all} element={<AdminLogin/>}></Route>
+            <Route path={routeConstants.register} element={<AdminSignup/>}></Route>
+            <Route path={routeConstants.dashboard} element={<h1>Dashboard</h1>}></Route>
+          </Route>
+      </Routes>
+    </Suspense>
     // <div>Happy</div>
   );
 }

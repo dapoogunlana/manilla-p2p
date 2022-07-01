@@ -1,11 +1,11 @@
 import React, {  } from 'react';
-import { Outlet  } from 'react-router-dom';
 
 function About() {
   return (
     <div>
-      <h1>Welcome to User About page</h1>
-      <p>Welcome to User About page</p>
+      <br /><br /><br /><br />
+      <h1>Welcome to User Home page</h1>
+      <p>Welcome to User Home page</p>
     </div>
   );
 }

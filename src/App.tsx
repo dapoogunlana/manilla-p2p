@@ -1,6 +1,7 @@
 import React from 'react';
 import BaseRoute from './routes/_base-route';
-import './App.css';
+import './assets/styles/general.scss';
+import './App.scss';
 
 function App() {
   return (
