@@ -1,0 +1,51 @@
+@import '../../../../../assets/styles/variables.scss';
+
+
+.services{
+    background-image: url(../../../../../assets/images/blue-brick-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    h3,h6,p{
+        color: $white;
+    }
+    .service-card{
+        background-color: $primary-card;
+        text-align: center;
+        width: 96%;
+        margin: 1em auto;
+        max-width: 290px;
+        padding: 45px 15px 35px;
+        border-radius: 15px;
+        box-shadow: 10px 10px 2px 0 $black-faint4;
+        transition: 0.4s ease;
+        position: relative;
+        h6{
+            font-size: 1.2em;
+            margin-top: 3em;
+        }
+        p{
+            min-height: 125px;
+        }
+        .topic{
+            .icon-sect{
+                width: 80%;
+                margin: auto;
+                max-width: 120px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                border: 1px solid $white-faint2;
+                box-shadow: 10px 10px 2px 0 $black-faint3;
+            }
+        }
+        &:hover{
+            background-color: $primary-card-highlight;
+            transform: scale(1.07);
+            h3,h6,p{
+                color: $black;
+            }
+        }
+    }
+}

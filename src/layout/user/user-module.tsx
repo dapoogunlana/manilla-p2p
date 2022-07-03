@@ -7,7 +7,6 @@ function UserModule() {
   return (
     <div>
       <Header/>
-      <h1>Welcome to User Module</h1>
       <Outlet/>
       <Footer/>
     </div>

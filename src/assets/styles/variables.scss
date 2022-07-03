@@ -1,9 +1,12 @@
 // Color variables
 
 $primary-blue-bright: #283FFF;
-$primary-blue: #0D1BBC;
+$primary-blue: #003DDB;
 $primary-blue-hover: #000b88;
 $primary-blue-active: #00053f;
+
+$primary-card: #192E62;
+$primary-card-highlight: #95B3FF;
 
 $primary-blue-hover-faint1: rgba(13, 28, 188, 0.7);
 $primary-blue-hover-faint2: rgba(13, 28, 188, 0.45);
@@ -12,6 +15,7 @@ $primary-blue-hover-faint4: rgba(13, 28, 188, 0.1);
 $primary-blue-hover-faint5: rgba(13, 28, 188, 0.06);
 
 $header-blue: #E7F4FF;
+$custom-yellow: #F6C745;
 
 $primary-shade: #041926;
 $primary-shade-light: #07263a;
@@ -21,19 +25,6 @@ $primary-bg: #F6F9FF;
 $bright-blue: #283FFF;
 $bright-blue-hover: #0315b9;
 $bright-blue-active: #000c74;
-
-$primary-pale: #ba3a7c;
-$primary-pale-hover: #9b2b65;
-$primary-pale-active: #6e1744;
-
-$secondary-pale: #A771EC;
-$secondary-pale-hover: #713ab8;
-
-$primary-pale-faint1: rgba(186, 58, 124, 0.7);
-$primary-pale-faint2: rgba(186, 58, 124, 0.451);
-$primary-pale-faint3: rgba(186, 58, 124, 0.2);
-$primary-pale-faint4: rgba(186, 58, 124, 0.1);
-$primary-pale-faint5: rgba(186, 58, 124, 0.06);
 
 $primary-blue-faint1: rgba(97, 195, 142, 0.7);
 $primary-blue-faint2: rgba(97, 195, 142, 0.45);
