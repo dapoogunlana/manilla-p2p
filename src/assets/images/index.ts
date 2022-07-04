@@ -30,6 +30,8 @@ import UnlockingUtilitiesStats from './unlocking-utilities-stats.png';
 import waysToTradeImg from './ways-to-trade-img.png';
 import HowToInnerRing from './how-to-inner-ring.svg';
 import HowToOuterRing from './how-to-outer-ring.svg';
+import ServiceLogo from './service-logo.png';
+import VidCurve from './vid-curve.svg';
 
 import AppleButton from './icons/apple-button.svg';
 import AppleIcon from './icons/apple-icon.svg';
@@ -82,7 +84,7 @@ import MediaCompanyNewsBTC from './media-companies/media-company-news-btc.png';
 import MediaCompanyVoa from './media-companies/media-company-voa.png';
 import MediaCompanyYahoo from './media-companies/media-company-yahoo.png';
 
-import Operator9mobil from './operators/operator-9mobile.png';
+import Operator9mobile from './operators/operator-9mobile.png';
 import OperatorGlo from './operators/operator-glo.png';
 import OperatorMtn from './operators/operator-mtn.png';
 import OperatorSurfline from './operators/operator-surfline.png';
@@ -134,6 +136,8 @@ export {
     waysToTradeImg,
     HowToInnerRing,
     HowToOuterRing,
+    ServiceLogo,
+    VidCurve,
 
     AppleButton,
     AppleIcon,
@@ -186,7 +190,7 @@ export {
     MediaCompanyVoa,
     MediaCompanyYahoo,
 
-    Operator9mobil,
+    Operator9mobile,
     OperatorGlo,
     OperatorMtn,
     OperatorSurfline,

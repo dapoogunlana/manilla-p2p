@@ -1255,9 +1255,6 @@
 .cyan {
   background-color: $light-cyan;
 }
-.blue {
-  background-color: $secondary-blue;
-}
 .brown {
   background-color: $brown;
 }
@@ -1327,20 +1324,11 @@
 .primary-blue {
   background-color: $primary-blue;
 }
-.secondary-blue {
-  background-color: $secondary-blue;
-}
-.secondary-blue-i {
-  background-color: $secondary-blue !important;
-}
 .c-primary-blue {
   color: $primary-blue;
 }
 .c-primary-blue1 {
   color: $primary-blue-faint1;
-}
-.c-secondary-blue {
-  color: $secondary-blue;
 }
 .c-faint-font {
   color: $faint-font;
@@ -1408,6 +1396,14 @@
   @include mediaM(1100px) {
     grid-template-columns: 25% 25% 25% 25%;
   }
+  @include mediaM(750px) {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.carousel-grid5 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   @include mediaM(750px) {
     grid-template-columns: 50% 50%;
   }
@@ -1663,7 +1659,7 @@
   .tablet {
     padding: 4px 11px;
     border-radius: 10px;
-    color: $secondary-blue;
+    color: $primary-blue;
     margin-right: 15px;
     display: inline-block;
     cursor: pointer;
@@ -2001,55 +1997,6 @@
   }
 }
 
-.white-button {
-  button {
-    background-color: $white !important;
-    &:hover {
-      background-color: $base-highlight !important;
-    }
-  }
-}
-.white-button-full {
-  button {
-    width: 100%;
-    background-color: $white !important;
-    &:hover {
-      background-color: $base-highlight !important;
-    }
-  }
-}
-.black-button {
-  button {
-    background-color: $off-black !important;
-    color: $white !important;
-    &:hover {
-      background-color: $black !important;
-    }
-  }
-}
-.black-button-full {
-  button {
-    width: 100%;
-    background-color: $off-black !important;
-    color: $white !important;
-    &:hover {
-      background-color: $black !important;
-    }
-  }
-}
-.green-link {
-  a {
-    color: $primary-blue;
-    transition: 0.2s ease;
-    &:hover {
-      color: $primary-blue-hover;
-      text-decoration: none;
-    }
-    i {
-      font-size: 0.7em;
-    }
-  }
-}
 .small-icon {
   i {
     font-size: 0.8em;
