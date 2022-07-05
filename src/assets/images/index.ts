@@ -8,6 +8,7 @@ import BigAngleBg from './big-angle-bg.jpg';
 import SmallAngleBg from './small-angle-bg.jpg';
 import FlipLineBg from './flip-line-bg.jpg';
 import YellowAngleBackdrop from './yellow-angle-backdrop.svg';
+import Banner3Bg from './banner-3-bg.jpg';
 
 import AboutImg from './about-img.png';
 import BannerImg1 from './banner-img-1.png';
@@ -114,6 +115,7 @@ export {
     SmallAngleBg,
     FlipLineBg,
     YellowAngleBackdrop,
+    Banner3Bg,
 
     AboutImg,
     BannerImg1,

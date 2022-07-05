@@ -1,13 +1,24 @@
 import React, {  } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
-import { AppleButton, BannerImg1, PlaystoreButton } from '../../../../../assets/images';
+import { Carousel } from '../../../../../components/block-components/carousel';
+import { imageSlide } from './banner-data';
 import './banner.scss';
 
 function Hero() {
   return (
     <div className='hero-case'>
-      <div className='hero banner-1'>
+    <Carousel.Effects
+      loop
+      autoPlay
+      delay={6000}
+      freeMode={false}
+      slidesPerView={1}
+      spaceBetween={0}
+      fade
+      pauseOnMouseEnter={false}
+      disableOnInteraction={false}
+      data={imageSlide}
+    />
+      {/* <div className='hero banner-1'>
         <div className='header-spacer'></div>
         <div className='hero-spread'>
           <div className='text-content'>
@@ -25,13 +36,12 @@ function Hero() {
             </div>
           </div>
           <div className='image'>
-            {/* <img src={BannerImg1} alt="" /> */}
             <div className='img-holder' data-aos="fade-in">
               <img src={BannerImg1} alt="" />
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Operators from './page-modules/operators/operators';
 import UnolckingUtilities from './page-modules/unolcking-utilities/unolcking-utilities';
 import TradeWays from './page-modules/trade-ways/trade-ways';
 import Testimonials from './page-modules/testimonials/testimonials';
+import Media from './page-modules/media/media';
 import LatestNews from './page-modules/latest-news/latest-news';
 import './home.scss';
 
@@ -21,6 +22,7 @@ function About() {
       <UnolckingUtilities/>
       <TradeWays/>
       <Testimonials/>
+      <Media/>
       <LatestNews/>
     </div>
   );

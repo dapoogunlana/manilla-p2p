@@ -36,11 +36,11 @@ function UnolckingUtilities() {
                 Bonuses accumulated through referrals can be withdrawn at any time to your secure wallets. To get started, 
                 simply get a referral link."
               </p>
-              <button className='solid-button-2c'>Login to get referral link</button>
+              <button className='solid-button-2c' data-aos='fade-up' data-aos-delay='500'>Login to get referral link</button>
             </div>
           </div>
           <div className='col-md-6 center-info'>
-            <div className='w80 max350 imh py-2 referral'>
+            <div className='w80 max300 imh py-2 referral' data-aos='flip-left'>
                 <img src={ReferralPhone} alt="" />
             </div>
           </div>
@@ -53,11 +53,10 @@ function UnolckingUtilities() {
         <div className='w96 max1200'>
           <div className='row'>
             <div className='col-md-6 center-info'>
-              <div className='vid-space'>
-                  <div className='top-sphare-curve'></div>
-                  <div className='bottom-sphare-curve'></div>
-                  <div className='bottom-sphare-curve'></div>
-                  <div className='vid-holder'>cvbxvbxfbd</div>
+              <div className='vid-space' data-aos='fade-up'>
+                  <div className='top-sphare-curve' data-aos='zoom-in' data-aos-delay='900'></div>
+                  <div className='bottom-sphare-curve' data-aos='zoom-in' data-aos-delay='900'></div>
+                  <div className='vid-holder'></div>
               </div>
             </div>
             <div className='col-md-6 center-info'>

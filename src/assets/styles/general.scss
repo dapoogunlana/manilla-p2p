@@ -1997,6 +1997,13 @@
   }
 }
 
+.hover-rotate{
+  transition: 0.3s ease-in-out;
+  &:hover{
+    transform: rotate(11deg);
+  }
+}
+
 .small-icon {
   i {
     font-size: 0.8em;

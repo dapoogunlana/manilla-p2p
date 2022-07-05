@@ -2,4 +2,19 @@
 
 .operators{
     background-color: $light-blue;
+
+    .operator_image {
+      width: 100%;
+      padding: 2px;
+      position: relative;
+  
+      @include mediaW(991px) {
+        position: static;
+        width: 100%;
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
 }
