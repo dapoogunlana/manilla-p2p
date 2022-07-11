@@ -228,6 +228,7 @@
         // border-radius: 10px 0 0 10px;
         border: 1px solid $white-faint3;
         color: $white;
+        min-width: 100px;
         &::placeholder{
           color: $white-faint1;
         }
@@ -383,9 +384,10 @@
   }
   p{
     color: $white;
-    a {
+    a, span {
       color: inherit;
       opacity: 0.9;
+      cursor: pointer;
       &:hover {
         opacity: 0.6;
         text-decoration: none;
@@ -394,6 +396,7 @@
   }
   p,
   a,
+  span,
   input,
   button {
     @include mediaW(768px) {

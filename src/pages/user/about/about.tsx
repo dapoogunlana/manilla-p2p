@@ -1,12 +1,137 @@
-import React, {  } from 'react';
+import React, { useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import { routeConstants } from '../../../services/constants/route-constants';
+import { AboutImg, OurTech } from '../../../assets/images';
+import './about.scss';
+import { advisorList, teamList } from './about-data';
 
 function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
-    <div>
-      <h1>Welcome to User About page</h1>
-      <p>Welcome to User About page <Link to={routeConstants.home}>Go Home</Link></p>
+    <div className='about'>
+      <div className='banner'>
+        <div className='header-spacer'></div>
+        <h1 className='text-center pt-5'>About Manilla</h1>
+        <div className='py-3 md-close'></div>
+        <div className='top-grid'>
+          <div className='text-sect md-open text-center'>
+            <p>
+              Manilla Exchange is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
+              unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
+              tokens to buy and sell on Manilla Exchange. 
+            </p>
+            <p>
+              With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
+              mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
+              airtime/data purchase using cryptocurrency. The Manilla P2P Exchange is powered by Manilla Technogies along with 
+              other ecosystem development partners. 
+            </p>
+          </div>
+          <div className='floated-img'>
+            <img src={AboutImg} alt="" />
+          </div>
+          <div className='text-sect md-close'>
+            <p>
+              Manilla Exchange is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
+              unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
+              tokens to buy and sell on Manilla Exchange. 
+            </p>
+            <p>
+              With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
+              mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
+              airtime/data purchase using cryptocurrency. The Manilla P2P Exchange is powered by Manilla Technogies along with 
+              other ecosystem development partners. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className='sub-info py-5'>
+        <div className='w96 max1200'>
+          <div className='sub-grid'>
+            <div></div>
+            <div className='more-info'>
+              <p>
+                Manilla Exchange adopts blockchain technology to build the next-generation financial ecosystem. We strive to 
+                eliminate financial barriers, evolve the global economy and its perception and ultimately pave the way for 
+                freedom and flexibility of transactions. We never pause on innovations and brilliant creations to improve our 
+                user-experience to make cryptocurrency trading available for everyone.
+              </p>
+              <p className='mb-0'>
+                We envision being the world’s most dedicated and innovative cryptocurrency P2P platform as we strive to 
+                infiltrate and birth newer ideas the blockchain space has never fathomed before.
+              </p>
+            </div>
+          </div>
+          <div className='row pt-5'>
+            <div className='col-md-6 center-info'>
+              <div className='w90 py-3'>
+                <h4 className='center-mobile'>Our Technology</h4>
+                <p className='center-mobile'>
+                  Security is our top priority, first of all, with speed rallying along. Manilla Exchange provides a safe, reliable, 
+                  and stable environment for crypto transactions via web and mobile apps. We adopt a global server load balancing, 
+                  distributed clusters and are open to accept upon demand any innovation that further boldens user-experience based 
+                  off of suggestions from the experts. We are tailored for you!
+                </p>
+              </div>
+            </div>
+            <div className='col-md-6 center-info'>
+              <div className='card-image'>
+                <img src={OurTech} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='team-sect py-5' id='our-people'>
+        <div className='w96 max1200 py-5'>
+          <h3 className='text-center'>Our Team</h3>
+          <p className='text-center'>
+            We are staffed with a group of technically creative fellows who are endowed with strong discipline across their 
+            respective fields of profession. They are a true heterogeneous mix of dedicated fellows and idea-flexible people 
+            whose love for perfection knows no bounds.
+            <br /><br />
+            A world-class team of adept technical writers, human relations experts, programming gurus, cryptographic and security 
+            pros are not less than a project like Manilla exchange would require. You just cannot get enough of their pro skills  
+          </p>
+          <div className='grid5'>
+            {teamList.map((member, index) => {
+              return <div className='py-' key={index}>
+                <div className='w90 team-card'>
+                  <div className='member-img'>
+                    <img src={member.image} alt="" />
+                  </div>
+                  <h6>{member.name}</h6>
+                  <h6 className='position'>{member.position}</h6>
+                </div>
+              </div>
+            })}
+          </div>
+        </div>
+      </div>
+      <div className='advisor-sect py-5'>
+        <div className='w96 max900 py-5'>
+          <h3 className='text-center'>Advisory Team</h3>
+          <div className='row'>
+            {advisorList.map((member, index) => {
+              return <div className='col-md-6' key={index}>
+                <div className='w90 advisor-card'>
+                  <div className='member-img'>
+                    <img src={member.image} alt="" />
+                  </div>
+                  <h6>{member.name}</h6>
+                  <h6 className='position'>{member.position}</h6>
+                </div>
+              </div>
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

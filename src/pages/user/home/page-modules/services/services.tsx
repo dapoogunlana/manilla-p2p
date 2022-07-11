@@ -5,7 +5,7 @@ import './services.scss';
 
 function Services() {
   return (
-    <div className='services py-5'>
+    <div className='services py-5' id='features'>
     <div className='w96 max1200 py-4'>
       <h3 className='text-center mt-5 pt-5'>Why Choose Us</h3>
       <div className='row'>

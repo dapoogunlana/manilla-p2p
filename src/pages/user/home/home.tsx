@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React, { useEffect } from 'react';
 import Banner from './page-modules/banner/banner';
 import PreInfo from './page-modules/pre-info/pre-info';
 import HowTo from './page-modules/how-to/how-to';
@@ -12,6 +12,11 @@ import LatestNews from './page-modules/latest-news/latest-news';
 import './home.scss';
 
 function About() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   return (
     <div className='home'>
       <Banner/>
