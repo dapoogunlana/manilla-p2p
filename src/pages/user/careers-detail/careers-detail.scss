@@ -1,6 +1,6 @@
 @import "../../../assets/styles/variables.scss";
 
-.faq{
+.careers{
     .top-band{
         width: 100%;
         background-image: url(../../../assets/images/yellow-brick-bg.jpg);
@@ -15,6 +15,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             min-height: 8em;
             text-align: center;
             color: $white;
@@ -37,33 +38,37 @@
         .cover{
             border: 1px dashed $primary-blue;
             border-radius: 20px;
-            background-color: $white-faint2;
-            padding: 5px 26px;
-            .item{
-              border-radius: 10px;
-              border: 1px solid $white-faint3;
-              background-color: $white;
-              box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.20);
-              padding: 10px;
-              transition: 0.3s ease;
-              .view-icon{
-                  width: 20px;
+            background-color: $white-faint1;
+            padding: 30px 26px;
+            .item-card{
+              .input-grp{
+                padding-top: 0.9em;
+                label{
+                  font-weight: 700;
+                  font-size: 0.7em;
+                  margin-bottom: 0;
+                }
+                input, textarea, select{
+                  width: 100%;
+                  border-radius: 8px;
+                  padding: 5px 15px;
+                  border: 1px solid $primary-blue-hover-faint3;
+                  box-shadow: 0 4px 8px -3px $black-faint4;
                   transition: 0.3s ease;
-                  img{
-                      width: 100%;
+                  background-color: $white;
+                  &:focus{
+                    outline: none;
+                    border-color: $primary-blue;
+                    box-shadow: 0 4px 8px 0 $black-faint3;
                   }
-              }
-              .answer{
-                transition: 0.6s ease;
-                max-height: 0;
-                overflow: hidden;
-              }
-              .full{
-                max-height: 600px;
-                transition: 0.3s ease;
-              }
-              .full-view{
-                transform: rotate(180deg);
+
+                }
+                input[type=file]{
+                  padding: 2px 15px;
+                  &::-webkit-file-upload-button {
+                    visibility: hidden;
+                  }
+                }
               }
             }
         }

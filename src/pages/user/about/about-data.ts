@@ -26,7 +26,7 @@ export const teamList = [
     {
         name: 'Rutherford Atayobo',
         image: TeamTunde,
-        position: 'CTO/Lead Backend Developer',
+        position: 'Chief Technology Officer',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -34,7 +34,7 @@ export const teamList = [
     {
         name: 'Etenikang David',
         image: TeamEtenikang,
-        position: 'CEO',
+        position: 'Compliance Executive 1',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -42,7 +42,7 @@ export const teamList = [
     {
         name: 'Obinna Inya A.',
         image: TeamObinna,
-        position: 'CEO',
+        position: 'Business Development Executive 1',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -50,7 +50,7 @@ export const teamList = [
     {
         name: 'Oyakhire Emmanuel',
         image: TeamOyakhire,
-        position: 'CEO',
+        position: 'Business Development Executive 2',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -58,7 +58,7 @@ export const teamList = [
     {
         name: 'Obot Ubong Benjamin',
         image: TeamBen,
-        position: 'CEO',
+        position: 'Art and UX Specialist',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -66,7 +66,7 @@ export const teamList = [
     {
         name: 'Adeshina Olarewaju',
         image: TeamAdeshina,
-        position: 'CEO',
+        position: 'Compliance Executive 2',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -74,7 +74,7 @@ export const teamList = [
     {
         name: 'Eliko Blessing',
         image: TeamEliko,
-        position: 'CEO',
+        position: 'Media Relations',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -82,7 +82,7 @@ export const teamList = [
     {
         name: 'Muhammad Nazif',
         image: TeamMohammad,
-        position: 'CEO',
+        position: 'Content Strategy Lead',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',
@@ -90,7 +90,7 @@ export const teamList = [
     {
         name: 'Dapo Paul Ogunlana',
         image: TeamDapo,
-        position: 'CEO',
+        position: 'Snr. UI/UX & Frontend Developer',
         linkedIn: 'linkedin',
         faceBook: 'facebook',
         twitter: 'twitter',

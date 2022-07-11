@@ -21,6 +21,7 @@ const PrivacyPolicyPage = lazy(() => import("../pages/user/privacy-policy/privac
 const TermsPage = lazy(() => import("../pages/user/terms/terms"));
 const AmlPolicyPage = lazy(() => import("../pages/user/aml-policy/aml-policy"));
 const CareersPage = lazy(() => import("../pages/user/careers/careers"));
+const CareerDetailPage = lazy(() => import("../pages/user/careers-detail/careers-detail"));
 const ContactPage = lazy(() => import("../pages/user/contact/contact"));
 const PlaceHolderPage = lazy(() => import("../pages/user/place-holder/place-holder"));
 
@@ -45,6 +46,7 @@ function UserRoute() {
           <Route path={routeConstants.terms} element={<TermsPage/>}></Route>
           <Route path={routeConstants.amlPolicy} element={<AmlPolicyPage/>}></Route>
           <Route path={routeConstants.careers} element={<CareersPage/>}></Route>
+          <Route path={routeConstants.careers + '/:id'} element={<CareerDetailPage/>}></Route>
           <Route path={routeConstants.contact} element={<ContactPage/>}></Route>
           <Route path={routeConstants.placeHolder} element={<PlaceHolderPage/>}></Route>
         </Route>

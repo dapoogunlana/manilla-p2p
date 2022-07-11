@@ -1,2 +1,72 @@
 @import "../../../assets/styles/variables.scss";
 
+.careers{
+    .top-band{
+        width: 100%;
+        background-image: url(../../../assets/images/yellow-brick-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding-bottom: 10em;
+        .topic-space{
+            background-image: url(../../../assets/images/blue-brick-bg.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 8em;
+            text-align: center;
+            color: $white;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px 0 $black-faint3;
+            // box-shadow: 10px 10px 2px 0 $black-faint3;
+            width: 90%;
+            max-width: 1200px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+    .content-body{
+        width: 100%;
+        background-image: url(../../../assets/images/small-angle-bg.jpg);
+        // background-size: cover;
+        background-position: center;
+        .cover{
+            border: 1px dashed $primary-blue;
+            border-radius: 20px;
+            background-color: $white-faint2;
+            padding: 5px 26px;
+            .item{
+              border-radius: 10px;
+              border: 1px solid $white-faint3;
+              background-color: $white;
+              box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.20);
+              padding: 10px;
+              transition: 0.3s ease;
+              .view-icon{
+                  width: 20px;
+                  transition: 0.3s ease;
+                  img{
+                      width: 100%;
+                  }
+              }
+              .answer{
+                transition: 0.6s ease;
+                max-height: 0;
+                overflow: hidden;
+              }
+              .full{
+                max-height: 600px;
+                transition: 0.3s ease;
+              }
+              .full-view{
+                transform: rotate(180deg);
+              }
+            }
+        }
+    }
+}

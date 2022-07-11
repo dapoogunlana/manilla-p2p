@@ -71,6 +71,7 @@ import WhyChooseIcon24Support from './icons/why-choose-icon-24-support.svg';
 import WhyChooseIconHighSpeed from './icons/why-choose-icon-high-speed.svg';
 import WhyChooseIconIntuitive from './icons/why-choose-icon-intuitive.svg';
 import WhyChooseIconSecurity from './icons/why-choose-icon-security.svg';
+import DropdownArrow from './icons/dropdown-arrow.svg';
 
 import MediaCompanyBlockchainNews from './media-companies/media-company-blockchain-news.png';
 import MediaCompanyCoindesk from './media-companies/media-company-coindesk.png';
@@ -178,6 +179,7 @@ export {
     WhyChooseIconHighSpeed,
     WhyChooseIconIntuitive,
     WhyChooseIconSecurity,
+    DropdownArrow,
 
     MediaCompanyBlockchainNews,
     MediaCompanyCoindesk,
