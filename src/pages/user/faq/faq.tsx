@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DropdownArrow } from '../../../assets/images';
 import { faqData } from './faq-data';
 import './faq.scss';
@@ -20,18 +20,23 @@ function Faq() {
     }
     setReactiveFaqs(newFaqs);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   return (
     <div className='faq'>
       <div className='top-band'>
         <div className='header-spacer'></div>
-        <div className='topic-space'>
+        <div className='topic-space' data-aos="fade-in">
           <h2>FAQs</h2>
         </div>
       </div>
       <div className='content-body py-5'>
-        <div className='w90 max-1200 py-5'></div>
-        <div className='w90 max-1200'>
-          <div className='cover'>
+        <div className='w90 max1200 py-5'></div>
+        <div className='w90 max1200'>
+          <div className='cover' data-aos="fade-up">
             <div className='item-card'>
 
             </div>

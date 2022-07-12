@@ -35,8 +35,10 @@ import ServiceLogo from './service-logo.png';
 import VidCurve from './vid-curve.svg';
 
 import AppleButton from './icons/apple-button.svg';
+import AppleButtonWhite from './icons/apple-button-white.svg';
 import AppleIcon from './icons/apple-icon.svg';
 import PlaystoreButton from './icons/playstore-button.svg';
+import PlaystoreButtonWhite from './icons/playstore-button-white.svg';
 import PlaystoreIcon from './icons/playstore-icon.svg';
 import BulletKiteIcon from './icons/bullet-kite-icon.svg';
 import ExchangeIconEtherium from './icons/exchange-icon-etherium.png';
@@ -72,6 +74,8 @@ import WhyChooseIconHighSpeed from './icons/why-choose-icon-high-speed.svg';
 import WhyChooseIconIntuitive from './icons/why-choose-icon-intuitive.svg';
 import WhyChooseIconSecurity from './icons/why-choose-icon-security.svg';
 import DropdownArrow from './icons/dropdown-arrow.svg';
+import CalendarIcon from './icons/calendar-icon.svg';
+import PointStar from './icons/point-star.svg';
 
 import MediaCompanyBlockchainNews from './media-companies/media-company-blockchain-news.png';
 import MediaCompanyCoindesk from './media-companies/media-company-coindesk.png';
@@ -143,8 +147,10 @@ export {
     VidCurve,
 
     AppleButton,
+    AppleButtonWhite,
     AppleIcon,
     PlaystoreButton,
+    PlaystoreButtonWhite,
     PlaystoreIcon,
     BulletKiteIcon,
     ExchangeIconEtherium,
@@ -180,6 +186,8 @@ export {
     WhyChooseIconIntuitive,
     WhyChooseIconSecurity,
     DropdownArrow,
+    CalendarIcon,
+    PointStar,
 
     MediaCompanyBlockchainNews,
     MediaCompanyCoindesk,

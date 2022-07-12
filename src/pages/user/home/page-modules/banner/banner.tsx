@@ -1,47 +1,64 @@
 import React, {  } from 'react';
 import { Carousel } from '../../../../../components/block-components/carousel';
-import { imageSlide } from './banner-data';
+import { AppleButtonWhite, PlaystoreButtonWhite, PointStar } from '../../../../../assets/images';
 import './banner.scss';
 
 function Hero() {
+
   return (
     <div className='hero-case'>
-    <Carousel.Effects
-      loop
-      autoPlay
-      delay={6000}
-      freeMode={false}
-      slidesPerView={1}
-      spaceBetween={0}
-      fade
-      pauseOnMouseEnter={false}
-      disableOnInteraction={false}
-      data={imageSlide}
-    />
-      {/* <div className='hero banner-1'>
-        <div className='header-spacer'></div>
-        <div className='hero-spread'>
-          <div className='text-content'>
-            <h3>
-              Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.
-            </h3>
-
-            <div className='max300'>
-              <button className='solid-button-2c px-4 my-3' data-aos="zoom-out" data-aos-delay="900">Post Trade</button>
-              <div className='info-grid'>
-                <img src={AppleButton} alt="" data-aos="fade-up" />
-                <span></span>
-                <img src={PlaystoreButton} alt="" data-aos="fade-up" data-aos-delay="300" />
-              </div>
-            </div>
+      <div className='hero'>
+        <div className='center-info-col'>
+          <div className='w90 max900 text-center my-5' data-aos='zoom-in'>
+            <h1>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
           </div>
-          <div className='image'>
-            <div className='img-holder' data-aos="fade-in">
-              <img src={BannerImg1} alt="" />
+          <div className='w90 max300' data-aos='fade-up'>
+            <button className='solid-button-2c w100'>Download Whitepaper</button>
+            <div className='input-divider mt-4'>
+              <img src={ AppleButtonWhite } alt="" />
+              <span></span>
+              <img src={ PlaystoreButtonWhite } alt="" />
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      <div className='sub-hero py-5'>
+        <div className='w20 max85 imh py-4' data-aos='zoom-in'>
+          <img src={PointStar} alt="" />
+        </div>
+        <div className='w90 max900'>
+          <div className='description-grid-40' data-aos='fade-up'>
+            <div className='imh spread-info-front'>
+              <img src={PointStar} alt="" />
+            </div>
+            <div className='spread-info-front'>
+              <p className='mb-0 pl-3'>
+                Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.
+              </p>
+            </div>
+          </div>
+          <div className='description-grid-40 py-4' data-aos='fade-up'>
+            <div className='imh spread-info-front'>
+              <img src={PointStar} alt="" />
+            </div>
+            <div className='spread-info-front'>
+              <p className='mb-0 pl-3'>
+                Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card across multiple merchants location worldwide.
+              </p>
+            </div>
+          </div>
+          <div className='description-grid-40 pb-5' data-aos='fade-up'>
+            <div className='imh spread-info-front'>
+              <img src={PointStar} alt="" />
+            </div>
+            <div className='spread-info-front'>
+              <p className='mb-0 pl-3'>
+                Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

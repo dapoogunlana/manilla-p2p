@@ -1,9 +1,14 @@
-import React, {  } from 'react';
+import React, { useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './help-detail.scss';
 
 function HelpDetail() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   return (
     <div>
       <h1>Help Detail</h1>

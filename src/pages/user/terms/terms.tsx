@@ -1,9 +1,14 @@
-import React, {  } from 'react';
+import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
 import { termsList } from './terms-data';
 import './terms.scss';
 
 function Terms() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  
   return (
     <div className='policy'>
       <div className='header-spacer'></div>

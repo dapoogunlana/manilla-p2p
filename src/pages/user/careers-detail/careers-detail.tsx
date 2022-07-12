@@ -10,6 +10,7 @@ function CareerDetail(props: any) {
   const [role, setRole] = useState<any>({});
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const currentRole = careerData.find((item) => item.role_code === id) || {};
     setRole(currentRole);
   });
@@ -18,7 +19,7 @@ function CareerDetail(props: any) {
     <div className='careers'>
       <div className='top-band'>
         <div className='header-spacer'></div>
-        <div className='topic-space py-4'>
+        <div className='topic-space py-4' data-aos="fade-in">
           <h2>Careers</h2>
           <h6>{role && role.title}</h6>
         </div>
@@ -27,7 +28,7 @@ function CareerDetail(props: any) {
         <div className='w90 max1200 py-5'></div>
         <div className='w90 max800'>
           <h6 className='text-center pb-4'>Fill in your details to apply for this position</h6>
-          <div className='cover'>
+          <div className='cover' data-aos="fade-up">
             <div className='item-card'>
               <div className='row'>
                 <div className='col-md-6'>
