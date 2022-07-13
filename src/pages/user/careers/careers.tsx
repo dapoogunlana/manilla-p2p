@@ -40,6 +40,18 @@ function Careers() {
       </div>
       <div className='content-body py-5'>
         <div className='w90 max1200 py-5'></div>
+        <div className='w90 max900 pb-4'>
+          <p className='text-center'>
+            Manilla Exchange is a customer centric blockchain firm and this regularly requires  the support of skilled and 
+            experienced manpower to provide an efficient ecosystem for our users. We welcome anyone irrespective of their 
+            location to fill our application form and submit their resume into our resume bank. Manilla is an equal opportunity 
+            employer and we encourage all to apply for any opening that matches their skill set as only qualified candidates 
+            will be contacted.
+          </p>
+          <p className='text-center'>
+            NOTE - Please DO NOT send a mail to careers@manilla.exchange. Use the online form only.  
+          </p>
+        </div>
         <div className='w90 max1200'>
           <div className='cover' data-aos="fade-up">
             <div className='item-card'>

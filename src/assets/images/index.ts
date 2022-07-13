@@ -77,6 +77,13 @@ import DropdownArrow from './icons/dropdown-arrow.svg';
 import CalendarIcon from './icons/calendar-icon.svg';
 import PointStar from './icons/point-star.svg';
 
+import ServiceImageAirtime from './service-image-airtime.jpg';
+import ServiceImageApy from './service-image-apy.jpg';
+import ServiceImageBorrow from './service-image-borrow.jpg';
+import ServiceImageExchange from './service-image-exchange.jpg';
+import ServiceImageGiftCard from './service-image-gift-card.jpg';
+import ServiceImageUtilities from './service-image-utilities.jpg';
+
 import MediaCompanyBlockchainNews from './media-companies/media-company-blockchain-news.png';
 import MediaCompanyCoindesk from './media-companies/media-company-coindesk.png';
 import MediaCompanyCoingreek from './media-companies/media-company-coingreek.png';
@@ -188,6 +195,13 @@ export {
     DropdownArrow,
     CalendarIcon,
     PointStar,
+
+    ServiceImageAirtime,
+    ServiceImageApy,
+    ServiceImageBorrow,
+    ServiceImageExchange,
+    ServiceImageGiftCard,
+    ServiceImageUtilities,
 
     MediaCompanyBlockchainNews,
     MediaCompanyCoindesk,

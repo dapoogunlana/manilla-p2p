@@ -20,7 +20,7 @@
         text-align: center;
         width: 96%;
         margin: 1em auto;
-        max-width: 290px;
+        max-width: 350px;
         padding: 25px 15px 15px;
         border-radius: 15px;
         box-shadow: 10px 10px 2px 0 $black-faint4;
@@ -35,23 +35,15 @@
         }
         .topic{
             .icon-sect{
-                width: 80%;
+                width: 100%;
                 margin: auto;
-                max-width: 120px;
-                height: 70px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 border-radius: 10px;
-                border: 1px solid $white-faint2;
-                box-shadow: 10px 10px 2px 0 $black-faint3;
+                overflow: hidden;
+                border: 1px solid $black-faint4;
+                box-shadow: 0 4px 10px 0 $black-faint3;
                 position: relative;
-                .abs{
-                    position: absolute;
-                    top: 50%;
-                    left:50%;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
+                img{
+                    width: 100%;
                 }
             }
         }
@@ -60,18 +52,7 @@
             transform: scale(1.07);
             h3,h6,p{
                 color: $black;
-            }
-            .topic{
-                .icon-sect{
-                    border-color: $black-faint2;
-                    .abs{
-                        opacity: 1;
-                    }
-                    .rel{
-                        opacity: 0;
-                    }
-                }
-            }
+            } 
         }
     }
     .manilla-service-logo{

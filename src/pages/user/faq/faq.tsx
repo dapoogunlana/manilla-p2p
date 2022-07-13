@@ -3,27 +3,28 @@ import { DropdownArrow } from '../../../assets/images';
 import { faqData } from './faq-data';
 import './faq.scss';
 
-function Faq() {
+function Faq(props: any) {
 
   const [reactiveFaqs, setReactiveFaqs] = useState(faqData);
 
   const openQuestion = (index: number) => {
     const newFaqs = [...reactiveFaqs];
-    if (newFaqs[index].active === true) {
-      newFaqs[index].active = false;
-    } else {
-      newFaqs.map((item) => {
-        item.active = false;
-        return item;
-      });
-      newFaqs[index].active = true;
-    }
+    newFaqs[index].active = !newFaqs[index].active;
+    // if (newFaqs[index].active === true) {
+    //   newFaqs[index].active = false;
+    // } else {
+    //   newFaqs.map((item) => {
+    //     item.active = false;
+    //     return item;
+    //   });
+    //   newFaqs[index].active = true;
+    // }
     setReactiveFaqs(newFaqs);
   }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, [props]);
   
   return (
     <div className='faq'>
@@ -42,11 +43,16 @@ function Faq() {
             </div>
             {reactiveFaqs.map((item, index) => {
             return <div className="item my-4 clickable" key={index} onClick={() => openQuestion(index)}>
-              <div className="spread-info py-2">
+              <div className={'spread-info py-2 ' + (item.active ? 'active-question' : 'question')}>
                 <h6 className="increased-soft mb-0">{item.question}</h6>
-                <div className={'view-icon' + (item.active ? ' full-view' : '')}>
+                {/* <div className={'view-icon' + (item.active ? ' full-view' : '')}>
                   <img src={DropdownArrow} alt="" />
-                </div>
+                </div> */}
+                {
+                  item.active ? 
+                  <i className="fa-solid fa-minus increased"></i> :
+                  <i className="fa-solid fa-plus increased"></i>
+                }
               </div>
               <div className={"answer" + (item.active ? ' full' : '')}>
                 <p className="reduced-soft mb-0">{item.answer}</p>

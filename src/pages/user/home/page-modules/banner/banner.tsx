@@ -1,24 +1,29 @@
 import React, {  } from 'react';
-import { Carousel } from '../../../../../components/block-components/carousel';
-import { AppleButtonWhite, PlaystoreButtonWhite, PointStar } from '../../../../../assets/images';
+import { AppleButton, PlaystoreButton, PointStar } from '../../../../../assets/images';
 import './banner.scss';
+import { IntroVid } from '../../../../../assets/videos';
+import { WhitePaper } from '../../../../../assets/files';
 
 function Hero() {
+
+  const downloadPdf = () => {
+    window.open(WhitePaper);
+  }
 
   return (
     <div className='hero-case'>
       <div className='hero'>
-        <div className='center-info-col'>
-          <div className='w90 max900 text-center my-5' data-aos='zoom-in'>
-            <h1>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
-          </div>
-          <div className='w90 max300' data-aos='fade-up'>
-            <button className='solid-button-2c w100'>Download Whitepaper</button>
-            <div className='input-divider mt-4'>
-              <img src={ AppleButtonWhite } alt="" />
-              <span></span>
-              <img src={ PlaystoreButtonWhite } alt="" />
-            </div>
+        <div className="underband">
+            <video muted={true} playsInline={true} autoPlay={true} src={IntroVid} loop id="myVideo">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div className='w90 max400 full-button top-space' data-aos='fade-up'>
+          <button className='solid-button-2c' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+          <div className='input-divider mt-4 imh full'>
+            <img src={ AppleButton } className='store-link' alt="" />
+            <span></span>
+            <img src={ PlaystoreButton } className='store-link' alt="" />
           </div>
         </div>
       </div>
@@ -27,6 +32,7 @@ function Hero() {
           <img src={PointStar} alt="" />
         </div>
         <div className='w90 max900'>
+          <h1 className='text-center'>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
           <div className='description-grid-40' data-aos='fade-up'>
             <div className='imh spread-info-front'>
               <img src={PointStar} alt="" />

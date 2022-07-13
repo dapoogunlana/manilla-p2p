@@ -11,12 +11,20 @@ import {
     ServiceIconAirtimeB,
     ServiceIconGiftCardW,
     ServiceIconGiftCardB,
+
+    ServiceImageAirtime,
+    ServiceImageApy,
+    ServiceImageBorrow,
+    ServiceImageExchange,
+    ServiceImageGiftCard,
+    ServiceImageUtilities,
 } from '../../../../../assets/images';
 
 export const serviceList = [
     {
         iconW: ServiceIconP2PW,
         iconB: ServiceIconP2PB,
+        image: ServiceImageExchange,
         topic: 'P2P Exchange',
         writeup: `
             Built on state of the art & secured escrow platform backed by technology, exchange your crypto assets 
@@ -26,6 +34,7 @@ export const serviceList = [
     {
         iconW: ServiceIconHighApyW,
         iconB: ServiceIconHighApyB,
+        image: ServiceImageApy,
         topic: 'Earn High APY',
         writeup: `
             Make your idle crypto assets work for you in return for high yield rewards throughout the year. 
@@ -35,6 +44,7 @@ export const serviceList = [
     {
         iconW: ServiceIconUtilitiesW,
         iconB: ServiceIconUtilitiesB,
+        image: ServiceImageUtilities,
         topic: 'Pay for Utilities',
         writeup: `
             Have utilities bills to pay? Pay for electricity and water across 5 continents using cryptocurrency 
@@ -44,6 +54,7 @@ export const serviceList = [
     {
         iconW: ServiceIconBorrowW,
         iconB: ServiceIconBorrowB,
+        image: ServiceImageBorrow,
         topic: 'Borrow',
         writeup: `
             Avoid selling off your assets at a loss. Take out a loan to resolve all emergencies. You can use any 
@@ -53,6 +64,7 @@ export const serviceList = [
     {
         iconW: ServiceIconAirtimeW,
         iconB: ServiceIconAirtimeB,
+        image: ServiceImageAirtime,
         topic: 'Airtime & Data',
         writeup: `
             Manilla Data & Airtime top-up solution is fast and simple to use. Our solution is borderless connecting 
@@ -62,6 +74,7 @@ export const serviceList = [
     {
         iconW: ServiceIconGiftCardW,
         iconB: ServiceIconGiftCardB,
+        image: ServiceImageGiftCard,
         topic: 'Gift Cards',
         writeup: `
             We offer gift cards in many countries around the world. This includes popular gift cards for global 
