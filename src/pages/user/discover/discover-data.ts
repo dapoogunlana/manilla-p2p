@@ -2,6 +2,7 @@ import { DiscoverBtcImg } from '../../../assets/images';
 
 export const discoverList = [
     {
+        id: 1,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [
@@ -15,6 +16,7 @@ export const discoverList = [
         date: ` 26 May 2021`,
     },
     {
+        id: 2,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [
@@ -28,6 +30,7 @@ export const discoverList = [
         date: ` 26 May 2021`,
     },
     {
+        id: 3,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [
@@ -41,6 +44,7 @@ export const discoverList = [
         date: ` 26 May 2021`,
     },
     {
+        id: 4,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [
@@ -54,6 +58,7 @@ export const discoverList = [
         date: ` 26 May 2021`,
     },
     {
+        id: 5,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [
@@ -67,6 +72,7 @@ export const discoverList = [
         date: ` 26 May 2021`,
     },
     {
+        id: 6,
         image: DiscoverBtcImg,
         title: 'Musking Tha Elon – Does Crypto Really Need A King?!',
         content: [

@@ -994,6 +994,38 @@
   }
 }
 
+@mixin hollow-button-p(
+  $hollow-border,
+  $fill-color,
+  $size,
+  $top-size,
+  $font-size
+) {
+  padding: $top-size $size;
+  font-size: $font-size;
+  border: 1px solid $hollow-border;
+  color: $hollow-border;
+  background-color: rgba(167, 113, 236, 0.1);
+  transition: 0.2s ease;
+  font-weight: 500;
+  &:hover {
+    border: 1px solid $fill-color;
+    color: $primary-blue-hover;
+    background-color: $fill-color;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+  }
+  &:active {
+    transform: translateY(3px);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
 @mixin solid-button($fill-color, $hover-color, $size, $top-size, $font-size) {
   padding: $top-size $size;
   font-size: $font-size;
@@ -1533,7 +1565,11 @@
   @include hollow-button($primary-blue, $primary-blue, 25px, 10px, 1em);
   border-radius: 15px;
 }
-.hollow-button-2c {
+.hollow-button-2cw {
+  @include hollow-button-p($white, $white, 45px, 10px, 1em);
+  border-radius: 15px;
+}
+.hollow-button-2cb {
   @include hollow-button($primary-blue, $primary-blue, 45px, 10px, 1em);
   border-radius: 15px;
 }

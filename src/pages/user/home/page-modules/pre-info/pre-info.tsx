@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <div className='crypto-stats'>
-        <h3 className='text-center mt-5 pt-5'>Buy And Sell Cryptocurrencies</h3>
+        <h3 className='text-center mt-5 pt-5'>Trade Crypto Assets with Your Peers</h3>
         <div className='stats-card' data-aos="flip-left">
           <div className='overflow-holder'>
             {exchangeList.map((item, index) => {

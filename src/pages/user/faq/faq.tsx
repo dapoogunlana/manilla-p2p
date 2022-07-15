@@ -50,8 +50,8 @@ function Faq(props: any) {
                 </div> */}
                 {
                   item.active ? 
-                  <i className="fa-solid fa-minus increased"></i> :
-                  <i className="fa-solid fa-plus increased"></i>
+                  <i className={"fa-solid fa-minus increased full " + (item.active ? 'full-view' : '')}></i> :
+                  <i className={"fa-solid fa-plus increased full " + (item.active ? 'full-view' : '')}></i>
                 }
               </div>
               <div className={"answer" + (item.active ? ' full' : '')}>

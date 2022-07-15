@@ -54,8 +54,8 @@ function CareerDetail(props: any) {
                 <div className='col-md-6'>
                   <div className='input-grp'>
                     <label>Country</label>
-                    <select name="" id="">
-                      <option value="" selected disabled>Choose your country</option>
+                    <select name="" id="" defaultValue={''}>
+                      <option value="" disabled>Choose your country</option>
                     </select>
                   </div>
                 </div>
@@ -70,8 +70,8 @@ function CareerDetail(props: any) {
                 <div className='col-md-6'>
                   <div className='input-grp'>
                     <label>Years Of Experience</label>
-                    <select name="" id="">
-                      <option value="" selected disabled>Choose your years of experience</option>
+                    <select name="" id="" defaultValue={''}>
+                      <option value="" disabled>Choose your years of experience</option>
                       <option value={0}>0 Years</option>
                       <option value={1}>1 Year</option>
                       <option value={2}>2 Years</option>

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
-import { Link  } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CalendarIcon } from '../../../assets/images';
-import { routeConstants } from '../../../services/constants/route-constants';
 import { discoverList } from './discover-data';
+import { routeConstants } from '../../../services/constants/route-constants';
 import './discover.scss';
 
 function Discover() {
+
+  const navigate = useNavigate();
 
   const clipToLength = (item: string, length: number) => {
     if (!item) {
@@ -17,6 +19,10 @@ function Discover() {
     } else {
       return item;
     }
+  }
+
+  const goToItem = (id: number) => {
+    navigate(`/${routeConstants.discover}/${id}`);
   }
 
   useEffect(() => {
@@ -38,10 +44,10 @@ function Discover() {
             {discoverList.map((item, index) => {
               return   <div className='col-lg-4 col-md-6 py-3' key={index}>
               <div className='cover' data-aos="fade-up">
-                <div className='display-img mt-3'>
+                <div className='display-img'>
                   <img src={item.image} alt="" />
                 </div>
-                <div className='content my-3'>
+                <div className='content mt-3'>
                   <div className='spread-info-front mb-2'>
                     <img src={CalendarIcon} alt="" className='mr-2' />
                     <p className='mb-0 reduced-soft faint-font'>{item.date}</p>
@@ -49,7 +55,7 @@ function Discover() {
                   <h6 className='mb- increased'>{item.title}</h6>
                   <p>{clipToLength(item.content[0], 100)}</p>
                   <div className='full-button'>
-                    <button className='solid-button-2c'>Read More</button>
+                    <button className='solid-button-2c' onClick={() => goToItem(item.id)}>Read More</button>
                   </div>
                 </div>
               </div>

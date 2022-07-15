@@ -19,7 +19,7 @@ function Hero() {
             </video>
         </div>
         <div className='w90 max400 full-button top-space' data-aos='fade-up'>
-          <button className='solid-button-2c' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+          <button className='hollow-button-2cw' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
           <div className='input-divider mt-4 imh full'>
             <img src={ AppleButton } className='store-link' alt="" />
             <span></span>
@@ -49,7 +49,7 @@ function Hero() {
             </div>
             <div className='spread-info-front'>
               <p className='mb-0 pl-3'>
-                Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card across multiple merchants location worldwide.
+                Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card.
               </p>
             </div>
           </div>
