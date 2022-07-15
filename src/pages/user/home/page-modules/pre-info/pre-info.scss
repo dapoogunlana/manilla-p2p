@@ -78,6 +78,9 @@
                 box-shadow: 10px 10px 2px 0 $black-faint3;
             }
         }
+    }
+    .hover-flip{
+        transition: 0.4s ease;
         &:hover{
             background-color: $primary-card-highlight;
             transform: scale(-1, 1);
@@ -89,4 +92,70 @@
             }
         }
     }
+    .auto-flip{
+        animation: flipper 6s ease;
+        animation-iteration-count:infinite;
+        .topic{
+            animation: flipper-topic 6s ease;
+            animation-iteration-count:infinite;
+        }
+        .text{
+            animation: flipper-text 6s ease;
+            animation-iteration-count:infinite;
+        }
+    }
+    .auto-flip2{
+        animation: flipper 6s ease;
+        animation-iteration-count:infinite;
+        animation-delay: 1s;
+        .topic{
+            animation: flipper-topic 6s ease;
+            animation-iteration-count:infinite;
+            animation-delay: 1s;
+        }
+        .text{
+            animation: flipper-text 6s ease;
+            animation-iteration-count:infinite;
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes flipper {
+    0% {
+        background-color: $primary-card;
+        transform: scale(1, 1);
+    }
+    40% {
+        background-color: $primary-card;
+        transform: scale(1, 1);
+    }
+    50% {
+        background-color: $primary-card-highlight;
+        transform: scale(-1, 1);
+    }
+    90% {
+        background-color: $primary-card-highlight;
+        transform: scale(-1, 1);
+    }
+    100% {
+        background-color: $primary-card;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes flipper-topic {
+    0% { opacity: 1 }
+    40% { opacity: 1 }
+    50% { opacity: 0 }
+    90% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes flipper-text {
+    0% { opacity: 0 }
+    40% { opacity: 0 }
+    50% { opacity: 1 }
+    90% { opacity: 1 }
+    100% { opacity: 0 }
 }

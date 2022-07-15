@@ -1568,10 +1568,12 @@
 .hollow-button-2cw {
   @include hollow-button-p($white, $white, 45px, 10px, 1em);
   border-radius: 15px;
+  transition: 0.3s ease;
 }
 .hollow-button-2cb {
   @include hollow-button($primary-blue, $primary-blue, 45px, 10px, 1em);
   border-radius: 15px;
+  transition: 0.3s ease;
 }
 
 .solid-button {

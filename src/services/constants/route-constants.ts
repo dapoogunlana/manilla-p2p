@@ -16,6 +16,7 @@
      productUpdates: 'product-updates',
      careers: 'careers',
      contact: 'contact-us',
+     operators: 'operators',
      placeHolder: 'waiting',
 
      admin: 'admin',

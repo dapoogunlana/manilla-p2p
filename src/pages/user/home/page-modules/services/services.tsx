@@ -5,18 +5,41 @@ import { serviceList, serviceList1half, serviceList2half } from './services-data
 import './services.scss';
 
 function Services() {
-  const serviceCarousel1 = serviceList1half.map((item, index) => {
-    return <div className='service-card' data-aos="zoom-in">
-      <div className='topic'>
-        <div className='icon-sect'>
-          <img src={item.image} alt="" />
-        </div>
-        <h6>{item.topic}</h6>
-        <p className='mb-0 reduced-soft'>{item.writeup}</p>
-      </div>
-    </div>
-  });
-  const serviceCarousel2 = serviceList2half.map((item, index) => {
+
+  const previewCount = () => {
+    const width = window.innerWidth;
+    if(width > 991) {
+      return 3;
+    } else if(width > 767) {
+      return 2;
+    } else {
+      return 1;
+    }
+  }
+
+  // const serviceCarousel1 = serviceList1half.map((item, index) => {
+  //   return <div className='service-card' data-aos="zoom-in">
+  //     <div className='topic'>
+  //       <div className='icon-sect'>
+  //         <img src={item.image} alt="" />
+  //       </div>
+  //       <h6>{item.topic}</h6>
+  //       <p className='mb-0 reduced-soft'>{item.writeup}</p>
+  //     </div>
+  //   </div>
+  // });
+  // const serviceCarousel2 = serviceList2half.map((item, index) => {
+  //   return <div className='service-card' data-aos="zoom-in">
+  //     <div className='topic'>
+  //       <div className='icon-sect'>
+  //         <img src={item.image} alt="" />
+  //       </div>
+  //       <h6>{item.topic}</h6>
+  //       <p className='mb-0 reduced-soft'>{item.writeup}</p>
+  //     </div>
+  //   </div>
+  // });
+  const serviceCarousel = serviceList.map((item, index) => {
     return <div className='service-card' data-aos="zoom-in">
       <div className='topic'>
         <div className='icon-sect'>
@@ -37,7 +60,7 @@ function Services() {
             of Services Using Cryptocurrency
           </p>
         </div>
-        <div className='row md-close'>
+        {/* <div className='row md-close'>
           {serviceList.map((item, index) => {
             return <div className='col-lg-4 col-md-6' key={index} data-aos="fade-up" data-aos-delay={index * 200}>
               <div className='service-card' data-aos="zoom-in">
@@ -71,7 +94,16 @@ function Services() {
             spaceBetween={0}
             data={serviceCarousel2}
           />
-        </div>
+        </div> */}
+        <Carousel
+            loop
+            autoPlay
+            delay={6000}
+            freeMode
+            slidesPerView={previewCount()}
+            spaceBetween={0}
+            data={serviceCarousel}
+          />
       </div>
     </div>
   );

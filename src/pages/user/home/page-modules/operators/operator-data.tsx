@@ -1,4 +1,10 @@
-import { Operator9mobile, OperatorGlo, OperatorMtn, OperatorSurfline, OperatorVodafone } from '../../../../../assets/images';
+import {
+    Operator9mobile,
+    OperatorGlo,
+    OperatorMtn,
+    OperatorSurfline,
+    OperatorVodafone
+} from '../../../../../assets/images';
 
 export const operatorList = [
     {

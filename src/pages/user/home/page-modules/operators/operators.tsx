@@ -1,7 +1,9 @@
 import React, {  } from 'react';
+import { Link } from 'react-router-dom';
 import {  } from '../../../../../assets/images';
 import { Carousel } from '../../../../../components/block-components/carousel';
-import { operatorList } from './operatoer-data';
+import { routeConstants } from '../../../../../services/constants/route-constants';
+import { operatorList } from './operator-data';
 import './operators.scss';
 
 function Operators() {
@@ -35,7 +37,9 @@ function Operators() {
           data={imageSlide}
         />
         <div className='text-center w96 pb-4'>
-          <button className='solid-button-2c rad-10' data-aos='fade-up'>See Supported Operators in Your Region</button>
+          <Link to={routeConstants.operators}>
+            <button className='hollow-button-2cb rad-10' data-aos='fade-up'>See Supported Operators in Your Region</button>
+          </Link>
         </div>
       </div>
     </div>

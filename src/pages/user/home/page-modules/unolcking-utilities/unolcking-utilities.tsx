@@ -1,5 +1,7 @@
 import React, {  } from 'react';
+import { Link } from 'react-router-dom';
 import { UnlockingUtilitiesPhone, UnlockingUtilitiesPoints, UnlockingUtilitiesStats, ReferralPhone, VidCurve } from '../../../../../assets/images';
+import { routeConstants } from '../../../../../services/constants/route-constants';
 import './unolcking-utilities.scss';
 
 function UnolckingUtilities() {
@@ -36,7 +38,9 @@ function UnolckingUtilities() {
                 Bonuses accumulated through referrals can be withdrawn at any time to your secure wallets. To get started, 
                 simply get a referral link."
               </p>
-              <button className='solid-button-2c' data-aos='fade-up' data-aos-delay='500'>Login to get referral link</button>
+                <Link to={routeConstants.userLogin}>
+                  <button className='hollow-button-2cb rad-10-im' data-aos='fade-up' data-aos-delay='500'>Login to get referral link</button>
+                </Link>
             </div>
           </div>
           <div className='col-md-6 center-info'>
@@ -74,7 +78,9 @@ function UnolckingUtilities() {
                   purchase, sell, and exchange digital assets on the Manilla P2P platform without interruption as we maintain 
                   a 99% uptime. Manilla has you secured, whether you are a first-time customer or a return trader.
                 </p>
-                <button className='solid-button-2c'>Login to get referral link</button>
+                <Link to={routeConstants.userLogin}>
+                  <button className='hollow-button-2cb rad-10-im'>Login to get referral link</button>
+                </Link>
               </div>
             </div>
           </div>

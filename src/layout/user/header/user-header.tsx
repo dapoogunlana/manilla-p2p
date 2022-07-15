@@ -23,7 +23,7 @@ function UserHeader() {
       >
         <div className="sub-layer"></div>
         <div className="case spread-info md-open relative">
-          <Link to={routeConstants.all}>
+          <Link to={routeConstants.home}>
             <div className="logo-mini">
               <img src={Logo} alt="" />
             </div>
@@ -35,7 +35,7 @@ function UserHeader() {
           </div>
         </div>
         <div className="w90 spread-nav-web relative">
-          <Link to={routeConstants.all}>
+          <Link to={routeConstants.home}>
             <div className="logo md-close-im">
               <img src={Logo} alt="" />
             </div>

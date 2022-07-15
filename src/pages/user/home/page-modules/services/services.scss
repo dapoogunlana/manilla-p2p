@@ -54,6 +54,10 @@
                 color: $black;
             } 
         }
+        background-color: $primary-card-highlight;
+        h3,h6,p{
+            color: $black;
+        } 
     }
     .manilla-service-logo{
         width: 70%;

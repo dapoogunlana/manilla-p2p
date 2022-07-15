@@ -37,7 +37,7 @@ function About() {
           <div className='row'>
             {whyChooseList.map((item, index) => {
               return <div className='col-lg-3 col-md-6' key={index} data-aos="fade-up" data-aos-delay={index * 200}>
-              <div className='why-us-card'>
+              <div className={'why-us-card auto-flip' + (index % 2 ? '2' : '')}>
                 <div className='text'>
                   <p className='mb-0'>{item.text}</p>
                 </div>
