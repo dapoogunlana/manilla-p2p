@@ -116,6 +116,22 @@ import TeamOyakhire from './team/team-oyakhire.jpg';
 import TeamRutherford from './team/team-rutherford.jpg';
 import TeamTunde from './team/team-tunde.jpg';
 
+import LearnImg1bitcoin from './article-images/learn-img1-bitcoin.jpg';
+import LearnImg2ethereum from './article-images/learn-img2-ethereum.jpg';
+import LearnImg3tether from './article-images/learn-img3-tether.jpg';
+import LearnImg4usdc from './article-images/learn-img4-usdc.jpg';
+import LearnImg5bnb from './article-images/learn-img5-bnb.jpg';
+import LearnImg6xpr from './article-images/learn-img6-xpr.jpg';
+import LearnImg7cardano from './article-images/learn-img7-cardano.jpg';
+import LearnImg8solana from './article-images/learn-img8-solana.jpg';
+import LearnImg9android from './article-images/learn-img9-android.jpg';
+import LearnImg10trust from './article-images/learn-img10-trust.jpg';
+import LearnImg11blockchain from './article-images/learn-img11-blockchain.jpg';
+import LearnImg12imtoken from './article-images/learn-img12-imtoken.jpg';
+import LearnImg13atomic from './article-images/learn-img13-atomic.jpg';
+import LearnImg14bitcoin from './article-images/learn-img14-bitcoin.jpg';
+import LearnImg15ethereum from './article-images/learn-img15-ethereum.jpg';
+
 export {
     Logo,
     FooterLogo,
@@ -234,4 +250,20 @@ export {
     TeamOyakhire,
     TeamRutherford,
     TeamTunde,
+
+    LearnImg1bitcoin,
+    LearnImg2ethereum,
+    LearnImg3tether,
+    LearnImg4usdc,
+    LearnImg5bnb,
+    LearnImg6xpr,
+    LearnImg7cardano,
+    LearnImg8solana,
+    LearnImg9android,
+    LearnImg10trust,
+    LearnImg11blockchain,
+    LearnImg12imtoken,
+    LearnImg13atomic,
+    LearnImg14bitcoin,
+    LearnImg15ethereum,
 }

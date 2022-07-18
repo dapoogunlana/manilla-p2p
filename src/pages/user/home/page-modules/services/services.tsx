@@ -1,6 +1,8 @@
 import React, {  } from 'react';
+import { Link } from 'react-router-dom';
 import { ServiceLogo } from '../../../../../assets/images';
 import { Carousel } from '../../../../../components/block-components/carousel';
+import { routeConstants } from '../../../../../services/constants/route-constants';
 import { serviceList, serviceList1half, serviceList2half } from './services-data';
 import './services.scss';
 
@@ -60,41 +62,6 @@ function Services() {
             of Services Using Cryptocurrency
           </p>
         </div>
-        {/* <div className='row md-close'>
-          {serviceList.map((item, index) => {
-            return <div className='col-lg-4 col-md-6' key={index} data-aos="fade-up" data-aos-delay={index * 200}>
-              <div className='service-card' data-aos="zoom-in">
-                <div className='topic'>
-                  <div className='icon-sect'>
-                    <img src={item.image} alt="" />
-                  </div>
-                  <h6>{item.topic}</h6>
-                  <p className='mb-0 reduced-soft'>{item.writeup}</p>
-                </div>
-              </div>
-            </div>
-          })}
-        </div>
-        <div className='md-open'>
-          <Carousel
-            loop
-            autoPlay
-            delay={6000}
-            freeMode
-            slidesPerView={1}
-            spaceBetween={0}
-            data={serviceCarousel1}
-          />
-          <Carousel
-            loop
-            autoPlay
-            delay={6000}
-            freeMode
-            slidesPerView={1}
-            spaceBetween={0}
-            data={serviceCarousel2}
-          />
-        </div> */}
         <Carousel
             loop
             autoPlay
@@ -104,6 +71,11 @@ function Services() {
             spaceBetween={0}
             data={serviceCarousel}
           />
+          <div className='text-center pt-4'>
+            <Link to={routeConstants.userLogin}>
+              <button className='solid-button-2c px-5'><span className='px-5'>Get Started</span></button>
+            </Link>
+          </div>
       </div>
     </div>
   );

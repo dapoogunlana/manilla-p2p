@@ -98,7 +98,7 @@ function UserFooter() {
                 <Link to={routeConstants.amlPolicy}>AML policy</Link>
               </p>
             </div>
-            <div className="footer-sect">
+            <div className="footer-sect sector-2">
               <div className="fit-footer-logo mt-2">
                 <img src={FooterLogo} width={'170px'} alt="" />
               </div>
@@ -107,6 +107,16 @@ function UserFooter() {
                   <a href={externalLinkConstants.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
                   <a href={externalLinkConstants.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
               </div>
+            </div>
+          </div>
+          <div className="footer-brand-sect">
+            <div className="fit-footer-logo w90 max200 imh mt-2">
+              <img src={FooterLogo} alt="" />
+            </div>
+            <div className="center-info mt-3 media-icons">
+                <a href={externalLinkConstants.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
+                <a href={externalLinkConstants.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
+                <a href={externalLinkConstants.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
             </div>
           </div>
         </div>

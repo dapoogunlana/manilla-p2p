@@ -20,7 +20,7 @@ function DiscoverDetail() {
   });
   
   return (
-    <div className='faq'>
+    <div className='discover'>
       <div className='top-band'>
         <div className='header-spacer'></div>
         <div className='topic-space' data-aos="fade-in">

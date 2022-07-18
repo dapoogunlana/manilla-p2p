@@ -32,7 +32,7 @@ function Hero() {
           <img src={PointStar} alt="" />
         </div>
         <div className='w90 max900'>
-          <h1 className='text-center'>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
+          <h1 className='text-center pb-5'>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
           <div className='description-grid-40' data-aos='fade-up'>
             <div className='imh spread-info-front'>
               <img src={PointStar} alt="" />

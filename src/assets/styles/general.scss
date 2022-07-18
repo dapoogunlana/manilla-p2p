@@ -882,19 +882,6 @@
     width: 100%;
   }
 }
-.full-input {
-  input {
-    border-radius: 6px;
-    padding: 12px 5px;
-    border: 1px solid $primary-blue-faint3;
-    transition: 0.2s ease;
-    width: 100%;
-    &:focus {
-      outline: none;
-      border-color: $primary-blue-faint1;
-    }
-  }
-}
 .reduced-xl {
   font-size: 0.5em;
 }
@@ -1317,8 +1304,8 @@
     background-color: $primary-blue-hover !important;
   }
 }
-.c-pr-green {
-  color: $primary-blue;
+.c-green {
+  color: $primary-green;
 }
 .c-orange {
   color: $orange;
@@ -1358,9 +1345,6 @@
 }
 .c-primary-blue {
   color: $primary-blue;
-}
-.c-primary-blue1 {
-  color: $primary-blue-faint1;
 }
 .c-faint-font {
   color: $faint-font;
@@ -1681,18 +1665,6 @@
 .active-category {
   color: $white;
 }
-.interest {
-  color: $white;
-  background-color: $primary-blue-faint2;
-  transition: 0.2s ease;
-  &:hover {
-    background-color: $primary-blue-hover;
-  }
-}
-.interest2 {
-  color: $white;
-  background-color: $primary-blue-faint2;
-}
 .tablet-case {
   .tablet {
     padding: 4px 11px;
@@ -1709,15 +1681,6 @@
     color: $black;
     font-weight: 700;
   }
-}
-.interest-small {
-  color: $white;
-  background-color: $primary-blue-faint2;
-  font-size: 10px;
-  padding: 2px 3px;
-  border-radius: 3px;
-  margin: 1.5px 2px 1.5px 2px;
-  display: inline-block;
 }
 .relative {
   position: relative;

@@ -36,11 +36,11 @@ function Operators() {
           spaceBetween={0}
           data={imageSlide}
         />
-        <div className='text-center w96 pb-4'>
+        {/* <div className='text-center w96 pb-4'>
           <Link to={routeConstants.operators}>
             <button className='hollow-button-2cb rad-10' data-aos='fade-up'>See Supported Operators in Your Region</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
