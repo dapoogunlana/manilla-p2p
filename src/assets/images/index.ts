@@ -76,6 +76,8 @@ import WhyChooseIconSecurity from './icons/why-choose-icon-security.svg';
 import DropdownArrow from './icons/dropdown-arrow.svg';
 import CalendarIcon from './icons/calendar-icon.svg';
 import PointStar from './icons/point-star.svg';
+import PopupIconPartnership from './icons/popup-icon-partnership.svg';
+import PopupIconWhitelist from './icons/popup-icon-whitelist.svg';
 
 import ServiceImageAirtime from './service-image-airtime.jpg';
 import ServiceImageApy from './service-image-apy.jpg';
@@ -211,6 +213,8 @@ export {
     DropdownArrow,
     CalendarIcon,
     PointStar,
+    PopupIconPartnership,
+    PopupIconWhitelist,
 
     ServiceImageAirtime,
     ServiceImageApy,

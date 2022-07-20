@@ -19,13 +19,20 @@
         .overflow-holder{
             overflow: auto;
             .stats-bar{
-                display: flex;
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+                display: grid;
+                grid-template-columns: 70px 200px 150px auto 180px 160px;
                 // grid-template-columns: auto auto auto auto auto auto;
-                align-items: center;
-                justify-content: space-between;
                 p{
                     white-space: nowrap;
                     padding: 0 2em;
+                    text-align: left;
+                }
+                .price{
+                    text-align: left;
+                    min-width: 220px;
                 }
             }
         }

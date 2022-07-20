@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link  } from 'react-router-dom';
+import { countryList } from '../../../services/constants/country-list';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './contact.scss';
 
@@ -20,7 +21,7 @@ function Contact() {
       <div className='content-body py-5'>
         <div className='w90 max1200 py-5'></div>
         <div className='w90 max1200 pb-5'>
-            <h6 className='text-center'>Fill our contact form to reach out to us</h6>
+            <h6 className='text-center'>For Business & Partnership Inquiries, Kindly Fill the Form Below to Reach Out to Us</h6>
           <div className='cover w96 max600' data-aos="fade-up">
             <div className='item-card'>
               <div className='row'>
@@ -49,6 +50,9 @@ function Contact() {
                     <label>Country</label>
                     <select name="" id="" defaultValue={''}>
                       <option value="" disabled>Choose your country</option>
+                      {countryList.map((country, index) => {
+                          return <option value={country?.name} key={index}>{country?.name}</option>
+                      })}
                     </select>
                   </div>
                 </div>

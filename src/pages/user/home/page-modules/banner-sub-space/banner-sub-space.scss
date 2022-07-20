@@ -1,0 +1,9 @@
+@import '../../../../../assets/styles/variables.scss';
+
+.sub-hero{
+    background-image: url(../../../../../assets/images/sub-hero-bg.jpg);
+    color: $white;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}

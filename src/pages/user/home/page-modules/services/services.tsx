@@ -56,7 +56,7 @@ function Services() {
     <div className='services py-5' id='features'>
       <div className='w96 max1200 py-5'>
         <div className='w96 max800'>
-          <h3 className='text-center'>Manilla E-Service Suites</h3>
+          <h3 className='text-center'>Manilla Service Suites</h3>
           <p className='text-center py-3'>
             Explore Endless Possibilities With Our Service Suites That Gives You the Power to Pay for a Variety 
             of Services Using Cryptocurrency

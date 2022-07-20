@@ -1,48 +1,20 @@
 import axios from 'axios';
+import { apiLinks } from '../../config/environment';
+import { IrequestFormat } from '../constants/request-schema';
 
-const content = {
-    type: 'json'
-};
-
-export const switchContent = (type: string) => {
-    content.type = type;
-    setTimeout(()=> content.type = 'json', 1000)
-}
-
-const returnHeader = (type: string) => {
-    console.log(type)
-    if(type === 'json') {
-        return {
-            "Content-type": "Application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers":"*"
+export const sendRequest = (params: IrequestFormat, success: Function, failure: Function) => {
+    const request2 = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.url });
+    request2.interceptors.request.use((req: any) => {
+    
+        if(params.header) {
+            req.headers = params.header
         }
-    } else if (type === 'form') {
-        return {
-            "Content-type": "multipart/form-data",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers":"*"
-        }
-    }
-}
-
-const devUrl = 'http://localhost:3500/api/v4/';
-const url = 'https://vanilla-network.herokuapp.com/api/v4/';
-
-const request = axios.create({
-    baseURL: `${devUrl}`
-})
-request.interceptors.request.use((req: any) => {
-
-    console.log(req);
-
-    req.headers = returnHeader(content.type)
-
-    return req
-})
-
-export default request;
-
-export{
-    request
+        return req 
+    })
+    return request2(params.url,{
+        method: params.method || 'GET',
+        data: params.body
+    })
+    .then((result) => success(result?.data))
+    .catch(error => failure(error.response?.data));
 }

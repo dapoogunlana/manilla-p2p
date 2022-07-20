@@ -4,7 +4,7 @@ import { JsxElement } from 'typescript';
 import * as Yup from 'yup';
 import { countryList } from '../../../services/constants/country-list';
 import { regexConstants } from '../../../services/constants/validation-regex';
-import request from '../../../services/utils/request';
+import { sendRequest } from '../../../services/utils/request';
 
 import './register-form.scss';
 
@@ -12,22 +12,28 @@ function RegisterForm() {
 
     const [response, setResponse] = useState<any>();
 
-    const submitRegistration = (values: any, setSubmitting: any) => {
-        setSubmitting(true);
-        request.post('whitelist-subscriber', {
-            firstName: values.firstName,
-            lastName: values.lastName,
-            email: values.email,
-            country: values.country,
-            phoneNo: values.phoneNo,
-        }).then((res: any) => {
-            setSubmitting(false);
-            setResponse(<p className='c-green mb-0 pt-2'>{res.data?.message}</p>);
-        }).catch((err: any) => {
-            setSubmitting(false);
-            setResponse(<p className='c-red-faded mb-0 pt-2'>{err.response?.data?.error?.emailError || err.response?.data?.message || 'Service downtime'}</p>);
+    const submitRegistration = (values: any, controls: any) => {
+        controls.setSubmitting(true);
+        sendRequest({
+            url: 'whitelist-subscriber',
+            method: 'POST',
+            body: {
+                firstName: values.firstName,
+                lastName: values.lastName,
+                email: values.email,
+                country: values.country,
+                phoneNo: values.phoneNo,
+            }
+        }, (res: any) => {
+            controls.setSubmitting(false);
+            setResponse(<p className='c-green mb-0 pt-2'>{res.message}</p>);
+            controls.resetForm();
+        }, (err: any) => {
+            controls.setSubmitting(false);
+            setResponse(<p className='c-red-faded mb-0 pt-2'>{err.error?.emailError || err.message || 'Service downtime'}</p>);
         });
     }
+
     const clearResponse = () => {
         setResponse(undefined);
     }
@@ -44,7 +50,7 @@ function RegisterForm() {
                 country: '',
                 phoneNo: ''
             }}
-            onSubmit={(values: any, { setSubmitting } : any) => submitRegistration(values, setSubmitting)}
+            onSubmit={(values: any, controls : any) => submitRegistration(values, controls)}
             // validationSchema={Yup.object().shape({
             //     firstName: Yup.string().required('First name is required'),
             //     lastName: Yup.string().required('Last name is required'),

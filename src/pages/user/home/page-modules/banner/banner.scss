@@ -4,9 +4,7 @@
     width: 100%;
     .hero{
         width: 100%;
-        background-image: url(../../../../../assets/images/hero-bg.jpg);
-        background-size: cover;
-        background-position: center;
+        background-color: $black-faint1;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -52,42 +50,36 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            @include mediaM(1200px) {
+                width: 120%;
+            }
+            @include mediaM(1100px) {
+                width: 140%;
+            }
+            @include mediaM(1000px) {
+                width: 160%;
+            }
+            @include mediaM(850px) {
+                width: 180%;
+            }
+            @include mediaM(750px) {
+                width: 210%;
+            }
+            @include mediaM(650px) {
+                width: 240%;
+            }
+            @include mediaM(560px) {
+                width: 300%;
+            }
+            @include mediaM(450px) {
+                width: 400%;
+            }
+            @include mediaM(350px) {
+                width: 460%;
+            }
             video{
                 width: 100%;
-                @include mediaM(1200px) {
-                    width: 120%;
-                }
-                @include mediaM(1100px) {
-                    width: 140%;
-                }
-                @include mediaM(1000px) {
-                    width: 160%;
-                }
-                @include mediaM(850px) {
-                    width: 180%;
-                }
-                @include mediaM(750px) {
-                    width: 210%;
-                }
-                @include mediaM(650px) {
-                    width: 240%;
-                }
-                @include mediaM(560px) {
-                    width: 300%;
-                }
-                @include mediaM(450px) {
-                    width: 400%;
-                }
-                @include mediaM(350px) {
-                    width: 460%;
-                }
             }
         }
-    }
-    .sub-hero{
-        background-image: url(../../../../../assets/images/sub-hero-bg.jpg);
-        color: $white;
-        background-size: cover;
-        background-position: center;
     }
 }

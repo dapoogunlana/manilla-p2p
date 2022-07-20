@@ -1,30 +1,59 @@
-import React, {  } from 'react';
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { apiLinks } from '../../../../../config/environment';
+import { routeConstants } from '../../../../../services/constants/route-constants';
+import { sendRequest } from '../../../../../services/utils/request';
 import { exchangeList, whyChooseList } from './pre-info-data';
 import './pre-info.scss';
 
-function About() {
+function About(props: any) {
+
+  const [currencyList, setCurrencyList] = useState<any[]>([]);
+
+  useEffect(() => {
+    console.log('habamana')
+    sendRequest({
+        url: apiLinks.cryptoCompare,
+        external: true
+    }, (res: any) => {
+        setCurrencyList(res.Data);
+    }, () => {});
+  },[props]);
+
   return (
     <>
       <div className='crypto-stats'>
         <h3 className='text-center mt-5 pt-5'>Trade Crypto Assets with Your Peers</h3>
         <div className='stats-card' data-aos="flip-left">
           <div className='overflow-holder'>
-            {exchangeList.map((item, index) => {
+            {currencyList.map((item, index) => {
+              const rise = ((item.RAW.USD.CHANGEHOUR / item.RAW.USD.PRICE) * 100);
               return <div className='stats-bar py-2' key={index}>
                 <div className='imh max50'>
-                  <img src={item.icon} alt="" />
+                  <img src={'https://www.cryptocompare.com' + item.CoinInfo.ImageUrl} alt="" />
                 </div>
-                <p className='mb-0'>
-                  {item.name}
-                  <span className='ml-3 mb-0 faint-font reduced'>{item.abrevation}</span>
-                </p>
-                <h6 className='mb-0'>{item.difference}</h6>
-                <p className={'mb-0' + (item.rise ? '' : '')}>
-                  { item.rise ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>}
-                  {item.percentage}
-                </p>
-                <h6 className='mb-0'>{item.difference}</h6>
-                <button className='hollow-button-c shadowed rad-7-im ml-3'>Trade</button>
+                <div className='spread-info-front'>
+                  <p className='mb-0 price'>
+                    {item.CoinInfo.FullName}
+                    <span className='ml-3 mb-0 faint-font reduced'>{item.CoinInfo.Internal}</span>
+                  </p>
+                </div>
+                <div className='spread-info-front'>
+                  <h6 className='mb-0 increased'>{item.DISPLAY.USD.PRICE}</h6>
+                </div>
+                <div className='spread-info-front'>
+                  <p className={'mb-0 ' + (rise >= 0 ? 'c-dark-green' : 'c-red')}>
+                    { rise >= 0 ? <i className="fa-solid fa-arrow-up"></i> : <i className="fa-solid fa-arrow-down"></i>}
+                    {rise.toFixed(2) + '%'}
+                  </p>
+                </div>
+                <div className='spread-info-front'>
+                  <h6 className='mb-0'>{item.DISPLAY.USD.TOPTIERVOLUME24HOURTO}</h6>
+                </div>
+                <div className='spread-info-front'>
+                  <button className='hollow-button-c shadowed rad-7-im ml-3'>Trade</button>
+                </div>
               </div>
             })}
           </div>
