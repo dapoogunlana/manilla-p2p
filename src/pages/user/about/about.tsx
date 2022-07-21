@@ -7,6 +7,12 @@ import { advisorList, teamList } from './about-data';
 
 function Home() {
 
+  const goToLink = (link: string) => {
+    if(link) {
+      window.open(link, '_blank');
+    }
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -108,6 +114,11 @@ function Home() {
                   </div>
                   <h6>{member.name}</h6>
                   <h6 className='position'>{member.position}</h6>
+                  {
+                    member.linkedIn && <div className='linked-in' onClick={() => goToLink(member.linkedIn)}>
+                      <i className="fab fa-linkedin increased"></i>
+                    </div>
+                  }
                 </div>
               </div>
             })}
@@ -116,7 +127,7 @@ function Home() {
       </div>
       <div className='advisor-sect py-5'>
         <div className='w96 max900 py-5'>
-          <h3 className='text-center'>Advisory Team</h3>
+          <h3 className='text-center topic'>Advisory Team</h3>
           <div className='row'>
             {advisorList.map((member, index) => {
               return <div className='col-md-6' key={index}>
@@ -126,6 +137,11 @@ function Home() {
                   </div>
                   <h6>{member.name}</h6>
                   <h6 className='position'>{member.position}</h6>
+                  {
+                    member.linkedIn && <div className='linked-in' onClick={() => goToLink(member.linkedIn)}>
+                      <i className="fab fa-linkedin increased"></i>
+                    </div>
+                  }
                 </div>
               </div>
             })}

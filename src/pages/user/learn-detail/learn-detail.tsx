@@ -49,7 +49,7 @@ function LearnDetail() {
                 {currentItem.content?.map((item, index: number) => {
                   return <React.Fragment key={index}>
                     <h6 className='increased text-center mt-3'>{item.topic}</h6>
-                    <p key={index}>{item.point && (<span>&nbsp; &nbsp; &nbsp; {item.point}</span>)}</p>
+                    <p key={index}>{item.point && (<span>{item.point}</span>)}</p>
                     {item.subPoints?.length > 0 && (
                       <ul className='pl-4'>
                         {item.subPoints.map((subItem, subIndex) => <li key={subIndex}>{subItem}</li>)}

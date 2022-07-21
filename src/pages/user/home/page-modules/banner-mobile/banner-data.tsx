@@ -5,7 +5,7 @@ export const bannerList = [
   {
       styleClass: 'banner-1',
       image: BannerImg1,
-      writeUp: 'Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.',
+      writeUp: `Welcome to Manilla, the World's Fastest & Multipurpose P2P Cryptocurrency Exchange`,
       showIcons: true,
   },
   {
@@ -24,7 +24,7 @@ export const bannerList = [
 export const banner1Item = {
   styleClass: 'banner-1',
   image: BannerImg1,
-  writeUp: 'Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.',
+  writeUp: `Welcome to Manilla, the World's Fastest & Multipurpose P2P Cryptocurrency Exchange`,
   showIcons: true,
 };
 

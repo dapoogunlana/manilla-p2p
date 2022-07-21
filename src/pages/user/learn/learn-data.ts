@@ -95,11 +95,11 @@ export const learnList = [
                 point: `By November 25th, 2014, Bitcoin was valued at $979.45. That kick-started a successful journey for cryptocurrency as it got the attention of big guns in the finance world. By the second quartile (Q3) of 2017, BTC was already being traded at $2,851.07. By the third quartile of the same year, it rose to $4,276.26 with a market cap of over $2 Billion and by November 10th in the year 2021, Bitcoin got to the all-time highest rate of over $68,789.63 with an all-time highest market cap of over $1 Trillion.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `BTC is currently being traded at $$BTCcurrentPrice on major exchanges with a market cap of $$BTCcurrentMarketCap, 24-hour volume of $$$BTCcurrent24HourVolume and a circulating supply of $$BTCcurrentSupply BTC.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `BTC is currently being traded at $$BTCcurrentPrice on major exchanges with a market cap of $$BTCcurrentMarketCap, 24-hour volume of $$$BTCcurrent24HourVolume and a circulating supply of $$BTCcurrentSupply BTC.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
