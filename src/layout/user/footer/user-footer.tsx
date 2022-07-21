@@ -71,7 +71,7 @@ function UserFooter() {
             <div className="footer-sect">
               <h6 className="mt-2 mb-3 pb-1 font-weight-bold">Explore</h6>
               <p className="reduced-soft">
-                <Link to={routeConstants.discover}>Discover</Link>
+                <Link to={routeConstants.discover}>Industry News</Link>
               </p>
               <p className="reduced-soft">
                 <Link to={routeConstants.faq}>FAQs</Link>

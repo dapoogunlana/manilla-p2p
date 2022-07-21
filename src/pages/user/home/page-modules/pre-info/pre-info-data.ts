@@ -7,6 +7,15 @@ import {
 } from '../../../../../assets/images';
 
 export const exchangeList = [
+    'BTC',
+    'ETH',
+    'BNB',
+    'XRP',
+    'TRX',
+    'USDT',
+    'BCH',
+];
+export const sampleExchangeList = [
     {
         id: 1,
         icon: ExchangeIconEtherium,

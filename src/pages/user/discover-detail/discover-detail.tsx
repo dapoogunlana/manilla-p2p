@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
-import { discoverList } from './discover-detail-data';
+import { IindustryNews } from '../../../services/constants/interfaces/data-schemas';
+import { discoverList } from '../discover/discover-data';
 import './discover-detail.scss';
 
 function DiscoverDetail() {
+  const initialState = {
+    id: 0,
+    image: '',
+    title: ``,
+    content: [{
+        topic: '',
+        subTopic: '',
+        point: '',
+        subPoints: [],
+    }],
+    date: '',
+};
 
   const { id } = useParams();
-  const [currentItem, setCurrentItem] = useState<any>({});
+  const [currentItem, setCurrentItem] = useState<IindustryNews>(initialState);
 
   const returnToList = () => {
     window.history.back();
@@ -15,7 +28,7 @@ function DiscoverDetail() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const activeItem = discoverList.find((item) => id === (item.id + '')) || {};
+    const activeItem = discoverList.find((item: any) => id === (item.id + '')) || initialState;
     setCurrentItem(activeItem);
   });
   
@@ -24,7 +37,7 @@ function DiscoverDetail() {
       <div className='top-band'>
         <div className='header-spacer'></div>
         <div className='topic-space' data-aos="fade-in">
-          <h2>Discover</h2>
+          <h2>Industry News</h2>
         </div>
       </div>
       <div className='content-body py-5'>
@@ -45,7 +58,7 @@ function DiscoverDetail() {
               <p className='mb-0 pl-3'>{currentItem.date}</p>
             </div>
             <div className='content'>
-                {currentItem.content?.map((item: any, index: number) => <p key={index}>{item}</p>)}
+                {currentItem.content?.map((item, index: number) => <p key={index}>{item.point}</p>)}
             </div>
           </div>
           <button className='solid-button-2 mt-4 mb-5' onClick={returnToList}>

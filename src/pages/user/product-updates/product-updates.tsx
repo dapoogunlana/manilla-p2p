@@ -122,9 +122,9 @@ function ProductUpdates() {
                 Manilla Service Suite Development begins
               </h6>
               <div className='progress'>
-                <div className='level r80 b_bl'></div>
+                <div className='level r60 b_bl'></div>
                 {bars}
-                <div className='level r80 f_bl'></div>
+                <div className='level r60 f_bl'></div>
               </div>
               <p className='date'>March 10th 2022</p>
             </div>
@@ -133,9 +133,9 @@ function ProductUpdates() {
                 Manilla Service Suite Development still ongoing
               </h6>
               <div className='progress'>
-                <div className='level r60 b_bl'></div>
+                <div className='level r80 b_bl'></div>
                 {bars}
-                <div className='level r60 f_bl'></div>
+                <div className='level r80 f_bl'></div>
               </div>
               <p className='date'>July 14th 2022</p>
             </div>

@@ -134,6 +134,15 @@ import LearnImg13atomic from './article-images/learn-img13-atomic.jpg';
 import LearnImg14bitcoin from './article-images/learn-img14-bitcoin.jpg';
 import LearnImg15ethereum from './article-images/learn-img15-ethereum.jpg';
 
+import newsImg1Musking from './article-images/news-img1-musking.jpg';
+import newsImg2Vitalik from './article-images/news-img2-vitalik.jpg';
+import newsImg3FarGone from './article-images/news-img3-far-gone.jpg';
+import newsImg4Mining from './article-images/news-img4-mining.jpg';
+import newsImg5InitialCoin from './article-images/news-img5-initial-coin.jpg';
+import newsImg6Unhackable from './article-images/news-img6-unhackable.jpg';
+import newsImg7Wallet from './article-images/news-img7-wallet.jpg';
+import newsImg8Contracts from './article-images/news-img8-contracts.jpg';
+
 export {
     Logo,
     FooterLogo,
@@ -270,4 +279,13 @@ export {
     LearnImg13atomic,
     LearnImg14bitcoin,
     LearnImg15ethereum,
+
+    newsImg1Musking,
+    newsImg2Vitalik,
+    newsImg3FarGone,
+    newsImg4Mining,
+    newsImg5InitialCoin,
+    newsImg6Unhackable,
+    newsImg7Wallet,
+    newsImg8Contracts,
 }

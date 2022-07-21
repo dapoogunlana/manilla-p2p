@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { apiLinks } from '../../config/environment';
-import { IrequestFormat } from '../constants/request-schema';
+import { IrequestFormat } from '../constants/interfaces/request-schema';
 
 export const sendRequest = (params: IrequestFormat, success: Function, failure: Function) => {
     const request2 = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.url });

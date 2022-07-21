@@ -12,12 +12,17 @@ function About(props: any) {
   const [currencyList, setCurrencyList] = useState<any[]>([]);
 
   useEffect(() => {
-    console.log('habamana')
     sendRequest({
         url: apiLinks.cryptoCompare,
         external: true
     }, (res: any) => {
-        setCurrencyList(res.Data);
+      const selectedList: any = [];
+      res.Data.map((item: any) => {
+        if(exchangeList.indexOf(item.RAW?.USD?.FROMSYMBOL) !== -1) {
+          selectedList.push(item);
+        }
+      });
+      setCurrencyList(selectedList);
     }, () => {});
   },[props]);
 

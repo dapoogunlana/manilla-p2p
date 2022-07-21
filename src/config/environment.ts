@@ -1,7 +1,7 @@
 export const apiLinks = {
     binance: `https://api.binance.com/api/v3/ticker/24hr`,
     coinGeco: 'https://www.coingecko.com/en/api/coins/list',
-    cryptoCompare: `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=7&tsym=USD&api_key=7c4c789b0b6c160099497bdfca52a1e941a04d982a37159634689f409ee2e1bd`,
+    cryptoCompare: `https://min-api.cryptocompare.com/data/top/totalvolfull?limit=100&tsym=USD&api_key=7c4c789b0b6c160099497bdfca52a1e941a04d982a37159634689f409ee2e1bd`,
     devUrl: 'http://localhost:3500/api/v4/',
     url: 'https://vanilla-network.herokuapp.com/api/v4/',
     next: ``,

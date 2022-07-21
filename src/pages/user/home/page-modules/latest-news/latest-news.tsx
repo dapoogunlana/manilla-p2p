@@ -1,10 +1,21 @@
 import React, {  } from 'react';
+import { useNavigate } from 'react-router';
 import {  } from '../../../../../assets/images';
 import { Carousel } from '../../../../../components/block-components/carousel';
+import { routeConstants } from '../../../../../services/constants/route-constants';
+import { clipToLength } from '../../../../../services/utils/data-manipulation-utilits';
+import { discoverList } from '../../../discover/discover-data';
 import { newsList } from './latest-new-data';
 import './latest-news.scss';
 
 function LatestNews() {
+
+  const navigate = useNavigate();
+
+  const goToItem = (id: number) => {
+    navigate(`/${routeConstants.discover}/${id}`);
+  }
+  
   const previewCount = () => {
     const width = window.innerWidth;
     if(width > 991) {
@@ -15,15 +26,17 @@ function LatestNews() {
       return 1;
     }
   }
-  const imageSlide = newsList.map((item, index) => {
-    return <div className='news-slide-holder' key={index}>
+  const imageSlide = discoverList.map((item, index) => {
+    return <div className='news-slide-holder' key={index} onClick={() => goToItem(item.id)}>
       <div className='news-slide' data-aos='fade-up'>
         <div className='image-holder'>
           <img src={item.image} alt="" />
         </div>
         <div className='text-holder'>
-          <h6 className=''>{item.topic}</h6>
-          <p className='faint-font reduced-soft mb-2 faint-font'>{item.brief}</p>
+          <h6 className=''>{item.title}</h6>
+          <p className='faint-font reduced-soft content mb-2 faint-font'>
+            {clipToLength(item.content[0].point || item.content[0].topic || item.content[1].point, 100)}
+          </p>
           <p className='faint-font reduced-soft mb-0 faint-font'>{item.date}</p>
         </div>
       </div>

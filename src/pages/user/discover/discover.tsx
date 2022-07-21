@@ -4,22 +4,11 @@ import { CalendarIcon } from '../../../assets/images';
 import { discoverList } from './discover-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './discover.scss';
+import { clipToLength } from '../../../services/utils/data-manipulation-utilits';
 
 function Discover() {
 
   const navigate = useNavigate();
-
-  const clipToLength = (item: string, length: number) => {
-    if (!item) {
-      return '';
-    }
-    if(item.length > length) {
-      const trimedItem = item.substring(0, (length - 2));
-      return trimedItem + '..';
-    } else {
-      return item;
-    }
-  }
 
   const goToItem = (id: number) => {
     navigate(`/${routeConstants.discover}/${id}`);
@@ -34,7 +23,7 @@ function Discover() {
       <div className='top-band'>
         <div className='header-spacer'></div>
         <div className='topic-space' data-aos="fade-in">
-          <h2>Discover</h2>
+          <h2>Industry News</h2>
         </div>
       </div>
       <div className='content-body py-5'>
@@ -52,8 +41,8 @@ function Discover() {
                     <img src={CalendarIcon} alt="" className='mr-2' />
                     <p className='mb-0 reduced-soft faint-font'>{item.date}</p>
                   </div>
-                  <h6 className='mb- increased'>{item.title}</h6>
-                  <p>{clipToLength(item.content[0], 100)}</p>
+                  <h6 className='mb- increased-soft'>{item.title}</h6>
+                  <p>{clipToLength(item.content[0].point || item.content[0].topic || item.content[1].point, 100)}</p>
                   <div className='full-button'>
                     <button className='solid-button-2c' onClick={() => goToItem(item.id)}>Read More</button>
                   </div>
