@@ -3,9 +3,9 @@
 import React, { } from "react";
 import { Link } from "react-router-dom";
 import { FooterLogo } from "../../../assets/images";
-import { externalLinkConstants } from "../../../services/constants/link-constants";
 import { routeConstants } from "../../../services/constants/route-constants";
 import { useNavigate } from "react-router-dom";
+import { socialLinks } from "../../../config/environment";
 
 function UserFooter() {
   
@@ -100,23 +100,28 @@ function UserFooter() {
             </div>
             <div className="footer-sect sector-2">
               <div className="fit-footer-logo mt-2">
-                <img src={FooterLogo} width={'170px'} alt="" />
+                <Link to={routeConstants.home}>
+                  <img src={FooterLogo} width={'170px'} alt="" />
+                </Link>
+                
               </div>
               <div className="spread-info-front mt-3 media-icons">
-                  <a href={externalLinkConstants.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
-                  <a href={externalLinkConstants.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
-                  <a href={externalLinkConstants.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
+                  <a href={socialLinks.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
+                  <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
+                  <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
               </div>
             </div>
           </div>
           <div className="footer-brand-sect">
             <div className="fit-footer-logo w90 max200 imh mt-2">
-              <img src={FooterLogo} alt="" />
+                <Link to={routeConstants.home}>
+                  <img src={FooterLogo} alt="" />
+                </Link>
             </div>
             <div className="center-info mt-3 media-icons">
-                <a href={externalLinkConstants.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
-                <a href={externalLinkConstants.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
-                <a href={externalLinkConstants.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
+                <a href={socialLinks.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
+                <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
+                <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
             </div>
           </div>
         </div>

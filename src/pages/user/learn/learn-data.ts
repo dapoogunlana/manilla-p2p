@@ -52,11 +52,6 @@ export const learnList = [
             },
             {
                 topic: `Brief History Of Bitcoin`,
-                point: `Checkingyourself.`,
-                subPoints: [],
-            },
-            {
-                topic: ``,
                 point: `The original whitepaper of Bitcoin was written by a famous but anonymous individual or group of individuals by the name Satoshi Nakamoto in 2008. The token itself was published in 2009 and in the subsequent year, the first Bitcoin transaction was carried out. A few thousands of this coin were transferred between two parties. Today, a Bitcoin token is worth an average of $30,000, leaving many of the adopters regretting having not boarded the train when it was almost nothing. Financial analysts and experts are already predicting that the price of Bitcoin (BTC) will skyrocket above $100,000 in the coming  years.`,
                 subPoints: [],
             },
@@ -157,11 +152,11 @@ export const learnList = [
                 point: `On August 7, 2015, the first ETH trading took place with an initial price of $2.83. By January the subsequent year, it was being sold on multiple exchanges at $1.06 and although that indicates a drop in value, it accumulated a staggering market cap of $81,051,494 USD. By the second quartile of 2017, ETH was already being valued at $333.50 with a market cap of over $30 billion USD.  On November 16, 2021, ETH got its all-time highest value of $4,891.70 USD and alongside its highest market cap of $560.56 Billion USD thereby registering a 24-hour volume of over $29 Billion USD.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `ETH is currently being traded at $ETHcurrentPrice on major exchanges with a market cap of $ETHcurrentMarketCap, 24-hour volume of $ETH24hourVolume and a circulating supply of $ETHcirculatingSupply ETH.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `ETH is currently being traded at $ETHcurrentPrice on major exchanges with a market cap of $ETHcurrentMarketCap, 24-hour volume of $ETH24hourVolume and a circulating supply of $ETHcirculatingSupply ETH.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
@@ -219,11 +214,11 @@ export const learnList = [
                 point: `USDT was launched with an initial price of $1 USD as pegged with an initial market cap of $251,300 USD. It maintained the pegged value until February 25th 2015 USDT when it went up to what happens to be its all-time highest value of $1.05. The value however, dropped to its all-time low of $0.5683 USD the subsequent month.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `USDT is currently being traded at exactly $USDTcurrentPrice on major exchanges with a market cap of $USDTcurrentMarketCap USD, 24 hour volume of $USDT24hourVolume and a circulating supply of $USDTcirculatingSupply USDT from the total supply of $USDTtotalSupply USDT.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `USDT is currently being traded at exactly $USDTcurrentPrice on major exchanges with a market cap of $USDTcurrentMarketCap USD, 24 hour volume of $USDT24hourVolume and a circulating supply of $USDTcirculatingSupply USDT from the total supply of $USDTtotalSupply USDT.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
@@ -290,11 +285,11 @@ export const learnList = [
                 point: `An all-time high occurred on January 30th, 2020 when USDC was sold around $1.044 USD, however, with zero recorded market cap. For the record, the lowest price that USDC has been sold in its market history is $0.9702 USD, taking place on 17th of March, 2020.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `USDC is currently being traded at $ USDCcurrentPrice USD on major exchanges with a market cap of $USDCcurrentMarketCap USD, 24-hour volume of $USDT24hourVolume USD and a total number of $USDCcirculatingSupply USDC is currently circulating in the cryptocurrency market from the total supply of $ USDCtotalSupply USDC.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `USDC is currently being traded at $ USDCcurrentPrice USD on major exchanges with a market cap of $USDCcurrentMarketCap USD, 24-hour volume of $USDT24hourVolume USD and a total number of $USDCcirculatingSupply USDC is currently circulating in the cryptocurrency market from the total supply of $ USDCtotalSupply USDC.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
@@ -357,11 +352,11 @@ export const learnList = [
                 point: `On January 12th, 2018, BNB made a sudden climb to the uptrend, increasing its price to $24.46 USD with a market cap of $2,422,090,369 USD. BNB is one of the few coins to have gotten their all-time highest value within the year 2019 despite the presence of intense volatility in the market. A record highest price of $690.93USD with a market cap of over $100 Billion USD was reached on 10th of May, 2021.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `BNB is currently being traded at exactly $ BNBcurrentPrice on major exchanges with a market cap of $ BNBcurrentMarketCap USD, 24 hour volume of $BNB24hourVolume USD and a circulating supply of $BNBcirculatingSupply  BNB from the total supply of $BNBtotalSupply  BNB.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `BNB is currently being traded at exactly $ BNBcurrentPrice on major exchanges with a market cap of $ BNBcurrentMarketCap USD, 24 hour volume of $BNB24hourVolume USD and a circulating supply of $BNBcirculatingSupply  BNB from the total supply of $BNBtotalSupply  BNB.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
@@ -414,11 +409,11 @@ export const learnList = [
                 point: `The unforgettable breakthrough experienced in the cryptocurrency industry between the last quartile of 2017 and first quartile of 2018 extended to this cryptocurrency. On January 4th 2018, XRP amassed an all-time highest price of $3.84, generating a market cap of $,555,070,000 USD in the process.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `XRP is currently being traded at $XRPcurrentPrice on major exchanges with a market cap of $XRPcurrentMarketCap, 24-hour volume of $XRP24hourVolume and a circulating supply of $XRPcirculatingSupply XRP from the total supply of $XRPtotalSupply XRP.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `XRP is currently being traded at $XRPcurrentPrice on major exchanges with a market cap of $XRPcurrentMarketCap, 24-hour volume of $XRP24hourVolume and a circulating supply of $XRPcirculatingSupply XRP from the total supply of $XRPtotalSupply XRP.`,
+            //     subPoints: [],
+            // },
         ],
     },
     {
@@ -494,30 +489,30 @@ export const learnList = [
                 point: `A 24-hour market volume of $11,867,200 was recorded on October 1st, 2017 as ADA was launched with an initial price of $0.021678. The token’s all-time low was experienced that same day as it dropped a little bit to be sold at of $0.01735. Exactly 60 days later, the token was being sold at $0.128264 with a market cap of $3,325,509,225. The market experienced a huge level of volatility resulting in the price being unpredictable. The major event, however, occurred on January 4th 2018 when ADA got an all-time high of being sold at $3.10 resulting in a market cap of over $95 Billion USD.`,
                 subPoints: [],
             },
-            {
-                topic: ``,
-                point: `ADA is currently being traded at $ADAcurrentPrice  on major exchanges with a market cap of $ADAcurrentMarketCap USD, 24-hour volume of $ADA24hourVolume USD and a circulating supply of $ADAcirculatingSupply  ADA from the total supply of $ADAtotalSupply  ADA.`,
-                subPoints: [],
-            },
+            // {
+            //     topic: ``,
+            //     point: `ADA is currently being traded at $ADAcurrentPrice  on major exchanges with a market cap of $ADAcurrentMarketCap USD, 24-hour volume of $ADA24hourVolume USD and a circulating supply of $ADAcirculatingSupply  ADA from the total supply of $ADAtotalSupply  ADA.`,
+            //     subPoints: [],
+            // },
         ],
     },
-    {
-        id: 8,
-        image: LearnImg8solana,
-        title: 'Solana - The Overview',
-        content: [
-            {
-                topic: ``,
-                point: `.`,
-                subPoints: [],
-            },
-            {
-                topic: ``,
-                point: `.`,
-                subPoints: [],
-            },
-        ],
-    },
+    // {
+    //     id: 8,
+    //     image: LearnImg8solana,
+    //     title: 'Solana - The Overview',
+    //     content: [
+    //         {
+    //             topic: ``,
+    //             point: `.`,
+    //             subPoints: [],
+    //         },
+    //         {
+    //             topic: ``,
+    //             point: `.`,
+    //             subPoints: [],
+    //         },
+    //     ],
+    // },
     {
         id: 9,
         image: LearnImg9android,

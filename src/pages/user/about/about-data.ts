@@ -64,7 +64,7 @@ export const teamList = [
         twitter: 'twitter',
     },
     {
-        name: 'Adesina Olarewaju',
+        name: 'Adesanya Olarewaju',
         image: TeamAdeshina,
         position: 'Compliance Executive 2',
         linkedIn: '',
@@ -103,7 +103,7 @@ export const advisorList = [
         name: 'Maruoane Fikri',
         image: AdviserMar,
         position: 'CEO Sinverse',
-        linkedIn: 'https://www.linkedin.com/in/marouane-fikri',
+        linkedIn: 'https://nl.linkedin.com/in/marouane-fikri-169a9619a',
         faceBook: 'facebook',
         twitter: 'twitter',
     },

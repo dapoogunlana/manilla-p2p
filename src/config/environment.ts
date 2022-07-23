@@ -7,7 +7,14 @@ export const apiLinks = {
     next: ``,
 }
 
-export const socialLinks = {
+export const externalLinkConstants = {
     whiteListForm: 'https://docs.google.com/forms/d/e/1FAIpQLSeTTNMBOEw0C_5P_Xu1Rn8dKIHE3Fm16uF0GuAFIhhNFuutjQ/viewform?usp=sf_link',
     partnershipForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4-DQOsZ-H-DpVHrHZc0nTzp3I2jgNWN94eynNy646pjZ0RA/viewform'
 }
+ 
+ 
+export const socialLinks = {
+    telegram: 'http://t.me/manilla_exchange',
+    twitter: 'http://twitter.com/manillaP2p',
+    linkedin: 'https://www.linkedin.com/company/manilla-technologies/',
+};

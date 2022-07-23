@@ -26,7 +26,7 @@ import Testimonial1 from './testimonial-1.png';
 import Testimonial2 from './testimonial-2.png';
 import Testimonial3 from './testimonial-3.png';
 import UnlockingUtilitiesPhone from './unlocking-utilities-phone.png';
-import UnlockingUtilitiesPoints from './unlocking-utilities-points.png';
+import UnlockingUtilitiesPoints from './unlocking-utilities-points.svg';
 import UnlockingUtilitiesStats from './unlocking-utilities-stats.png';
 import waysToTradeImg from './ways-to-trade-img.png';
 import HowToInnerRing from './how-to-inner-ring.svg';
@@ -104,6 +104,20 @@ import OperatorGlo from './operators/operator-glo.png';
 import OperatorMtn from './operators/operator-mtn.png';
 import OperatorSurfline from './operators/operator-surfline.png';
 import OperatorVodafone from './operators/operator-vodafone.png';
+import OperatorGooglePlay from './operators/operator-google-play.png';
+import OperatorAmazon from './operators/operator-amazon.png';
+import OperatorBell from './operators/operator-bell.png';
+import OperatorChatrMobile from './operators/operator-chatr-mobile.png';
+import OperatorEbay from './operators/operator-ebay.png';
+import OperatorFreedomMobile from './operators/operator-freedom-mobile.png';
+import OperatorItunes from './operators/operator-itunes.png';
+import OperatorKengen from './operators/operator-kengen.png';
+import OperatorLebara from './operators/operator-lebara.png';
+import OperatorLuckyMobile from './operators/operator-lucky-mobile.png';
+import OperatorLyca from './operators/operator-lyca.png';
+import OperatorPHCN from './operators/operator-phcn.png';
+import OperatorRogers from './operators/operator-rogers.png';
+import OperatorSteam from './operators/operator-steam.png';
 
 import AdviserCosti from './team/adviser-costi.jpg';
 import AdviserMar from './team/adviser-mar.jpg';
@@ -250,6 +264,20 @@ export {
     OperatorMtn,
     OperatorSurfline,
     OperatorVodafone,
+    OperatorGooglePlay,
+    OperatorAmazon,
+    OperatorBell,
+    OperatorChatrMobile,
+    OperatorEbay,
+    OperatorFreedomMobile,
+    OperatorItunes,
+    OperatorKengen,
+    OperatorLebara,
+    OperatorLuckyMobile,
+    OperatorLyca,
+    OperatorPHCN,
+    OperatorRogers,
+    OperatorSteam,
 
     AdviserCosti,
     AdviserMar,

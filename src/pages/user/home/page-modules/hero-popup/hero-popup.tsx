@@ -1,7 +1,7 @@
 import React, {  } from 'react';
 import { Link } from 'react-router-dom';
 import { PopupIconPartnership, PopupIconWhitelist } from '../../../../../assets/images';
-import { socialLinks } from '../../../../../config/environment';
+import { externalLinkConstants } from '../../../../../config/environment';
 import './hero-popup.scss';
 
 function HeroPopup() {
@@ -15,7 +15,7 @@ function HeroPopup() {
           <div className='imh'>
             <img src={PopupIconPartnership} alt="" />
           </div>
-          <a href={socialLinks.partnershipForm} target='_blank' rel='no-referrer'>
+          <a href={externalLinkConstants.partnershipForm} target='_blank' rel='no-referrer'>
             <button className='solid-button-2c px-5'>Apply Now</button>
           </a>
         </div>
@@ -25,7 +25,7 @@ function HeroPopup() {
           <div className='imh'>
             <img src={PopupIconWhitelist} alt="" />
           </div>
-          <a href={socialLinks.whiteListForm} target='_blank' rel='no-referrer'>
+          <a href={externalLinkConstants.whiteListForm} target='_blank' rel='no-referrer'>
             <button className='solid-button-2c px-5'>Apply Now</button>
           </a>
         </div>

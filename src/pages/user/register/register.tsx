@@ -27,7 +27,7 @@ function Register() {
           </div>
         </div>
         <div className='col-lg-6 center-info-col'>
-          <p className='font-weight-bold reg-mobile-text'>Join our wait list to stay up to date on our app launch</p>
+          <p className='font-weight-bold reg-mobile-text increased-x'>Join our wait list to stay up to date on our app launch</p>
           <div className='w90 my-3' data-aos="fade-up">
             <RegisterForm/>
           </div>
