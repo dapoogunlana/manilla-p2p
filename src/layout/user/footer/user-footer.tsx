@@ -128,7 +128,7 @@ function UserFooter() {
       </div>
       <div className="center-info reduced footer-base relative">
           <p className="pt-4 pb-3 center-mobile">
-            © Manilla Exchange {new Date().getFullYear()} . All right reserved
+            © Manilla Finance {new Date().getFullYear()} . All right reserved
           </p>
         </div>
     </div>

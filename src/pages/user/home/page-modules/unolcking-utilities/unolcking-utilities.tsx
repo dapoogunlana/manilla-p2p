@@ -10,7 +10,7 @@ function UnolckingUtilities() {
       <div className='w90 max1000'>
         <h3 className='text-center'>Unlocking Crypto Utilities</h3>
         <p className='text-center'>
-          Through a solid alliance with our ecosystem development partners, Manilla P2P Exchange is giving a 
+          Through a solid alliance with our ecosystem development partners, Manilla Finance is giving a 
           robust use-case to multiple cryptocurrency assets. We are leveraging our years of experience in blockchain 
           technology to continuously improve our ecosystem with hopes that before long, crypto will be used for just 
           about anything in our everyday payments on the Manilla application.
@@ -70,12 +70,12 @@ function UnolckingUtilities() {
             <div className='col-md-6 center-info'>
               <div className='center-mobile py-4 w96 max500'>
                 <h6 className='increased pb-3'>
-                  Manilla exchange is the most trusted cryptocurrency exchange on the market.
+                  Manilla Finance is the most trusted cryptocurrency exchange on the market.
                 </h6>
                 <p>
                   Begin trading with confidence and ease as our platform will enable anybody who is an early adopter to join 
                   the digital currency revolution in a truly decentralized environment with automated processes. You can 
-                  purchase, sell, and exchange digital assets on the Manilla P2P platform without interruption as we maintain 
+                  purchase, sell, and exchange digital assets on the Manilla Finance platform without interruption as we maintain 
                   a 99% uptime. Manilla has you secured, whether you are a first-time customer or a return trader.
                 </p>
                 <Link to={routeConstants.userLogin}>

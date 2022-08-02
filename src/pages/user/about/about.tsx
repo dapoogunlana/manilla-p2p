@@ -26,15 +26,15 @@ function Home() {
         <div className='top-grid'>
           <div className='text-sect md-open text-center'>
             <p>
-              Manilla Exchange is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              Manilla Finance is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
               financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
               unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
-              tokens to buy and sell on Manilla Exchange. 
+              tokens to buy and sell on Manilla Finance. 
             </p>
             <p>
               With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
-              airtime/data purchase using cryptocurrency. The Manilla P2P Exchange is powered by Manilla Technogies along with 
+              airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
             </p>
           </div>
@@ -43,15 +43,15 @@ function Home() {
           </div>
           <div className='text-sect md-close'>
             <p>
-              Manilla Exchange is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              Manilla Finance is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
               financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
               unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
-              tokens to buy and sell on Manilla Exchange. 
+              tokens to buy and sell on Manilla Finance. 
             </p>
             <p>
               With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
-              airtime/data purchase using cryptocurrency. The Manilla P2P Exchange is powered by Manilla Technogies along with 
+              airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
             </p>
           </div>
@@ -63,7 +63,7 @@ function Home() {
             <div></div>
             <div className='more-info'>
               <p>
-                Manilla Exchange adopts blockchain technology to build the next-generation financial ecosystem. We strive to 
+                Manilla Finance adopts blockchain technology to build the next-generation financial ecosystem. We strive to 
                 eliminate financial barriers, evolve the global economy and its perception and ultimately pave the way for 
                 freedom and flexibility of transactions. We never pause on innovations and brilliant creations to improve our 
                 user-experience to make cryptocurrency trading available for everyone.
@@ -79,7 +79,7 @@ function Home() {
               <div className='w90 py-3'>
                 <h4 className='center-mobile'>Our Technology</h4>
                 <p className='center-mobile'>
-                  Security is our top priority, first of all, with speed rallying along. Manilla Exchange provides a safe, reliable, 
+                  Security is our top priority, first of all, with speed rallying along. Manilla Finance provides a safe, reliable, 
                   and stable environment for crypto transactions via web and mobile apps. We adopt a global server load balancing, 
                   distributed clusters and are open to accept upon demand any innovation that further boldens user-experience based 
                   off of suggestions from the experts. We are tailored for you!
@@ -103,7 +103,7 @@ function Home() {
             whose love for perfection knows no bounds.
             <br /><br />
             A world-class team of adept technical writers, human relations experts, programming gurus, cryptographic and security 
-            pros are not less than a project like Manilla exchange would require. You just cannot get enough of their pro skills  
+            pros are not less than a project like Manilla Finance would require. You just cannot get enough of their pro skills  
           </p>
           <div className='grid5'>
             {teamList.map((member, index) => {
@@ -114,6 +114,7 @@ function Home() {
                   </div>
                   <h6>{member.name}</h6>
                   <h6 className='position'>{member.position}</h6>
+                  <div className='pt-4'></div>
                   {
                     member.linkedIn && <div className='linked-in' onClick={() => goToLink(member.linkedIn)}>
                       <i className="fab fa-linkedin increased"></i>

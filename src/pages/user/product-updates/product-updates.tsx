@@ -75,7 +75,7 @@ function ProductUpdates() {
         <div className='w90 max1200'>
             <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
-                Manilla P2P Application Development Begins
+                Manilla Finance Application Development Begins
               </h6>
               <div className='progress'>
                 <div className='level r100 b_bl'></div>
@@ -86,7 +86,7 @@ function ProductUpdates() {
             </div>
             <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
-                Manilla P2P Exchange Web Application development
+                Manilla Finance Web Application development
               </h6>
               <div className='progress'>
                 <div className='level r100 b_gr'></div>
@@ -97,7 +97,7 @@ function ProductUpdates() {
             </div>
             <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
-                Manilla P2P Exchange Android & iOS Application begins
+                Manilla Finance Android & iOS Application begins
               </h6>
               <div className='progress'>
                 <div className='level r100 b_bl'></div>
@@ -108,7 +108,7 @@ function ProductUpdates() {
             </div>
             <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
-                Manilla P2P Exchange Android & iOS mobile apps development complete
+                Manilla Finance Android & iOS mobile apps development complete
               </h6>
               <div className='progress'>
                 <div className='level r100 b_gr'></div>

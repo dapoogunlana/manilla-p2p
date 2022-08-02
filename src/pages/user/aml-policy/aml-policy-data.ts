@@ -71,7 +71,7 @@ export const amlPolicyList = [
         topic: '2',
         body: [
             {
-                point: ` In accordance with the above stated laws, Manilla exchange strongly adheres to the AML policies therefore to carry out business transactions with customers (users) `,
+                point: ` In accordance with the above stated laws, Manilla Finance strongly adheres to the AML policies therefore to carry out business transactions with customers (users) `,
                 subPoints: [],
             },
             {

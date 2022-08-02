@@ -1,7 +1,7 @@
 
 export const faqData  = [
     {
-        question: `Are the price offers on Manilla P2P exchange provided by Manilla or by the concerned buyer/seller?`,
+        question: `Are the price offers on Manilla Finance provided by Manilla or by the concerned buyer/seller?`,
         answer: `
         Prices are provided by the sellers. However, our system ensures that the range is not far from the real-time prices in the cryptocurrency market.
         `,
@@ -94,7 +94,7 @@ export const faqData  = [
     {
         question: `What is Manilla staking?`,
         answer: `
-        Manilla staking is the service that allows users to lock part or all of their cryptocurrency assets on the Manilla exchange within a certain period, thereby earning rewards based on the volume and period of staking.
+        Manilla staking is the service that allows users to lock part or all of their cryptocurrency assets on the Manilla Finance within a certain period, thereby earning rewards based on the volume and period of staking.
         `,
         active: false
     },
@@ -162,7 +162,7 @@ export const faqData  = [
         active: false
     },
     {
-        question: `How many tokens are listed on Manilla Exchange?`,
+        question: `How many tokens are listed on Manilla Finance?`,
         answer: `
         7 more tokens will be added as development progresses.
         `,
