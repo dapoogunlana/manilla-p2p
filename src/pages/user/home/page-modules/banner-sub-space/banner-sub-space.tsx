@@ -9,7 +9,7 @@ function SubSpace() {
         <img src={PointStar} alt="" />
       </div>
       <div className='w90 max900'>
-        <h1 className='text-center pb-5'>World’s First General-Purpose P2P Crypto Exchange Platform</h1>
+        <h1 className='text-center pb-5'>Your Financial Suite, Fueled By Crypto!</h1>
         <div className='description-grid-40' data-aos='fade-up'>
           <div className='imh spread-info-front'>
             <img src={PointStar} alt="" />
@@ -26,7 +26,7 @@ function SubSpace() {
           </div>
           <div className='spread-info-front'>
             <p className='mb-0 pl-3'>
-              Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card.
+              Enjoy a Profit Share of 40% Every Fiscal Year When You Stake MNLA for 365 Days
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ function SubSpace() {
           </div>
           <div className='spread-info-front'>
             <p className='mb-0 pl-3'>
-              Explore & Benefit from Manilla’s Comprehensive Service Suite for Reliability, Security & Speed.
+              Explore & Benefit from the Manilla’s Service Suite Enabling Users Pay with Crypto for their Daily Bills.
             </p>
           </div>
         </div>

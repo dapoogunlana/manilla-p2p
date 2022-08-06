@@ -50,7 +50,7 @@ function Careers(props: any) {
             will be contacted.
           </p>
           <p className='text-center'>
-            NOTE - Please DO NOT send a mail to careers@manilla.exchange. Use the online form only.  
+            NOTE - Please DO NOT send any mail to Manilla Finance’s mail addresses. Use the online form only. 
           </p>
         </div>
         <div className='w90 max1200'>

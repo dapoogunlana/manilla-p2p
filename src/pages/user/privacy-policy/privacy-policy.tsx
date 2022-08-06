@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
 import './privacy-policy.scss';
 import { privactPolicyList } from './privacy-policy-data';
+import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
 
 function PrivacyPolicy() {
 
@@ -35,7 +36,11 @@ function PrivacyPolicy() {
               <ul>
                 {point.body.map((item, itemIndex) => {
                   return <li key={itemIndex}>
-                    <p>{item.point}</p>
+                    <p>
+                      {/* {item.point} */}
+                      <b>{segrigateString(item.point).brief}</b>
+                      {segrigateString(item.point).explanation}
+                    </p>
                     <ul>
                       {item.subPoints.map((subItem, subIndex) => {
                         return <li key={subIndex}>

@@ -164,7 +164,7 @@ export const faqData  = [
     {
         question: `How many tokens are listed on Manilla Finance?`,
         answer: `
-        7 more tokens will be added as development progresses.
+        There are 7 tokens, more tokens will be added as development progresses.
         `,
         active: false
     },

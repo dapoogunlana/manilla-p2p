@@ -14,7 +14,7 @@ export const externalLinkConstants = {
  
  
 export const socialLinks = {
-    telegram: 'http://t.me/manilla_exchange',
-    twitter: 'http://twitter.com/manillaP2p',
+    telegram: 'http://t.me/manilla_finance',
+    twitter: 'https://twitter.com/manilla_finance',
     linkedin: 'https://www.linkedin.com/company/manilla-technologies/',
 };

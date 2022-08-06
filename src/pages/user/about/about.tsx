@@ -26,13 +26,13 @@ function Home() {
         <div className='top-grid'>
           <div className='text-sect md-open text-center'>
             <p>
-              Manilla Finance is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              Manilla Finance is an innovative cryptocurrency exchange with advancements from conventional 
               financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
               unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
               tokens to buy and sell on Manilla Finance. 
             </p>
             <p>
-              With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
+              Serving millions of users in 44 countries and counting, we are providing a safe and trustworthy 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
               airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
@@ -43,13 +43,13 @@ function Home() {
           </div>
           <div className='text-sect md-close'>
             <p>
-              Manilla Finance is an innovative peer-to-peer cryptocurrency exchange with advancements from conventional 
+              Manilla Finance is an innovative cryptocurrency exchange with advancements from conventional 
               financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
               unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
               tokens to buy and sell on Manilla Finance. 
             </p>
             <p>
-              With serving millions of users in 17 countries and counting, we are providing a safe and trustworthy peer-2-peer 
+              With serving millions of users in 44 countries and counting, we are providing a safe and trustworthy 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
               airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
@@ -69,7 +69,7 @@ function Home() {
                 user-experience to make cryptocurrency trading available for everyone.
               </p>
               <p className='mb-0'>
-                We envision being the world’s most dedicated and innovative cryptocurrency P2P platform as we strive to 
+                We envision being the world’s most dedicated and innovative cryptocurrency platform as we strive to 
                 infiltrate and birth newer ideas the blockchain space has never fathomed before.
               </p>
             </div>

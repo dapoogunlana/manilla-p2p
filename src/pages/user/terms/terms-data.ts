@@ -17,7 +17,7 @@ export const termsList = [
         topic: '1.Definitions',
         body: [
             {
-                point: `Website. An electronic website, known as www.manilla.exchange whose domain and property is owned by Manilla Technologies`,
+                point: `Website. An electronic website, known as www.manilla.finance whose domain and property is owned by Manilla Technologies`,
                 subPoints: [],
             },
             {
@@ -54,7 +54,7 @@ export const termsList = [
         topic: '2.About The Website',
         body: [
             {
-                point: `Website. Manilla Technologies maintains the P2P trading site of Manilla (www.manilla.exchange)`,
+                point: `Website. Manilla Technologies maintains the trading site of Manilla (www.manilla.finance)`,
                 subPoints: [],
             },
             {
@@ -116,7 +116,7 @@ export const termsList = [
         topic: '4.Buying And Selling Cryptos Via The Website',
         body: [
             {
-                point: `Purchase process. Making a purchase will require the user to have registered successfully and need to information the volume of crypto they'd like to buy via the Website itself. According to the purchase quantity and value, the User will transfer or deposit the amount into the indicated account shown in the transaction by the User that is responsible for the sale, who is going to release the cryptocurrency amount to the User's virtual wallet on the website after confirming the receipt, creating a "hash." The "miners" will validate the "hash" transfer (from a wallet to the other), and after that, inform the User via the website itself. When the system confirms the receipt, it will complete the purchase.`,
+                point: `Purchase process. Making a purchase will require the user to have registered successfully and need to input the volume of crypto they'd like to buy via the Website itself. According to the purchase quantity and value, the User will transfer or deposit the amount into the indicated account shown in the transaction by the User that is responsible for the sale, who is going to release the cryptocurrency amount to the User's virtual wallet on the website after confirming the receipt, creating a "hash." The "miners" will validate the "hash" transfer (from a wallet to the other), and after that, inform the User via the website itself. When the system confirms the receipt, it will complete the purchase.`,
                 subPoints: [],
             },
             {
@@ -183,7 +183,7 @@ export const termsList = [
         topic: '7.Restrictions And Problems Of Accessing The Website',
         body: [
             {
-                point: `Navigation. The website's searches can be exclusively accessed via the internet. Users need to have the appropriate and necessary equipment to access our service. The equipment includes a computer with a licensed and installed browser, modem, and internet access provision services and infrastructure.`,
+                point: `Navigation. The website's searches can be exclusively accessed via the internet. Users need to have the appropriate and necessary equipment to access our service. The equipment includes an electronic device with a licensed and installed browser, modem, and internet access provision services and infrastructure.`,
                 subPoints: [],
             },
             {

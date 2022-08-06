@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
+import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
 import { amlPolicyList } from './aml-policy-data';
 import './aml-policy.scss';
 
@@ -35,7 +36,12 @@ function AMLPolicy() {
               <ul>
                 {point.body.map((item, itemIndex) => {
                   return <li key={itemIndex} className={item.point ? '' : 'clear'}>
-                    <p className='pt-3'>{item.point}<span className='c-white'>.</span></p>
+                    <p className='pt-3'>
+                      {item.point}
+                      {/* <b>{segrigateString(item.point).brief}</b>
+                      {segrigateString(item.point).explanation} */}
+                      <span className='c-white'>.</span>
+                    </p>
                     <ul className='pl-3'>
                       {item.subPoints.map((subItem, subIndex) => {
                         return <li key={subIndex}>

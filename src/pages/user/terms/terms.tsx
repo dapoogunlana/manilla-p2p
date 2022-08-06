@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
+import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
 import { termsList } from './terms-data';
 import './terms.scss';
 
@@ -35,7 +36,11 @@ function Terms() {
               <ul>
                 {point.body.map((item, itemIndex) => {
                   return <li key={itemIndex}>
-                    <p>{item.point}</p>
+                  <p>
+                    {/* {item.point} */}
+                    <b>{segrigateString(item.point).brief}</b>
+                    {segrigateString(item.point).explanation}
+                  </p>
                     <ul>
                       {item.subPoints.map((subItem, subIndex) => {
                         return <li key={subIndex}>

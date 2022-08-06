@@ -4,7 +4,7 @@ export const privactPolicyList = [
         topic: '',
         body: [
             {
-                point: `This "Privacy Policy" page that you are currently in informationrms you of the Terms & Conditions of Use and also shows you how our organization, Manila Technologies, registered in Cyprus, does the collection, protection, use, processing, storage, association, sharing, alongside some other treatment forms of your details, which includes personal data alongside the Website and Services that the Terms & Conditions of Use governs.`,
+                point: `This "Privacy Policy" page that you are currently in informationrms you of the Terms & Conditions of Use and also shows you how our organization, Manilla Technologies, registered in Cyprus, does the collection, protection, use, processing, storage, association, sharing, alongside some other treatment forms of your details, which includes personal data alongside the Website and Services that the Terms & Conditions of Use governs.`,
                 subPoints: [],
             }
         ],
@@ -13,11 +13,11 @@ export const privactPolicyList = [
         topic: '1.Data We Collect',
         body: [
             {
-                point: `Personal Information. The information you provide is collected by Manila when you register for an account, and the information created anytime you use our Services.`,
+                point: `Personal Information. The information you provide is collected by Manilla when you register for an account, and the information created anytime you use our Services.`,
                 subPoints: [],
             },
             {
-                point: `Checking registration data. Manila has full rights to verify the legitimacy and any other aspect that has to do with your registration information and can deny your account creation at its exclusive and sole discretion that is based on the information gathered. Other companies may carry out this check, particularly hire for these specific purposes. Be sure of this, we may share some of your data with those companies. Among the other information, we have got the right to verify, prior to public authorities like federal courts and courts of law, if you participate in any form of legal proceedings, your status prior to credit protection institutions. About yourself.`,
+                point: `Checking registration data. Manilla has full rights to verify the legitimacy and any other aspect that has to do with your registration information and can deny your account creation at its exclusive and sole discretion that is based on the information gathered. Other companies may carry out this check, particularly hire for these specific purposes. Be sure of this, we may share some of your data with those companies. Among the other information, we have got the right to verify, prior to public authorities like federal courts and courts of law, if you participate in any form of legal proceedings, your status prior to credit protection institutions. About yourself.`,
                 subPoints: [],
             },
         ],
@@ -35,11 +35,11 @@ export const privactPolicyList = [
         topic: '3.Information Created When You Make Use Of Our Service',
         body: [
             {
-                point: `Payment details. Manila gives you the chance to purchase cryptos. Because of that, they will collect data that has to do with the transactions you did. When a transaction happens, the amount and date will be stored by our system alongside Users who take part in that transaction.`,
+                point: `Payment details. Manilla gives you the chance to purchase cryptos. Because of that, they will collect data that has to do with the transactions you did. When a transaction happens, the amount and date will be stored by our system alongside Users who take part in that transaction.`,
                 subPoints: [],
             },
             {
-                point: `Data collected automatically. The Manila platforms collect information automatically including your ISP's domain name, the IP address used in connecting the computer to the internet, the OS and platform, the average time used on the app, the visited pages, the information sought, the times of access, and some of the relevant data that are commercially relevant. Some of the data are mandatorily collected, according to the international and local laws alongside business best practices, but third parties can get access to it through court order or their express authorization.`,
+                point: `Data collected automatically. The Manilla platform collects information automatically including your ISP's domain name, the IP address used in connecting the computer to the internet, the OS and platform, the average time used on the app, the visited pages, the information sought, the times of access, and some of the relevant data that are commercially relevant. Some of the data are mandatorily collected, according to the international and local laws alongside business best practices, but third parties can get access to it through court order or their express authorization.`,
                 subPoints: [],
             },
             {
@@ -64,7 +64,7 @@ export const privactPolicyList = [
                 subPoints: [],
             },
             {
-                point: `Manila has the right to monitor the entire website, which includes the frequency of every transaction that you initiate, the active sessions number, devices, and systems that access the website, among others, basically to make sure that the website isn't being used to do any illegal activity and also to make sure that users observe the rules we stated in our Terms & Conditions of Use. Therefore, we reserve the right of blocking the profile of a particular user, at our exclusive and sole discretion, if we discover that the User may be using the platform for illegitimate purposes. Manila also has the right of excluding a particular user, in this case, no Privacy Policy is respected.`,
+                point: `Manilla has the right to monitor the entire website, which includes the frequency of every transaction that you initiate, the active sessions number, devices, and systems that access the website, among others, basically to make sure that the website isn't being used to do any illegal activity and also to make sure that users observe the rules we stated in our Terms & Conditions of Use. Therefore, we reserve the right of blocking the profile of a particular user, at our exclusive and sole discretion, if we discover that the User may be using the platform for illegitimate purposes. Manilla also has the right of excluding a particular user, in this case, no Privacy Policy is respected.`,
                 subPoints: [],
             },
             {
@@ -117,7 +117,7 @@ export const privactPolicyList = [
         topic: '7.Updates On Privacy Policy',
         body: [
             {
-                point: `Manila has full rights to alter the Privacy Policy, with the aim to offer users more convenience and security in a situation whereby we make the relevant changes that need new approval from Users, we will send every User a notification`,
+                point: `Manilla has full rights to alter the Privacy Policy, with the aim to offer users more convenience and security in a situation whereby we make the relevant changes that need new approval from Users, we will send every User a notification`,
                 subPoints: [],
             },
         ],
