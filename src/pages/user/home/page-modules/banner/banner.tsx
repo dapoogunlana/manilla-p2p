@@ -1,7 +1,7 @@
 import React, {  } from 'react';
 import { AppleButton, PlaystoreButton } from '../../../../../assets/images';
 import './banner.scss';
-import { WebIntroVid } from '../../../../../assets/videos';
+import { WebIntroVid, MobileIntroVid } from '../../../../../assets/videos';
 import { WhitePaper } from '../../../../../assets/files';
 
 function Hero() {
@@ -10,16 +10,24 @@ function Hero() {
     window.open(WhitePaper);
   }
 
+  const selectBanner = () => {
+    if(window.innerWidth > 750) {
+      return WebIntroVid;
+    } else {
+      return MobileIntroVid;
+    }
+  }
+
   return (
     <div className='hero-case'>
       <div className='hero'>
         <div className="underband">
-            <video muted={true} playsInline={true} autoPlay={true} src={WebIntroVid} loop id="myVideo">
+            <video muted={true} playsInline={true} autoPlay={true} src={selectBanner()} loop id="myVideo">
                 Your browser does not support HTML5 video.
             </video>
         </div>
         <div className='w90 max400 full-button top-space' data-aos='fade-up'>
-          <button className='hollow-button-2cw' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+          <button className='hollow-button-2cw rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
           <div className='input-divider mt-4 imh full'>
             <img src={ AppleButton } className='store-link' alt="" />
             <span></span>

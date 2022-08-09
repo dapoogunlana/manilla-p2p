@@ -42,7 +42,7 @@ function Operators() {
                   <h6 className='mb-0'>{category.category}</h6>
                 </div>
                 {category.operators.map((item, index) => (
-                  <div className='operator-card' title={item.icon}>
+                  <div className='operator-card' title={item.icon} key={index}>
                     <img src={item.icon} alt="" />
                   </div>
                 ))}
