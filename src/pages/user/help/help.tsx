@@ -4,6 +4,7 @@ import { CalendarIcon } from '../../../assets/images';
 import { helpList } from './help-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './help.scss';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 
 function Help() {
 
@@ -79,6 +80,8 @@ function Help() {
           </div> */}
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

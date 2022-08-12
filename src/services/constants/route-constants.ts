@@ -10,7 +10,7 @@
      terms: 'terms',
      amlPolicy: 'aml-policy',
      faq: 'faq',
-     discover: 'discover',
+     industryNews: 'news',
      help: 'help',
      learn: 'learn',
      productUpdates: 'product-updates',
@@ -18,6 +18,7 @@
      contact: 'contact-us',
      operators: 'operators',
      placeHolder: 'waiting',
+     cryptoCurrencies: 'crypto-currencies',
 
      admin: 'admin',
      dashboard: 'dashboard',

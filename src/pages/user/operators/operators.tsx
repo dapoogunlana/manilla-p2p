@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { operatorList } from './operators-data';
 import './operators.scss';
 
@@ -37,6 +38,8 @@ function DiscoverDetail() {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

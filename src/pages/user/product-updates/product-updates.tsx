@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link  } from 'react-router-dom';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './product-updates.scss';
 
@@ -141,6 +142,8 @@ function ProductUpdates() {
             </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

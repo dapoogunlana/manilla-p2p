@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
 import { termsList } from './terms-data';
 import './terms.scss';
@@ -55,6 +56,8 @@ function Terms() {
           })}
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

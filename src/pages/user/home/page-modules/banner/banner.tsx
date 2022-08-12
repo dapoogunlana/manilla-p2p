@@ -1,5 +1,5 @@
 import React, {  } from 'react';
-import { AppleButton, PlaystoreButton } from '../../../../../assets/images';
+import { AppleButton, PlaystoreButton, CommingSoon } from '../../../../../assets/images';
 import './banner.scss';
 import { WebIntroVid, MobileIntroVid } from '../../../../../assets/videos';
 import { WhitePaper } from '../../../../../assets/files';
@@ -32,6 +32,9 @@ function Hero() {
             <img src={ AppleButton } className='store-link' alt="" />
             <span></span>
             <img src={ PlaystoreButton } className='store-link' alt="" />
+          </div>
+          <div className='coming-soon imh max200'>
+            <img src={CommingSoon} alt="" />
           </div>
         </div>
       </div>

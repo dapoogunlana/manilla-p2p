@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams  } from 'react-router-dom';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { careerData } from './careers-detail-data';
 import './careers-detail.scss';
 
@@ -120,6 +121,8 @@ function CareerDetail(props: any) {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

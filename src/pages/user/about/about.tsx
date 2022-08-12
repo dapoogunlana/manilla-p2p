@@ -4,6 +4,7 @@ import { routeConstants } from '../../../services/constants/route-constants';
 import { AboutImg, OurTech } from '../../../assets/images';
 import './about.scss';
 import { advisorList, teamList } from './about-data';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 
 function Home() {
 
@@ -149,6 +150,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

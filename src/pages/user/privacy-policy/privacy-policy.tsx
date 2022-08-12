@@ -3,6 +3,7 @@ import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
 import './privacy-policy.scss';
 import { privactPolicyList } from './privacy-policy-data';
 import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 
 function PrivacyPolicy() {
 
@@ -55,6 +56,8 @@ function PrivacyPolicy() {
           })}
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

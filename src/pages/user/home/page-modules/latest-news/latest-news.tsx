@@ -4,8 +4,7 @@ import {  } from '../../../../../assets/images';
 import { Carousel } from '../../../../../components/block-components/carousel';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { clipToLength } from '../../../../../services/utils/data-manipulation-utilits';
-import { discoverList } from '../../../discover/discover-data';
-import { newsList } from './latest-new-data';
+import { newsList } from '../../../news/news-data';
 import './latest-news.scss';
 
 function LatestNews() {
@@ -13,7 +12,7 @@ function LatestNews() {
   const navigate = useNavigate();
 
   const goToItem = (id: number) => {
-    navigate(`/${routeConstants.discover}/${id}`);
+    navigate(`/${routeConstants.industryNews}/${id}`);
   }
   
   const previewCount = () => {
@@ -26,7 +25,7 @@ function LatestNews() {
       return 1;
     }
   }
-  const imageSlide = discoverList.map((item, index) => {
+  const imageSlide = newsList.map((item, index) => {
     return <div className='news-slide-holder' key={index} onClick={() => goToItem(item.id)}>
       <div className='news-slide' data-aos='fade-up'>
         <div className='image-holder'>

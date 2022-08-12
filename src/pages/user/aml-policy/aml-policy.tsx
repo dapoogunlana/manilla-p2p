@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { PolicyImg, BulletKiteIcon } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { segrigateString } from '../../../services/utils/data-manipulation-utilits';
 import { amlPolicyList } from './aml-policy-data';
 import './aml-policy.scss';
@@ -56,6 +57,8 @@ function AMLPolicy() {
           })}
         </div>
       </div>
+      
+      <ContactSect/>
     </div>
   );
 }

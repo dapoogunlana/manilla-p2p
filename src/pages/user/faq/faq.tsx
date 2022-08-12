@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { DropdownArrow } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { faqData } from './faq-data';
 import './faq.scss';
 
@@ -62,6 +63,8 @@ function Faq(props: any) {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

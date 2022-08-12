@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { IlearnData, learnDataInitialState, learnList } from '../learn/learn-data';
 import './learn-detail.scss';
 
@@ -66,6 +67,8 @@ function LearnDetail() {
           </button>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

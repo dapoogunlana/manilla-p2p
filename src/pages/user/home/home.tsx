@@ -14,6 +14,7 @@ import AppModal from '../../../components/block-components/app-modal/app-modal';
 import HeroPopup from './page-modules/hero-popup/hero-popup';
 import './home.scss';
 import SubSpace from './page-modules/banner-sub-space/banner-sub-space';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 
 function About(props: any) {
 
@@ -50,6 +51,7 @@ function About(props: any) {
       {/* <Testimonials/> */}
       <Media/>
       <LatestNews/>
+      <ContactSect/>
       {viewModal && <AppModal onCloseModal={toggleModal} styleClass="m80-im"><HeroPopup/></AppModal>}
     </div>
   );

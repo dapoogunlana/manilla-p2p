@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { DropdownArrow } from '../../../assets/images';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { routeConstants } from '../../../services/constants/route-constants';
 import { careerData } from './careers-data';
 import './careers.scss';
@@ -85,6 +86,8 @@ function Careers(props: any) {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }

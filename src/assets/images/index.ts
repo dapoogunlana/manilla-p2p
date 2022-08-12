@@ -33,6 +33,7 @@ import HowToInnerRing from './how-to-inner-ring.svg';
 import HowToOuterRing from './how-to-outer-ring.svg';
 import ServiceLogo from './service-logo.png';
 import VidCurve from './vid-curve.svg';
+import CommingSoon from './comming-soon.png';
 
 import AppleButton from './icons/apple-button.svg';
 import AppleButtonWhite from './icons/apple-button-white.svg';
@@ -78,6 +79,7 @@ import CalendarIcon from './icons/calendar-icon.svg';
 import PointStar from './icons/point-star.svg';
 import PopupIconPartnership from './icons/popup-icon-partnership.svg';
 import PopupIconWhitelist from './icons/popup-icon-whitelist.svg';
+import SupportImage from './icons/support-image.svg';
 
 import ServiceImageAirtime from './service-image-airtime.jpg';
 import ServiceImageApy from './service-image-apy.jpg';
@@ -152,8 +154,8 @@ import newsImg1Musking from './article-images/news-img1-musking.jpg';
 import newsImg2Vitalik from './article-images/news-img2-vitalik.jpg';
 import newsImg3FarGone from './article-images/news-img3-far-gone.jpg';
 import newsImg4Mining from './article-images/news-img4-mining.jpg';
-import newsImg5InitialCoin from './article-images/news-img5-initial-coin.jpg';
-import newsImg6Unhackable from './article-images/news-img6-unhackable.jpg';
+import newsImg5Unhackable from './article-images/news-img6-unhackable.jpg';
+import newsImg6InitialCoin from './article-images/news-img5-initial-coin.jpg';
 import newsImg7Wallet from './article-images/news-img7-wallet.jpg';
 import newsImg8Contracts from './article-images/news-img8-contracts.jpg';
 
@@ -193,6 +195,7 @@ export {
     HowToOuterRing,
     ServiceLogo,
     VidCurve,
+    CommingSoon,
 
     AppleButton,
     AppleButtonWhite,
@@ -238,6 +241,7 @@ export {
     PointStar,
     PopupIconPartnership,
     PopupIconWhitelist,
+    SupportImage,
 
     ServiceImageAirtime,
     ServiceImageApy,
@@ -312,8 +316,8 @@ export {
     newsImg2Vitalik,
     newsImg3FarGone,
     newsImg4Mining,
-    newsImg5InitialCoin,
-    newsImg6Unhackable,
+    newsImg5Unhackable,
+    newsImg6InitialCoin,
     newsImg7Wallet,
     newsImg8Contracts,
 }

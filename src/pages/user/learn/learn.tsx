@@ -4,6 +4,7 @@ import { CalendarIcon } from '../../../assets/images';
 import { learnList } from './learn-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './learn.scss';
+import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 
 function Learn() {
 
@@ -60,6 +61,8 @@ function Learn() {
           </div>
         </div>
       </div>
+
+      <ContactSect/>
     </div>
   );
 }
