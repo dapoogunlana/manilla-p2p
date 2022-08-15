@@ -1,9 +1,13 @@
-import { DiscoverBtcImg } from '../../../assets/images';
+import {
+    HelpImgDepositHelp,
+    HelpImgDepositInfo,
+    HelpImgDepositTime,
+} from '../../../assets/images';
 
 export const helpList = [
     {
         id: 1,
-        image: DiscoverBtcImg,
+        image: HelpImgDepositHelp,
         title: 'Need Help With Deposits?',
         content: [
             `No problem. Depositing money into your Manilla wallet is easy. Once we know a little bit more about you (aka verifying your identity), follow the steps below and you’re good to go:`,
@@ -18,7 +22,7 @@ export const helpList = [
     },
     {
         id: 2,
-        image: DiscoverBtcImg,
+        image: HelpImgDepositTime,
         title: 'How Long Until My Deposit Shows In My Manilla Wallet?',
         content: [
             `When you make a deposit, it may take some time for your money to arrive with us. We will allocate your deposit as soon as it arrives and we’ll send you an email notification (or push notification if you use our app). The times below shows how long it takes to allocate deposits in your country.`,
@@ -71,7 +75,7 @@ export const helpList = [
     },
     {
         id: 3,
-        image: DiscoverBtcImg,
+        image: HelpImgDepositInfo,
         title: 'Things You Need To Know About Deposits',
         content: [
             `As with any service, there are a few basic requirements in linking your bank account to your Manilla wallet:

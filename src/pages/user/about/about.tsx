@@ -27,10 +27,9 @@ function Home() {
         <div className='top-grid'>
           <div className='text-sect md-open text-center'>
             <p>
-              Manilla Finance is an innovative cryptocurrency exchange with advancements from conventional 
-              financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
-              unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
-              tokens to buy and sell on Manilla Finance. 
+              Manilla Finance is an innovative and highly scalable project bridging traditional fintech solutions from Web2.0 
+              to Web3.0 and enabling multiple bills settlement in cryptocurrency. The platform also sports an intuitive P2P 
+              exchange. 
             </p>
             <p>
               Serving millions of users in 44 countries and counting, we are providing a safe and trustworthy 
@@ -75,7 +74,7 @@ function Home() {
               </p>
             </div>
           </div>
-          <div className='row pt-5'>
+          <div className='row py-5'>
             <div className='col-md-6 center-info'>
               <div className='w90 py-3'>
                 <h4 className='center-mobile'>Our Technology</h4>

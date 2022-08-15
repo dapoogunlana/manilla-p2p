@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import HalfBanner from '../../../components/block-components/half-banner/half-banner';
 import { IlearnData, learnDataInitialState, learnList } from '../learn/learn-data';
 import './learn-detail.scss';
 
@@ -27,14 +28,10 @@ function LearnDetail() {
   
   return (
     <div className='learn-detail'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>Discover</h2>
-        </div>
-      </div>
+
+      <HalfBanner>Learn</HalfBanner>
+
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max800'>
           <button className='solid-button-2' onClick={returnToList}>
             <div className='spread-info'></div>

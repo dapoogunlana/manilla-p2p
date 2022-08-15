@@ -4,6 +4,8 @@ import './assets/styles/general.scss';
 import './App.scss';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   AOS.init({
@@ -12,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <BaseRoute></BaseRoute>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate  } from 'react-router-dom';
-import { DropdownArrow } from '../../../assets/images';
+import { CareersBanerImg } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import HalfBannerImaged from '../../../components/block-components/half-banner-imaged/half-banner-imaged';
 import { routeConstants } from '../../../services/constants/route-constants';
 import { careerData } from './careers-data';
 import './careers.scss';
@@ -34,14 +35,8 @@ function Careers(props: any) {
   }
   return (
     <div className='careers'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>Careers</h2>
-        </div>
-      </div>
+      <HalfBannerImaged image={CareersBanerImg}>Careers</HalfBannerImaged>
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max900 pb-4'>
           <p className='text-center'>
             Manilla Finance is a customer centric blockchain firm and this regularly requires  the support of skilled and 

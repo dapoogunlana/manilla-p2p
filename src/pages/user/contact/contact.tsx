@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Link  } from 'react-router-dom';
+import HalfBannerImaged from '../../../components/block-components/half-banner-imaged/half-banner-imaged';
 import { countryList } from '../../../services/constants/country-list';
-import { routeConstants } from '../../../services/constants/route-constants';
+import { ContactBanerImg } from '../../../assets/images';
 import './contact.scss';
 
 function Contact() {
@@ -12,14 +12,8 @@ function Contact() {
   
   return (
     <div className='contact'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>Contact Us</h2>
-        </div>
-      </div>
+      <HalfBannerImaged image={ContactBanerImg}>Contact Us</HalfBannerImaged>
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max1200 pb-5'>
             <h6 className='text-center'>For Business & Partnership Inquiries, Kindly Fill the Form Below to Reach Out to Us</h6>
           <div className='cover w96 max600' data-aos="fade-up">

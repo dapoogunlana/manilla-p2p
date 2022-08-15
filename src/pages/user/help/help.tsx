@@ -32,7 +32,53 @@ function Help() {
   
   return (
     <div className='help'>
-      <div className='top-band'>
+      <div className='w90 max1200 pt-5'>
+        <div className='header-spacer'></div>
+        <h2 className='pt-3'>Help</h2>
+
+        <hr className='mb-0' />
+
+        <div className='row' data-aos="fade-up">
+          <div className='col-md-6 center-info-front py-4'>
+            <div className='imh max500 shadowed rad-10'>
+              <img src={helpList[0].image} className='rad-10' alt="" />
+            </div>
+          </div>
+          <div className='col-md-6 center-info'>
+            <div className='max500'>
+              <p className='c-faint-font mb-2'>{helpList[0].date}</p>
+              <h3>{helpList[0].title}</h3>
+              <p>{clipToLength(helpList[0].content[0] || helpList[0].title || helpList[0].content[1], 100)}</p>
+              <p className='c-pr-blue increased clickable' onClick={() => goToItem(helpList[0].id)}>Read More</p>
+            </div>
+          </div>
+        </div>
+
+        <hr className='pt-0 mt-0' />
+
+        <div className='row'>
+            {helpList.map((item, index) => {
+              if (index > 0 && index < 4) {
+                return <div className='col-lg-4 colmd-6 py-3' data-aos="fade-up" key={index}>
+                  <div className='imh max500 shadowed rad-10'>
+                    <img src={item.image} className='rad-10' alt="" />
+                  </div>
+                  <div className='max500 pt-3'>
+                    <p className='c-faint-font mb-2'>{item.date}</p>
+                    <h4 className='increased'>{item.title}</h4>
+                    <p className='c-pr-blue increased-soft clickable' onClick={() => goToItem(item.id)}>Read More</p>
+                  </div>
+                </div>
+              }
+            })}
+          
+        </div>
+
+        <hr className='pt-0 mt-0' />
+
+      </div>
+
+      {/* <div className='top-band'>
         <div className='header-spacer'></div>
         <div className='topic-space' data-aos="fade-in">
           <h2>Help</h2>
@@ -63,23 +109,8 @@ function Help() {
             </div>
             })}
           </div>
-          {/* <div className='cover' data-aos="fade-up">
-            {discoverList.map((item, index) => {
-              return <div className="item my-4 clickable" key={index} onClick={() => openQuestion(index)}>
-                <div className="spread-info py-2">
-                  <h6 className="increased-soft mb-0">{item.question}</h6>
-                  <div className={'view-icon' + (item.active ? ' full-view' : '')}>
-                    <img src={DropdownArrow} alt="" />
-                  </div>
-                </div>
-                <div className={"answer" + (item.active ? ' full' : '')}>
-                  <p className="reduced-soft mb-0">{item.answer}</p>
-                </div>
-              </div>
-            })}
-          </div> */}
         </div>
-      </div>
+      </div> */}
 
       <ContactSect/>
     </div>

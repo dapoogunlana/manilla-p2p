@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { DropdownArrow } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { faqData } from './faq-data';
+import { FaqBanerImg } from '../../../assets/images';
 import './faq.scss';
+import HalfBannerImaged from '../../../components/block-components/half-banner-imaged/half-banner-imaged';
 
 function Faq(props: any) {
 
@@ -29,14 +30,8 @@ function Faq(props: any) {
   
   return (
     <div className='faq'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>FAQs</h2>
-        </div>
-      </div>
+      <HalfBannerImaged image={FaqBanerImg}>FAQ</HalfBannerImaged>
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max1200'>
           <div className='cover' data-aos="fade-up">
             <div className='item-card'>

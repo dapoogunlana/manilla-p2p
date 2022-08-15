@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import HalfBanner from '../../../components/block-components/half-banner/half-banner';
 import { IindustryNews } from '../../../services/constants/interfaces/data-schemas';
 import { newsList } from '../news/news-data';
 import './news-detail.scss';
@@ -34,15 +35,10 @@ function NewsDetail() {
   });
   
   return (
-    <div className='news'>
-      <div className='top-band w90 max800'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-        <div className='header-spacer'></div>
-          <h2>Industry News</h2>
-          <hr className='mb-0' />
-        </div>
-      </div>
+    <div className='news-detail'>
+
+      <HalfBanner>Industry News</HalfBanner>
+    
       <div className='content-body py-5'>
         <div className='w90 max800'>
           <button className='solid-button-2' onClick={returnToList}>

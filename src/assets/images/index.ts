@@ -34,6 +34,13 @@ import HowToOuterRing from './how-to-outer-ring.svg';
 import ServiceLogo from './service-logo.png';
 import VidCurve from './vid-curve.svg';
 import CommingSoon from './comming-soon.png';
+import HelpImgDepositHelp from './help-img-deposit-help.jpg';
+import HelpImgDepositInfo from './help-img-deposit-info.jpg';
+import HelpImgDepositTime from './help-img-deposit-time.jpg';
+import CareersBanerImg from './careers-baner-img.png';
+import ContactBanerImg from './contact-baner-img.png';
+import FaqBanerImg from './faq-baner-img.png';
+import UpdateBanerImg from './update-baner-img.png';
 
 import AppleButton from './icons/apple-button.svg';
 import AppleButtonWhite from './icons/apple-button-white.svg';
@@ -196,6 +203,13 @@ export {
     ServiceLogo,
     VidCurve,
     CommingSoon,
+    HelpImgDepositHelp,
+    HelpImgDepositInfo,
+    HelpImgDepositTime,
+    CareersBanerImg,
+    ContactBanerImg,
+    FaqBanerImg,
+    UpdateBanerImg,
 
     AppleButton,
     AppleButtonWhite,

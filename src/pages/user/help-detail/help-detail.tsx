@@ -5,6 +5,7 @@ import { helpList } from '../help/help-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './help-detail.scss';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import HalfBanner from '../../../components/block-components/half-banner/half-banner';
 
 function HelpDetail() {
 
@@ -25,14 +26,10 @@ function HelpDetail() {
   
   return (
     <div className='help-detail'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>Help</h2>
-        </div>
-      </div>
+
+      <HalfBanner>Help</HalfBanner>
+
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max800'>
           <button className='solid-button-2' onClick={returnToList}>
             <div className='spread-info'></div>

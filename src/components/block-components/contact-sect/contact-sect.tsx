@@ -14,9 +14,9 @@ function ContactSect(props: any) {
                 <div className="w96 max500" data-aos="fade-up">
                   <h3>Instant Support when you need us</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    We understand how important prompt response to your inquiries means to you. The support team is here for You!
                   </p>
-                  <Link to={routeConstants.contact}>
+                  <Link to={`/${routeConstants.contact}`}>
                     <button className="solid-button-2c">Contact Us</button>
                   </Link>
                 </div>

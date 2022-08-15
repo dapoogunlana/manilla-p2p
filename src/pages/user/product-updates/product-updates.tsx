@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { routeConstants } from '../../../services/constants/route-constants';
+import { UpdateBanerImg } from '../../../assets/images';
 import './product-updates.scss';
+import HalfBannerImaged from '../../../components/block-components/half-banner-imaged/half-banner-imaged';
 
 function ProductUpdates() {
 
@@ -65,14 +67,8 @@ function ProductUpdates() {
   
   return (
     <div className='product-updates'>
-      <div className='top-band'>
-        <div className='header-spacer'></div>
-        <div className='topic-space' data-aos="fade-in">
-          <h2>Product Updates</h2>
-        </div>
-      </div>
+      <HalfBannerImaged image={UpdateBanerImg}>Product Updates</HalfBannerImaged>
       <div className='content-body py-5'>
-        <div className='w90 max1200 py-5'></div>
         <div className='w90 max1200'>
             <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
