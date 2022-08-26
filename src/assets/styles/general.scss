@@ -1481,6 +1481,19 @@
     grid-template-columns: 50% 50%;
   }
 }
+.grid5b2 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  @include mediaM(1100px) {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  @include mediaM(850px) {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+  @include mediaM(550px) {
+    grid-template-columns: 50% 50%;
+  }
+}
 
 .carousel-grid5 {
   display: grid;

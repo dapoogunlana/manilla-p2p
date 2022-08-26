@@ -1,6 +1,6 @@
 import React, {  } from 'react';
 import { Link } from 'react-router-dom';
-import { UnlockingUtilitiesPhone, UnlockingUtilitiesPoints, UnlockingUtilitiesStats, ReferralPhone, VidCurve } from '../../../../../assets/images';
+import { UnlockingUtilitiesPhone, UnlockingUtilitiesPoints, UnlockingUtilitiesStats, ReferralPhone, VidCurve, ManillaLaptop } from '../../../../../assets/images';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import './unolcking-utilities.scss';
 
@@ -15,7 +15,7 @@ function UnolckingUtilities() {
           technology to continuously improve our ecosystem with hopes that before long, crypto will be used for just 
           about anything in our everyday payments on the Manilla application.
         </p>
-        <div className='mock-sect'>
+        <div className='mock-sect full-hidden'>
           <div className='phone-mockup'>
             <div className='imh'>
               <img src={UnlockingUtilitiesPhone} data-aos='fade-up' alt="" />
@@ -28,6 +28,13 @@ function UnolckingUtilities() {
             <img src={UnlockingUtilitiesStats} data-aos='zoom-in' data-aos-delay='800' alt="" />
           </div>
         </div>
+      </div>
+      <div className='w96 max1400' data-aos="zoom-in">
+        <div className='imh'>
+          <img src={ManillaLaptop} alt="" />
+        </div>
+      </div>
+      <div className='w90 max1000'>
         <h3 className='text-center mt-5 pt-3 mb-0'>Referral Program</h3>
         <div className='row ref'>
           <div className='col-md-6 center-info'>
@@ -39,7 +46,7 @@ function UnolckingUtilities() {
                 simply get a referral link."
               </p>
                 <Link to={routeConstants.userLogin}>
-                  <button className='hollow-button-2cb rad-10-im' data-aos='fade-up' data-aos-delay='500'>Login to get referral link</button>
+                  <button className='hollow-button-2cb rad-10-im' data-aos='fade-up' data-aos-delay='500'>Join Waitlist</button>
                 </Link>
             </div>
           </div>
@@ -54,7 +61,7 @@ function UnolckingUtilities() {
         <div className='top-curve'>
           <img src={VidCurve} alt="" />
         </div>
-        <div className='w96 max1200'>
+        <div className='w96 max1200 pt-5'>
           <div className='row'>
             <div className='col-md-6 center-info'>
               <div className='vid-space' data-aos='fade-up'>
@@ -79,7 +86,7 @@ function UnolckingUtilities() {
                   a 99% uptime. Manilla has you secured, whether you are a first-time customer or a return trader.
                 </p>
                 <Link to={routeConstants.userLogin}>
-                  <button className='hollow-button-2cb rad-10-im'>Login to get referral link</button>
+                  <button className='hollow-button-2cb rad-10-im'>Join Waitlist</button>
                 </Link>
               </div>
             </div>

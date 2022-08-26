@@ -37,8 +37,12 @@ function CryptoList(props: any) {
                   <img src={'https://www.cryptocompare.com' + item.CoinInfo?.ImageUrl} alt="" />
                 </div>
                 <div className='spread-info-front'>
-                  <p className='mb-0 price'>
-                    {item.CoinInfo?.FullName}
+                  <div className='price'>
+                    <span className='pr-0 mr-0 mb-0'>
+                      {item.CoinInfo?.FullName}
+                    </span>
+                  </div>
+                  <p className='pl-0 ml-0 mb-0'>
                     <span className='ml-3 mb-0 faint-font reduced'>{item.CoinInfo.Internal}</span>
                   </p>
                 </div>

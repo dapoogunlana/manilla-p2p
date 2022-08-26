@@ -1,5 +1,4 @@
 
-
 import React, { } from "react";
 import { Link } from "react-router-dom";
 import { FooterLogo } from "../../../assets/images";
@@ -23,7 +22,7 @@ function UserFooter() {
   return (
     <div className="footer pt-2 relative">
       <div className="pattern-holder"></div>
-      <div className="w90 p-3 relative">
+      <div className="w96 p-3 relative">
         <div className="w96 max1200 mt-5">
           <div className="w96 max600">
             <p className="text-center">Subscribe to our newsletter and get notifications to stay updated</p>
@@ -71,7 +70,7 @@ function UserFooter() {
             <div className="footer-sect">
               <h6 className="mt-2 mb-3 pb-1 font-weight-bold">Explore</h6>
               <p className="reduced-soft">
-                <Link to={routeConstants.industryNews}>Industry News</Link>
+                <Link to={routeConstants.industryNews}>Industry Updates</Link>
               </p>
               <p className="reduced-soft">
                 <Link to={routeConstants.faq}>FAQs</Link>
@@ -84,6 +83,9 @@ function UserFooter() {
               </p>
               <p className="reduced-soft">
                 <Link to={routeConstants.productUpdates}>Product Updates</Link>
+              </p>
+              <p className="reduced-soft">
+                <Link to={routeConstants.operators}>Global Operators</Link>
               </p>
             </div>
             <div className="footer-sect">
@@ -100,12 +102,13 @@ function UserFooter() {
             </div>
             <div className="footer-sect sector-2">
               <div className="fit-footer-logo mt-2">
-                <Link to={routeConstants.home}>
-                  <img src={FooterLogo} width={'170px'} alt="" />
-                </Link>
-                
+                <div className="logo-holder">
+                  <Link to={routeConstants.home}>
+                    <img src={FooterLogo} alt="" />
+                  </Link>
+                </div>
               </div>
-              <div className="spread-info-front mt-3 media-icons">
+              <div className="spread-info-back mt-3 media-icons">
                   <a href={socialLinks.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
                   <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
                   <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>
@@ -113,12 +116,14 @@ function UserFooter() {
             </div>
           </div>
           <div className="footer-brand-sect">
-            <div className="fit-footer-logo w90 max200 imh mt-2">
-                <Link to={routeConstants.home}>
-                  <img src={FooterLogo} alt="" />
-                </Link>
+            <div className="spread-info-back mt-2">
+                <div className="max150 imh">
+                  <Link to={routeConstants.home}>
+                    <img src={FooterLogo} alt="" />
+                  </Link>
+                </div>
             </div>
-            <div className="center-info mt-3 media-icons">
+            <div className="spread-info-back mt-3 media-icons">
                 <a href={socialLinks.telegram} target="_blank" rel="noreferrer"><i className="fab fa-telegram-plane increased-x"></i></a>
                 <a href={socialLinks.twitter} target="_blank" rel="noreferrer" className="mx-3"><i className="fab fa-twitter increased-x"></i></a>
                 <a href={socialLinks.linkedin} target="_blank" rel="noreferrer"><i className="fab fa-linkedin increased-x"></i></a>

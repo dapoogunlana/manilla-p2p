@@ -28,6 +28,7 @@ import Testimonial3 from './testimonial-3.png';
 import UnlockingUtilitiesPhone from './unlocking-utilities-phone.png';
 import UnlockingUtilitiesPoints from './unlocking-utilities-points.svg';
 import UnlockingUtilitiesStats from './unlocking-utilities-stats.png';
+import ManillaLaptop from './web-laptop.png';
 import waysToTradeImg from './ways-to-trade-img.png';
 import HowToInnerRing from './how-to-inner-ring.svg';
 import HowToOuterRing from './how-to-outer-ring.svg';
@@ -41,6 +42,7 @@ import CareersBanerImg from './careers-baner-img.png';
 import ContactBanerImg from './contact-baner-img.png';
 import FaqBanerImg from './faq-baner-img.png';
 import UpdateBanerImg from './update-baner-img.png';
+import OperatorCurve from './operator-curve.svg';
 
 import AppleButton from './icons/apple-button.svg';
 import AppleButtonWhite from './icons/apple-button-white.svg';
@@ -81,6 +83,10 @@ import WhyChooseIcon24Support from './icons/why-choose-icon-24-support.svg';
 import WhyChooseIconHighSpeed from './icons/why-choose-icon-high-speed.svg';
 import WhyChooseIconIntuitive from './icons/why-choose-icon-intuitive.svg';
 import WhyChooseIconSecurity from './icons/why-choose-icon-security.svg';
+import WhyChooseIcon24SupportDark from './icons/why-choose-icon-24-support-dark.svg';
+import WhyChooseIconHighSpeedDark from './icons/why-choose-icon-high-speed-dark.svg';
+import WhyChooseIconIntuitiveDark from './icons/why-choose-icon-intuitive-dark.svg';
+import WhyChooseIconSecurityDark from './icons/why-choose-icon-security-dark.svg';
 import DropdownArrow from './icons/dropdown-arrow.svg';
 import CalendarIcon from './icons/calendar-icon.svg';
 import PointStar from './icons/point-star.svg';
@@ -95,6 +101,15 @@ import ServiceImageExchange from './service-image-exchange.jpg';
 import ServiceImageGiftCard from './service-image-gift-card.jpg';
 import ServiceImageUtilities from './service-image-utilities.jpg';
 
+import MediaCompanyAzcentral from './media-companies/media-company-azcentral.png';
+import MediaCompanyBitcoinist from './media-companies/media-company-bitcoinist.png';
+import MediaCompanyCoinMarketCap from './media-companies/media-company-CoinMarketCap.png';
+import MediaCompanyDailyHerald from './media-companies/media-company-daily-herald.png';
+import MediaCompanyEminectra from './media-companies/media-company-eminectra.png';
+import MediaCompanyFinancialContent from './media-companies/media-company-financial-content.png';
+import MediaCompanyGlobe from './media-companies/media-company-globe.jpg';
+import MediaCompanyGuardian from './media-companies/media-company-guardian.png';
+import MediaCompanyNairametrics from './media-companies/media-company-nairametrics.png';
 import MediaCompanyBlockchainNews from './media-companies/media-company-blockchain-news.png';
 import MediaCompanyCoindesk from './media-companies/media-company-coindesk.png';
 import MediaCompanyCoingreek from './media-companies/media-company-coingreek.png';
@@ -197,6 +212,7 @@ export {
     UnlockingUtilitiesPhone,
     UnlockingUtilitiesPoints,
     UnlockingUtilitiesStats,
+    ManillaLaptop,
     waysToTradeImg,
     HowToInnerRing,
     HowToOuterRing,
@@ -210,6 +226,7 @@ export {
     ContactBanerImg,
     FaqBanerImg,
     UpdateBanerImg,
+    OperatorCurve,
 
     AppleButton,
     AppleButtonWhite,
@@ -250,6 +267,10 @@ export {
     WhyChooseIconHighSpeed,
     WhyChooseIconIntuitive,
     WhyChooseIconSecurity,
+    WhyChooseIcon24SupportDark,
+    WhyChooseIconHighSpeedDark,
+    WhyChooseIconIntuitiveDark,
+    WhyChooseIconSecurityDark,
     DropdownArrow,
     CalendarIcon,
     PointStar,
@@ -264,6 +285,15 @@ export {
     ServiceImageGiftCard,
     ServiceImageUtilities,
 
+    MediaCompanyAzcentral,
+    MediaCompanyBitcoinist,
+    MediaCompanyCoinMarketCap,
+    MediaCompanyDailyHerald,
+    MediaCompanyEminectra,
+    MediaCompanyFinancialContent,
+    MediaCompanyGlobe,
+    MediaCompanyGuardian,
+    MediaCompanyNairametrics,
     MediaCompanyBlockchainNews,
     MediaCompanyCoindesk,
     MediaCompanyCoingreek,

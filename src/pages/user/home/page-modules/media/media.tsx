@@ -17,7 +17,13 @@ function Media() {
   }
   const imageSlide = mediaList.map((item, index) => {
     return <div className='media-slide' key={index}>
-      <img src={item.image} alt="" />
+      {
+        item.link ? 
+        <a href={item.link} target={'_blank'}>
+          <img src={item.image} alt="" />
+        </a> :
+        <img src={item.image} alt="" />
+      }
     </div>
   })
   return (

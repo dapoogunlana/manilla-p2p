@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { apiLinks } from '../../../../../config/environment';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { sendRequest } from '../../../../../services/utils/request';
-import { exchangeList, whyChooseList } from './pre-info-data';
+import { exchangeList } from './pre-info-data';
+import WhyUs from '../why-us/why-us';
 import './pre-info.scss';
 
 function About(props: any) {
@@ -44,7 +45,7 @@ function About(props: any) {
                     <span className='ml-3 mb-0 faint-font reduced'>{item.CoinInfo.Internal}</span>
                   </p>
                 </div>
-                <div className='spread-info-front'>
+                <div className='spread-info-front pl-4'>
                   <h6 className='mb-0 increased'>{item.DISPLAY.USD.PRICE}</h6>
                 </div>
                 <div className='spread-info-front'>
@@ -70,29 +71,7 @@ function About(props: any) {
           
         </div>
       </div>
-      <div className='why-us pb-5'>
-        <div className='w96 max1200 pb-4'>
-          <h3 className='text-center mt-5 pt-5'>Why Choose Us</h3>
-          <div className='row'>
-            {whyChooseList.map((item, index) => {
-              return <div className='col-lg-3 col-md-6' key={index} data-aos="fade-up" data-aos-delay={index * 200}>
-              <div className={'why-us-card auto-flip' + (index % 2 ? '2' : '')}>
-                <div className='text'>
-                  <p className='mb-0'>{item.text}</p>
-                </div>
-                <div className='topic'>
-                  <div className='icon-sect'>
-                    <img src={item.icon} alt="" />
-                  </div>
-
-                  <h6>{item.topic}</h6>
-                </div>
-              </div>
-            </div>
-            })}
-          </div>
-        </div>
-      </div>
+      <WhyUs spaceUp={true} />
     </>
   );
 }

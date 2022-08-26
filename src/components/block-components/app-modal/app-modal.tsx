@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { forwardRef, useEffect, useImperativeHandle } from "react";
 import './app-modal.scss';
 
-function AppModal(props: any) {
+const AppModal = forwardRef((props: any, ref: any) => {
 
   const closeModal = () => {
     document.body.style.overflow = '';
-    const vidModal: any = document.querySelector('.app-modal');
+    const appModal: any = document.querySelector('.app-modal');
     const modalContent: any = document.querySelector('.modal-content');
-    if (vidModal && modalContent) {
-      vidModal.style.opacity = '';
+    if (appModal && modalContent) {
+      appModal.style.opacity = '';
       modalContent.style.transform = '';
     }
     setTimeout(() => {
@@ -16,6 +16,9 @@ function AppModal(props: any) {
       props.onCloseModal();
     }, 500);
   }
+  useImperativeHandle(ref, () => ({
+    closeModal
+  }));
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -42,5 +45,5 @@ function AppModal(props: any) {
       </div>
     </div>
   );
-}
+})
 export default AppModal;

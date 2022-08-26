@@ -35,7 +35,7 @@
                 // align-items: center;
                 // justify-content: space-between;
                 display: grid;
-                grid-template-columns: 70px 200px 150px auto 180px 160px;
+                grid-template-columns: 70px 250px 150px auto 180px 160px;
                 // grid-template-columns: auto auto auto auto auto auto;
                 p{
                     white-space: nowrap;
@@ -44,7 +44,7 @@
                 }
                 .price{
                     text-align: left;
-                    min-width: 220px;
+                    max-width: 150px;
                 }
             }
         }

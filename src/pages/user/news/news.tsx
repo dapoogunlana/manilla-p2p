@@ -23,7 +23,7 @@ function News() {
     <div className='news'>
       <div className='w90 max1200 pt-5'>
         <div className='header-spacer'></div>
-        <h2 className='pt-3'>Trending Industry News</h2>
+        <h2 className='pt-3'>Trending Industry Updates</h2>
 
         <hr className='mb-0' />
 

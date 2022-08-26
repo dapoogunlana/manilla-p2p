@@ -70,12 +70,15 @@ function Services() {
             slidesPerView={previewCount()}
             spaceBetween={0}
             data={serviceCarousel}
-          />
-          <div className='text-center pt-4'>
-            <Link to={routeConstants.userLogin}>
-              <button className='solid-button-2c px-5'><span className='px-5'>Get Started</span></button>
-            </Link>
-          </div>
+            navigation={true}
+            pagination={true}
+            customPagination={true}
+        />
+        <div className='text-center pt-4'>
+          <Link to={routeConstants.userLogin}>
+            <button className='hollow-button-2cw px-5'><span className='px-5'>Join Waitlist</span></button>
+          </Link>
+        </div>
       </div>
     </div>
   );
