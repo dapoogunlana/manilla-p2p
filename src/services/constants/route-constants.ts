@@ -23,4 +23,5 @@
      admin: 'admin',
      dashboard: 'dashboard',
      adminRegister: 'register',
+     adminLogin: 'log-in',
  };

@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { countryList } from '../../../services/constants/country-list';
 import { regexConstants } from '../../../services/constants/validation-regex';
 import { sendRequest } from '../../../services/utils/request';
+import { toast } from 'react-toastify';
 
 import './register-form.scss';
 
@@ -27,10 +28,12 @@ function RegisterForm() {
         }, (res: any) => {
             controls.setSubmitting(false);
             setResponse(<p className='c-green mb-0 pt-2'>{res.message}</p>);
+            toast.success(res.message);
             controls.resetForm();
         }, (err: any) => {
             controls.setSubmitting(false);
-            setResponse(<p className='c-red-faded mb-0 pt-2'>{err.error?.emailError || err.message || 'Service downtime'}</p>);
+            setResponse(<p className='c-red-faded mb-0 pt-2'>{err.error?.emailError || err.message || 'Unable to complete'}</p>);
+            toast.error(err.error?.emailError || err.message || 'Unable to complete');
         });
     }
 

@@ -35,7 +35,7 @@ function CareerDetail(props: any) {
           setTimeout(() => window.history.back(), 1000);
       }, (err: any) => {
           controls.setSubmitting(false);
-          const errorMessage = err.error?.emailError || err.message || 'Service downtime';
+          const errorMessage = err.error?.emailError || err.message || 'Unable to complete';
           setResponse(<p className='c-red-faded mb-0 pt-2'>{errorMessage}</p>);
           toast.error(errorMessage);
       });
