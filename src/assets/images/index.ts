@@ -8,6 +8,7 @@ import BigAngleBg from './big-angle-bg.jpg';
 import SmallAngleBg from './small-angle-bg.jpg';
 import FlipLineBg from './flip-line-bg.jpg';
 import YellowAngleBackdrop from './yellow-angle-backdrop.svg';
+import WhiteAngleBackdrop from './white-angle-backdrop.svg';
 import Banner3Bg from './banner-3-bg.jpg';
 
 import AboutImg from './about-img.png';
@@ -93,6 +94,9 @@ import PointStar from './icons/point-star.svg';
 import PopupIconPartnership from './icons/popup-icon-partnership.svg';
 import PopupIconWhitelist from './icons/popup-icon-whitelist.svg';
 import SupportImage from './icons/support-image.svg';
+import LogoIcon from './icons/logo-icon.svg';
+import DashboardIconSubscribe from './icons/dashboard-icon-subscribe.svg';
+import DashboardIconTimeLeft from './icons/dashboard-icon-time-left.svg';
 
 import ServiceImageAirtime from './service-image-airtime.jpg';
 import ServiceImageApy from './service-image-apy.jpg';
@@ -192,6 +196,7 @@ export {
     SmallAngleBg,
     FlipLineBg,
     YellowAngleBackdrop,
+    WhiteAngleBackdrop,
     Banner3Bg,
 
     AboutImg,
@@ -277,6 +282,9 @@ export {
     PopupIconPartnership,
     PopupIconWhitelist,
     SupportImage,
+    LogoIcon,
+    DashboardIconSubscribe,
+    DashboardIconTimeLeft,
 
     ServiceImageAirtime,
     ServiceImageApy,

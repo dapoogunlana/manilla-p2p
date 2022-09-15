@@ -1,14 +1,20 @@
 
-import React, { } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FooterLogo } from "../../../assets/images";
 import { routeConstants } from "../../../services/constants/route-constants";
 import { useNavigate } from "react-router-dom";
 import { socialLinks } from "../../../config/environment";
+import { sendRequest } from "../../../services/utils/request";
+import { toast } from 'react-toastify';
+import { Formik } from "formik";
+import * as Yup from "yup";
 
-function UserFooter() {
+function UserFooter(props: any) {
   
   const navigate = useNavigate();
+  const [response, setResponse] = useState<any>();
+  const [location, setLocation] = useState<any>();
 
   const goToPageSection = (page: string, section: string) => {
     navigate(page);
@@ -19,6 +25,49 @@ function UserFooter() {
     }, 100);
   }
 
+  const subscribe = (email: string, controls: any) => {
+
+    // return console.log({location});
+
+    sendRequest(
+      {
+        method: 'POST',
+        url: 'visitor',
+        body: {
+          email: email,
+          geolocation: location,
+          subscribed: true,
+          rating: 5
+        }
+      },
+      (res: any) => {
+          controls.setSubmitting(false);
+          setResponse(<p className='c-green mb-0 pt-2'>{res.message}</p>);
+          setTimeout(() => setResponse(''), 7000);
+          controls.resetForm();
+          toast.success(res.message);
+        },
+      (err: any) => {
+          controls.setSubmitting(false);
+          const errorMessage = err.error?.emailError || err.message || 'Unable to complete';
+          setResponse(<p className='c-red-faded mb-0 pt-2'>{errorMessage}</p>);
+          toast.error(errorMessage);
+          setTimeout(() => setResponse(''), 7000);
+        }
+    );
+  }
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((location) => {
+      console.log({location});
+      setLocation({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        accuracy: location.coords.accuracy,
+      });
+    }, null, {});
+  }, [props]);
+
   return (
     <div className="footer pt-2 relative">
       <div className="pattern-holder"></div>
@@ -26,12 +75,56 @@ function UserFooter() {
         <div className="w96 max1200 mt-5">
           <div className="w96 max600">
             <p className="text-center">Subscribe to our newsletter and get notifications to stay updated</p>
-            <div className="subscribe-grid inc-grid w96 max600 mb-4">
+            {/* <div className="subscribe-grid inc-grid w96 max600 mb-4">
                 <input type="text" placeholder="Enter your email" />
                 <span></span>
                 <button className="md-close">Subscribe</button>
                 <button className="md-open">Go</button>
-            </div>
+            </div> */}
+            <Formik
+                initialValues={{
+                  email: '',
+                }}
+                validationSchema={Yup.object().shape({
+                  email: Yup.string().required().email('Invalid Email'),
+                })}
+                onSubmit={(values, formParams) => subscribe(values.email, formParams)}
+              >
+                {
+                  (props) => {
+                    const {
+                      values,
+                      touched,
+                      errors,
+                      isSubmitting,
+                      handleChange,
+                      handleSubmit
+                    } = props;
+                    return <form action="" onSubmit={handleSubmit}>
+                      <div className='subscribe-grid inc-grid w96 max600 mb-1'>
+                            <input
+                              type="email"
+                              placeholder='Enter email address'
+                              name='email'
+                              id='email'
+                              value={values.email}
+                              onChange={handleChange}
+                              onBlur={() => touched.email = false}
+                            />
+                            <span></span>
+                            <button type='submit' className="md-close" disabled={isSubmitting}>Subscribe</button>
+                            <button type='submit' className="md-open" disabled={isSubmitting}>Go</button>
+                            {/* <button type='submit' className='solid-button-2c rad-10 shadowed' disabled={isSubmitting}>
+                              {isSubmitting ? 'Processing..' : 'Submit'}
+                            </button> */}
+                      </div>
+                      {touched.email && errors.email && <p className='c-red-faded text-center'>{errors.email}</p>}
+                      { isSubmitting && <div className='text-center'>Processing...</div> }
+                      { response && <div className=' text-center'>{response}</div> }
+                    </form>
+                  }
+                }
+              </Formik>
           </div>
           <div className="footer-sector">
             <div className="footer-sect">

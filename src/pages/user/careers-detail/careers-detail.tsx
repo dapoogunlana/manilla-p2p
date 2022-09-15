@@ -154,7 +154,7 @@ function CareerDetail(props: any) {
                               id='email'
                               value={values.email}
                               onChange={handleChange}
-                              className={(errors.lastName && touched.lastName) ? 'error-input' : ''}
+                              className={(errors.email && touched.email) ? 'error-input' : ''}
                             />
                             {touched.email && errors.email && <p className='c-red reduced'>{errors.email}</p>}
                           </div>

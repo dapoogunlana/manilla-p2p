@@ -24,4 +24,8 @@
      dashboard: 'dashboard',
      adminRegister: 'register',
      adminLogin: 'log-in',
+     adminStatistics: 'stats',
+     adminPosts: 'posts',
+     adminWaitlistMessages: 'waitlist-messages',
+     adminVisitorMessages: 'visitor-messages',
  };
