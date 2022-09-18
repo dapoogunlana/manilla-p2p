@@ -97,6 +97,7 @@ import SupportImage from './icons/support-image.svg';
 import LogoIcon from './icons/logo-icon.svg';
 import DashboardIconSubscribe from './icons/dashboard-icon-subscribe.svg';
 import DashboardIconTimeLeft from './icons/dashboard-icon-time-left.svg';
+import DashboardIconEmail from './icons/dashboard-icon-email.svg';
 
 import ServiceImageAirtime from './service-image-airtime.jpg';
 import ServiceImageApy from './service-image-apy.jpg';
@@ -285,6 +286,7 @@ export {
     LogoIcon,
     DashboardIconSubscribe,
     DashboardIconTimeLeft,
+    DashboardIconEmail,
 
     ServiceImageAirtime,
     ServiceImageApy,

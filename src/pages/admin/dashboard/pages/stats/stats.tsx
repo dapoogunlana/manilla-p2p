@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link  } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { Logger } from 'sass';
-import { DashboardIconSubscribe, DashboardIconTimeLeft } from '../../../../../assets/images';
+import { DashboardIconEmail, DashboardIconSubscribe, DashboardIconTimeLeft } from '../../../../../assets/images';
 import MiniLoader from '../../../../../components/block-components/mini-loader/mini-loader';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { sendRequest } from '../../../../../services/utils/request';
@@ -18,6 +18,9 @@ function Stats(props: any) {
   const [visitors, setVisitors] = useState([]);
   const [visitorsLoaded, setVisitorsLoaded] = useState(false);
   const [visitorCount, setVisitorCount] = useState('...');
+
+  const [subscriberEmails, setSubscriberEmails] = useState('...')
+  const [visitorEmails, setVisitorEmails] = useState('...')
 
   const updatePortfolioSwitch = (switcher: string) => {
     setPortfolioSwitch(switcher);
@@ -78,38 +81,96 @@ function Stats(props: any) {
     });
   }
 
+
+  const loadSubscriberMails = () => {
+    sendRequest({
+      url: 'whitelist-mail'
+    },
+    (res: any) => {
+      setSubscriberEmails(res.data.length || 0);
+    }, (err: any) => {
+      toast.error(err.message || 'Unable to load');
+    });
+  }
+  const loadVisitorMails = () => {
+    sendRequest({
+      url: 'visitor-mail'
+    },
+    (res: any) => {
+      setVisitorEmails(res.data.length || 0);
+    }, (err: any) => {
+      toast.error(err.message || 'Unable to load');
+    });
+  }
+
   useEffect(() => {
     loadSubscribers();
+    loadSubscriberMails();
     loadVisitors();
+    loadVisitorMails();
   },[props]);
   
   return (
-    <div className='w90 max1000 py-5'>
+    <div className='w90 max1000 py-5 stats-page'>
       <div className='row'>
-        <div className='col-md-6 pb-3'>
+        <div className='col-lg-3 col-md-6 pb-3'>
           <div className='main-card' data-aos='zoom-in'>
-            <div className='spread-info'>
-              <div className='pb-3'>
-                <img src={DashboardIconTimeLeft} width={70} alt="" />
+            <div className='description-grid-50'>
+              <div className='relative'>
+                <div className='icon-holder'>
+                  <img src={DashboardIconTimeLeft} width={50} alt="" />
+                </div>
               </div>
               <div className=''>
-                <h6 className='text-right'>Waitlist</h6>
-                <h1 className='pt-4 text-right'>{ subscriberCount }</h1>
+                <h6 className='text-right mb-0 mt-2'>Waitlist</h6>
               </div>
             </div>
+            <h1 className='pt-4 text-right'>{ subscriberCount }</h1>
           </div>
         </div>
-        <div className='col-md-6 pb-3'>
+        <div className='col-lg-3 col-md-6 pb-3'>
           <div className='main-card' data-aos='zoom-in'>
-            <div className='spread-info'>
-              <div className='pb-3'>
-                <img src={DashboardIconSubscribe} width={70} alt="" />
+            <div className='description-grid-50'>
+              <div className='relative'>
+                <div className='icon-holder'>
+                  <img src={DashboardIconEmail} width={50} alt="" />
+                </div>
               </div>
               <div className=''>
-                <h6 className='text-right'>Visitors</h6>
-                <h1 className='pt-4 text-right'>{ visitorCount }</h1>
+                <h6 className='text-right mb-0 mt-2'>Messages</h6>
               </div>
             </div>
+            <h1 className='pt-4 text-right'>{ subscriberEmails }</h1>
+          </div>
+        </div>
+        <div className='col-lg-3 col-md-6 pb-3'>
+          <div className='main-card' data-aos='zoom-in'>
+            <div className='description-grid-50'>
+              <div className='relative'>
+                <div className='icon-holder'>
+                  <img src={DashboardIconSubscribe} width={50} alt="" />
+                </div>
+              </div>
+              <div className=''>
+                <h6 className='text-right mb-0 mt-2'>Visitors</h6>
+              </div>
+            </div>
+            <h1 className='pt-4 text-right'>{ visitorCount }</h1>
+          </div>
+        </div>
+        <div className='col-lg-3 col-md-6 pb-3'>
+          <div className='main-card' data-aos='zoom-in'>
+            <div className='description-grid-50'>
+              <div className='relative'>
+                <div className='icon-holder'>
+                  <img src={DashboardIconEmail} width={50} alt="" />
+                </div>
+              </div>
+              <div className=''>
+                <h6 className='text-right mb-0 mt-2'>Messages</h6>
+              </div>
+            </div>
+            <h1 className='pt-4 text-right'>{ visitorEmails }</h1>
           </div>
         </div>
       </div>

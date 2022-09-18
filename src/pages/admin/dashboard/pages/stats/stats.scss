@@ -69,6 +69,10 @@
   background-color: rgb(236, 236, 236);
 }
 
+.icon-holder{
+  position: absolute;
+}
+
 .red-button, .blue-button{
   border: none;
   padding: 4px 9px;
@@ -94,5 +98,24 @@
   background-color: $primary-blue;
   &:hover{
     background-color: $primary-blue-hover;
+  }
+}
+
+.stats-page{
+  .description-grid-50{
+    @include mediaM(1100px) {
+      display: block;
+    }
+    @include mediaM(991px) {
+      display: grid;
+    }
+    .icon-holder{
+      @include mediaM(1100px) {
+        display: none;
+      }
+      @include mediaM(991px) {
+        display: block;
+      }
+    }
   }
 }
