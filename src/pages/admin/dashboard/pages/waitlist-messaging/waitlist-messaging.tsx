@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link  } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Logger } from 'sass';
-import { findConfigFile } from 'typescript';
-import { DashboardIconSubscribe, DashboardIconTimeLeft } from '../../../../../assets/images';
-import MiniLoader from '../../../../../components/block-components/mini-loader/mini-loader';
-import { routeConstants } from '../../../../../services/constants/route-constants';
 import { sendRequest } from '../../../../../services/utils/request';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -14,15 +8,12 @@ import './waitlist-messaging.scss';
 function WaitlistMessaging(props: any) {
 
   const [emailPosts, setEmailPosts] = useState<any[]>([]);
-  const [submitMsg, setSubmitMsg] = useState('Send Mail');
-  const [postLoading, setPostLoading] = useState(false);
 
   const getEmailPosts = () => {
     sendRequest({
-      url: 'mail'
+      url: 'whitelist-mail'
     },
     (res: any) => {
-      console.log(res);
       setEmailPosts(res.data || []);
     }, (err: any) => {
       toast.error(err.message || 'Unable to load');
@@ -30,8 +21,6 @@ function WaitlistMessaging(props: any) {
   }
 
   const broadcastMail = (form: any, controls: any) => {
-    setSubmitMsg('processing');
-    setPostLoading(true);
     const mailObj = {
       title: form.mail_title,
       subTitle: form.mail_subtitle,
@@ -39,21 +28,18 @@ function WaitlistMessaging(props: any) {
       Disclaimer: form.mail_disclaimer
     };
     sendRequest({
-      url: 'mail',
+      url: 'whitelist-mail',
       method: 'POST',
       body: mailObj,
     },
     (res: any) => {
-      console.log(res);
+      controls.setSubmitting(false);
       toast.success(res.message);
+      controls.resetForm();
       getEmailPosts();
-      form = {};
-      setSubmitMsg('Send Mail');
-      setPostLoading(false);
     }, (err: any) => {
-      setSubmitMsg('Send Mail');
-      setPostLoading(false);
-      toast.error(err.message || 'Unable to load');
+      controls.setSubmitting(false);
+      toast.error(err.message || 'Unable to send');
     });
   }
 
@@ -72,15 +58,14 @@ function WaitlistMessaging(props: any) {
     getEmailPosts();
   },[props]);
   return (
-    <div className='waitlist-post'>
+    <div className='waitlist-post w90 max900 py-5'>
       
       <div className="row">
           <div className="col-lg-12" data-aos="zoom-in" data-aos-delay="400">
-              <div className="db-table-card card-hover">
-                  <div className="db-card-header-slim cover"></div>
-                  <div className="db-card-body">
+              <div className="card-hover">
+                  <div className="db-card-body cover">
                       <div className="content-holder item-card">
-                          <h5 className="mb-3 text-center">New Broadcast Email To Website Subscribers</h5>
+                          <h5 className="mb-3 text-center">New Broadcast Email To Wait List Subscribers</h5>
                           <Formik
                             initialValues={{
                               mail_title: '',
@@ -108,7 +93,7 @@ function WaitlistMessaging(props: any) {
                                 } = props;
                                 return <form action="" onSubmit={handleSubmit}>
                                   <div className='row'>
-                                    <div className='col-md-6'>
+                                    <div className='col-md-12'>
                                       <div className='input-grp'>
                                         <label>Email Title</label>
                                         <input
@@ -123,7 +108,7 @@ function WaitlistMessaging(props: any) {
                                         {touched.mail_title && errors.mail_title && <p className='c-red reduced'>{errors.mail_title}</p>}
                                       </div>
                                     </div>
-                                    <div className='col-md-6'>
+                                    <div className='col-md-12'>
                                       <div className='input-grp'>
                                         <label>Email Subtitle</label>
                                         <input
@@ -140,7 +125,7 @@ function WaitlistMessaging(props: any) {
                                     </div>
                                   </div>
                                   <div className='row'>
-                                    <div className='col-md-6'>
+                                    <div className='col-md-12'>
                                       <div className='input-grp'>
                                         <label>Email Body</label>
                                         <textarea
@@ -154,7 +139,7 @@ function WaitlistMessaging(props: any) {
                                         {touched.mail_body && errors.mail_body && <p className='c-red reduced'>{errors.mail_body}</p>}
                                       </div>
                                     </div>
-                                    <div className='col-md-6'>
+                                    <div className='col-md-12'>
                                       <div className='input-grp'>
                                         <label>Email Disclaimer</label>
                                         <input
@@ -183,45 +168,24 @@ function WaitlistMessaging(props: any) {
                               }
                             }
                           </Formik>
-                          {/* <form method="POST" className="register-form" #f="ngForm" name="blog-form" (ngSubmit)="broadcastMail()" id="blog-form">
-                              <div className="form-group">
-                                  <label className="mb-0"><small>Email Title</small></label><br>
-                                  <input type="text" required name="mail_title" required [(ngModel)]="form.mail_title" id="mail_title" placeholder="Enter Title"/>
-                              </div>
-                              <div className="form-group">
-                                  <label className="mb-0"><small>Email Subtitle</small></label><br>
-                                  <input type="text" required name="mail_subtitle" required [(ngModel)]="form.mail_subtitle" id="mail_subtitle" placeholder="Enter Subtitle"/>
-                              </div>
-                              <div className="form-group">
-                                  <label className="mb-0"><small>Email Body</small></label><br>
-                                  <textarea required rows="3" name="mail_body" required [(ngModel)]="form.mail_body" id="mail_body" placeholder="Enter Description"></textarea>
-                              </div>
-                              <div className="form-group">
-                                  <label className="mb-0"><small>Email Disclaimer</small></label><br>
-                                  <input type="text" required name="mail_disclaimer" required [(ngModel)]="form.mail_disclaimer" id="mail_disclaimer" placeholder="Enter Disclaimer"/>
-                              </div>
-                              <div className="form-group form-button">
-                                  <button type="submit" [disabled]="f.invalid || postLoading">{{ submitMsg }}</button>
-                              </div>
-                          </form> */}
-                          
                       </div>
                   </div>
               </div>
           </div>
       </div>
 
-      <h3 className="mt-5">Email History</h3>
+      <h3 className="mt-5">Wait List Email History</h3>
       <div className="row">
-          <div className="col-lg-12" data-aos="zoom-in" data-aos-delay="1000">
+          <div className="col-lg-12">
               {
                 emailPosts.map((post, index) => {
-                  return <div className="db-table-card card-hover" key={index}>
+                  return <div className=" db-table-card card-hover" key={index} data-aos="zoom-in" data-aos-delay="500">
                   <div className="db-card-body">
                       <div className={"content-holder2" + (!post.active ? 'compress-answer' : '')} onClick={() => openQuestion(index)}>
-                          <h5>{ post.title }</h5>
-                          <p style={{fontStyle: 'italic'}}>{ post.dateSent }</p>
-                           {/* <p className="folded">{{ post.brief }}</p> */}
+                          <div className='spread-info'>
+                            <h5 className='font-weight-bold'>{ post.title }</h5>
+                            <p style={{fontStyle: 'italic', fontSize: '0.8em'}}>{ new Date(post.dateSent).toDateString() }</p>
+                          </div>
                           <div className="answer">
                               <h6>{ post.subTitle }</h6>
                               <p>{ post.body }</p>
@@ -231,6 +195,13 @@ function WaitlistMessaging(props: any) {
                   </div>
               </div>
                 })
+              }
+          </div>
+          <div className="col-lg-12" data-aos="zoom-in">
+              {
+                emailPosts.length === 0 && <div className='main-card pt-3 mt-4'>
+                  <h5 className='text-center'>No emails sent yet</h5>
+                </div>
               }
           </div>
       </div>

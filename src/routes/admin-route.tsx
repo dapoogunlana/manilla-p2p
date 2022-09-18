@@ -31,7 +31,6 @@ function AdminRoute() {
           </Route>
       </Routes>
     </Suspense>
-    // <div>Happy</div>
   );
 }
 

@@ -13,10 +13,7 @@ function Sidebar(props: any) {
       <NavLink to={`/${routeConstants.admin}/${routeConstants.adminStatistics}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
         <span>Statistics</span>
       </NavLink>
-      {/* <NavLink to={`/${routeConstants.admin}/${routeConstants.adminWaitlistMessages}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
-        <span>Waitlist</span>
-      </NavLink> */}
-      <NavLink to={`/${routeConstants.admin}/${routeConstants.adminVisitorMessages}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
+      <NavLink to={`/${routeConstants.admin}/${routeConstants.adminWaitlistMessages}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
         <span>Waitlist</span>
       </NavLink>
       <NavLink to={`/${routeConstants.admin}/${routeConstants.adminVisitorMessages}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>

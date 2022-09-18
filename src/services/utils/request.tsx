@@ -22,17 +22,15 @@ export const sendRequest = (params: IrequestFormat, success: Function, failure: 
     })
     .then((result) => success(result?.data))
     .catch(error => {
-        console.log({
-            error,
-            status: error.request.status
-        });
+
         const errorStatus = error.request.status;
 
         if(errorStatus === 401 || errorStatus === 403) {
             sessionStorage.clear();
             setTimeout(() => {
                 window.location.href = `/${routeConstants.admin}/${routeConstants.adminLogin}`;
-            }, 500)
+            }, 500);
+            return
         }
         return failure(error.response?.data);
     });
