@@ -4,7 +4,7 @@ import { IrequestFormat } from '../constants/interfaces/request-schema';
 import { routeConstants } from '../constants/route-constants';
 
 export const sendRequest = (params: IrequestFormat, success: Function, failure: Function) => {
-    const request = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.devUrl });
+    const request = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.activeUrl });
     request.interceptors.request.use((req: any) => {
     
         if(params.header) {

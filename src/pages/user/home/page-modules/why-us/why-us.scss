@@ -1,167 +1,60 @@
 @import '../../../../../assets/styles/variables.scss';
 
 .why-us{
-    background-image: url(../../../../../assets/images/blue-brick-bg.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: #DBE6F0;
+    position: relative;
+    padding-bottom: calc(7vh + 7vw);
     .why-spacing{
         padding-top: calc(30vh + 4px);
     }
-    h3,h6{
-        color: $white;
+    .block-side{
+        @include mediaW(768px) {
+            border-left: 1px solid $black-faint4;
+        }
     }
     .why-us-card{
-        background-color: $primary-card;
-        text-align: center;
-        width: 96%;
         margin: 1em auto;
-        max-width: 290px;
-        padding: 45px 15px 35px;
-        border-radius: 15px;
-        box-shadow: 10px 10px 2px 0 $black-faint4;
+        padding: 0 15px 0;
         transition: 0.4s ease;
         position: relative;
+        @include mediaM(767px) {
+            text-align: center;
+        }
         h6{
             font-size: 1.3em;
-            min-height: 85px;
-            margin-top: 3em;
+            min-height: 25px;
+            color: $red-hover;
         }
-        transition: 0.4s ease;
-        .text-sect{
-            position: absolute;
-            width: 90%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) scale(-1, 1);
-            opacity: 0;
-            .writeup{
-                padding: 8px;
-                border-radius: 10px;
-                border: 2px dashed $black-faint2;
-                width: 100%;
-                position: relative;
-                min-height: 265px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                @include mediaM(767px) {
-                    min-height: 200px;
-                }
+        p{
+            @include mediaW(768px) {
+                font-size: 0.85em;
             }
         }
+        transition: 0.4s ease;
         .topic{
             z-index: 10;
             position: relative;
-            .icon-sect{
-                width: 80%;
-                margin: auto;
-                max-width: 150px;
-                height: 150px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 25px;
-                border: 1px dashed $white-faint2;
-                box-shadow: 10px 10px 2px 0 $black-faint3;
+            .icon{
+                width: 60%;
+                max-width: 100px;
+                @include mediaM(767px) {
+                    margin: auto;
+                }
             }
-            // .flip-menu{}
-        }
-    }
-    .hover-flip{
-        transition: 0.4s ease;
-        &:hover{
-            background-color: $primary-card-highlight;
-            transform: scale(-1, 1);
-            .topic{
-                opacity: 0
-            }
-            .text-sect{
-                opacity: 1;
+            .writeup{
+                @include mediaW(768px) {
+                    min-height: 170px;
+                }
             }
         }
     }
-    .flipped{
-        transition: 0.4s ease;
-        background-color: $primary-card-highlight;
-        transform: scale(-1, 1);
-        .topic{
-            opacity: 0
-        }
-        .text-sect{
-            opacity: 1;
-        }
-        .unflipped-menu{
-            // width: 0;
-            pointer-events: none;
-            // display: none;
-            // position: absolute;
-            opacity: 0;
+    .bottom-arc{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        img{
+            width: 100%;
         }
     }
-    .auto-flip{
-        animation: flipper 15s ease;
-        animation-iteration-count:infinite;
-        .topic{
-            animation: flipper-topic 15s ease;
-            animation-iteration-count:infinite;
-        }
-        .text-sect{
-            animation: flipper-text 15s ease;
-            animation-iteration-count:infinite;
-        }
-    }
-    .auto-flip2{
-        animation: flipper 15s ease;
-        animation-iteration-count:infinite;
-        animation-delay: 3s;
-        .topic{
-            animation: flipper-topic 15s ease;
-            animation-iteration-count:infinite;
-            animation-delay: 3s;
-        }
-        .text-sect{
-            animation: flipper-text 15s ease;
-            animation-iteration-count:infinite;
-            animation-delay: 3s;
-        }
-    }
-}
-
-@keyframes flipper {
-    0% {
-        background-color: $primary-card;
-        transform: scale(1, 1);
-    }
-    34% {
-        background-color: $primary-card;
-        transform: scale(1, 1);
-    }
-    40% {
-        background-color: $primary-card-highlight;
-        transform: scale(-1, 1);
-    }
-    94% {
-        background-color: $primary-card-highlight;
-        transform: scale(-1, 1);
-    }
-    100% {
-        background-color: $primary-card;
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes flipper-topic {
-    0% { opacity: 1 }
-    34% { opacity: 1 }
-    40% { opacity: 0 }
-    94% { opacity: 0 }
-    100% { opacity: 1 }
-}
-
-@keyframes flipper-text {
-    0% { opacity: 0 }
-    34% { opacity: 0 }
-    40% { opacity: 1 }
-    94% { opacity: 1 }
-    100% { opacity: 0 }
 }

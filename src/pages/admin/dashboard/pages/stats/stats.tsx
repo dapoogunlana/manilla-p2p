@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { Logger } from 'sass';
 import { DashboardIconEmail, DashboardIconSubscribe, DashboardIconTimeLeft } from '../../../../../assets/images';
 import MiniLoader from '../../../../../components/block-components/mini-loader/mini-loader';
+import { apiLinks } from '../../../../../config/environment';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { sendRequest } from '../../../../../services/utils/request';
 import './stats.scss';
@@ -46,10 +47,11 @@ function Stats(props: any) {
   }
 
   const downloadWaitlist = () => {
-    toast.info( 'Feature Under Development');
+    window.open(`${apiLinks.activeUrl}whitelist-subscriber/download`);
   }
   const downloadVisitorlist = () => {
-    toast.error( 'Feature Under Development');
+    // toast.error( 'Feature Under Development');
+    window.open(`${apiLinks.activeUrl}visitor/download`);
   }
 
   const loadSubscribers = () => {

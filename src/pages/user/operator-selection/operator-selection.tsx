@@ -3,7 +3,7 @@ import { useNavigate  } from 'react-router-dom';
 import { allOperators } from '../../../assets/images/all-operators';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import { routeConstants } from '../../../services/constants/route-constants';
-import WhyUs from '../home/page-modules/why-us/why-us';
+import WhyUs2 from '../home/page-modules/why-us-2/why-us-2';
 import './operator-selection.scss';
 
 function OperatorSelection() {
@@ -44,7 +44,7 @@ function OperatorSelection() {
           </div>
         </div>
       </div>
-      <WhyUs flipped={true} />
+      <WhyUs2 flipped={true} />
       <ContactSect/>
     </div>
   );

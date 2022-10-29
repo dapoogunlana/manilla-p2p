@@ -57,12 +57,12 @@ function HowTo() {
                   <img src={HowToIconEasyBuy} alt="" />
                 </div>
                 <div className='topic'>
-                  <h6 className='pl-2 mb-0 reduced-soft'>EASILY BUY/SELL</h6>
+                  <h6 className='pl-2 mb-0 reduced-soft'>PAY BILLS & TRADE DIGITAL ASSETS</h6>
                 </div>
               </div>
               <p className='mb-0 pt-3 reduced'>
-                Whether you are a buyer or seller, an expert trader or a beginner, this platform has been designed to be 
-                intuitive and guide you through all the processes.
+                Whether you are a buyer or seller, an expert trader, a beginner, or you want to pay everyday bills, this 
+                platform has been designed to be intuitive and guide you through all the processes.
               </p>
             </div>
           </div>

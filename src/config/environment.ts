@@ -6,6 +6,7 @@ export const apiLinks = {
     // url: 'https://vanilla-network.herokuapp.com/api/v4/',
     url: 'https://vanillanftwhitelist.herokuapp.com/api/v4/',
     next: ``,
+    activeUrl: 'https://vanillanftwhitelist.herokuapp.com/api/v4/',
 }
 
 export const externalLinkConstants = {

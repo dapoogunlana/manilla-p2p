@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link  } from 'react-router-dom';
-import { routeConstants } from '../../../services/constants/route-constants';
 import { AboutImg, OurTech } from '../../../assets/images';
 import './about.scss';
 import { advisorList, teamList } from './about-data';
@@ -32,7 +30,7 @@ function Home() {
               exchange. 
             </p>
             <p>
-              Serving millions of users in 44 countries and counting, we are providing a safe and trustworthy 
+              With intent to serve millions of people in 44 countries, we are providing a safe and trustworthy 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
               airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
@@ -49,7 +47,7 @@ function Home() {
               tokens to buy and sell on Manilla Finance. 
             </p>
             <p>
-              With serving millions of users in 44 countries and counting, we are providing a safe and trustworthy 
+              With intent to serve millions of people in 44 countries, we are providing a safe and trustworthy 
               mechanism having financial features such as spot lending, staking, ticketing, utilities bill payment and 
               airtime/data purchase using cryptocurrency. The Manilla Finance is powered by Manilla Technogies along with 
               other ecosystem development partners. 
