@@ -10,6 +10,7 @@ import FlipLineBg from './flip-line-bg.jpg';
 import YellowAngleBackdrop from './yellow-angle-backdrop.svg';
 import WhiteAngleBackdrop from './white-angle-backdrop.svg';
 import Banner3Bg from './banner-3-bg.jpg';
+import BottomWhiteArc from './bottom-white-arc.svg';
 
 import AboutImg from './about-img.png';
 import BannerImg1 from './banner-img-1.png';
@@ -98,6 +99,23 @@ import LogoIcon from './icons/logo-icon.svg';
 import DashboardIconSubscribe from './icons/dashboard-icon-subscribe.svg';
 import DashboardIconTimeLeft from './icons/dashboard-icon-time-left.svg';
 import DashboardIconEmail from './icons/dashboard-icon-email.svg';
+
+import SbCardIconEarn from './icons/sb-card-icon-earn.svg';
+import SbCardIconExperience from './icons/sb-card-icon-experience.svg';
+import SbCardIconExplore from './icons/sb-card-icon-explore.svg';
+import SubBannerIconBorrow from './icons/sub-banner-icon-borrow.svg';
+import SubBannerIconData from './icons/sub-banner-icon-data.svg';
+import SubBannerIconEarn from './icons/sub-banner-icon-earn.svg';
+import SubBannerIconExchange from './icons/sub-banner-icon-exchange.svg';
+import SubBannerIconGiftcard from './icons/sub-banner-icon-giftcard.svg';
+import SubBannerIconUtility from './icons/sub-banner-icon-utility.svg';
+import WhyIconInterface from './icons/why-icon-interface.svg';
+import WhyIconSecurity from './icons/why-icon-security.svg';
+import WhyIconSpeed from './icons/why-icon-speed.svg';
+import WhyIconSupport from './icons/why-icon-support.svg';
+
+import SbDottedSpinner from './sb-dotted-spinner.png';
+import SbSpinnerImage from './sb-spinner-image.png';
 
 import ServiceImageAirtime from './service-image-airtime.jpg';
 import ServiceImageApy from './service-image-apy.jpg';
@@ -199,6 +217,7 @@ export {
     YellowAngleBackdrop,
     WhiteAngleBackdrop,
     Banner3Bg,
+    BottomWhiteArc,
 
     AboutImg,
     BannerImg1,
@@ -287,6 +306,23 @@ export {
     DashboardIconSubscribe,
     DashboardIconTimeLeft,
     DashboardIconEmail,
+
+    SbCardIconEarn,
+    SbCardIconExperience,
+    SbCardIconExplore,
+    SubBannerIconBorrow,
+    SubBannerIconData,
+    SubBannerIconEarn,
+    SubBannerIconExchange,
+    SubBannerIconGiftcard,
+    SubBannerIconUtility,
+    WhyIconInterface,
+    WhyIconSecurity,
+    WhyIconSpeed,
+    WhyIconSupport,
+
+    SbDottedSpinner,
+    SbSpinnerImage,
 
     ServiceImageAirtime,
     ServiceImageApy,
