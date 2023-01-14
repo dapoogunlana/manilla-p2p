@@ -4,8 +4,8 @@ import './how-to.scss';
 
 function HowTo() {
   return (
-    <div className='how-to py-5' id='how-it-works'>
-      <div className='w96 max1200 py-4'>
+    <div className='how-to pt-5' id='how-it-works'>
+      <div className='w96 max1200 pt-4'>
         <h3 className='text-center'>How It Works</h3>
         <div className='step-ring'>
           <div className='outer-ring'>

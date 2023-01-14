@@ -2,28 +2,61 @@
 
 .hero-case{
     width: 100%;
+    background-image: url(../../../../../assets/images/blue-brick-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .hero-case-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        .bg-shape{
+            clip-path: polygon(85% 0%, 100% 0%, 100% 100%, 50% 100%);
+            height: 100vh;
+            background-image: url(../../../../../assets/images/light-blue-brick-bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    }
     .hero{
         width: 100%;
-        background-color: $black-faint1;
+        // background-color: $black-faint1;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        // flex-direction: column;
         position: relative;
         overflow: hidden;
         padding: 0 5%;
+        color: $white;
         h1{
             // font-size: 2em;
             color: $white;
         }
+        .download-button{
+            color: $white;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: rgba(0, 0, 0, 0);
+            border-bottom: 1px solid $white;
+            transition: 0.3s ease;
+            &:hover{
+                border-color: $white;
+            }
+        }
+        .sect90-max350{
+            width: 90%;
+            max-width: 350px;
+        }
         .top-space{
             display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            align-items: flex-start;
+            justify-content: space-around;
             flex-direction: column;
             width: 100%;
-            height: 90vh;
+            min-height: 60vh;
             .full{
                 width: 100%;
             }
@@ -37,66 +70,23 @@
                     transform: scale(1.06) translateY(6px);
                 }
             }
-            @include mediaW(850px) {
-                button{
-                    padding-top: 0.8em;
-                    padding-bottom: 0.8em;
+            .coming-soon{
+                width: 60%;
+                margin: 5px auto;
+                transition: 0.3s ease;
+                max-height: 0;
+                overflow: hidden;
+            }
+            .action-buttons{
+                &:hover{
+                    .coming-soon{
+                        max-height: 100px;
+                    }
                 }
             }
-            .coming-soon{
-                width: 70%;
-                margin: 5px auto;
-                animation: fading 4s ease 0s infinite;
-            }
-        }
-        .underband{
-            position: absolute;
-            width: 110%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            @include mediaM(1200px) {
-                width: 120%;
-            }
-            @include mediaM(1100px) {
-                width: 140%;
-            }
-            @include mediaM(1000px) {
-                width: 160%;
-            }
-            @include mediaM(850px) {
-                width: 180%;
-            }
-            // @include mediaM(750px) {
-            //     width: 210%;
-            // }
-            // @include mediaM(650px) {
-            //     width: 240%;
-            // }
-            // @include mediaM(560px) {
-            //     width: 300%;
-            // }
-            // @include mediaM(450px) {
-            //     width: 400%;
-            // }
-            // @include mediaM(350px) {
-            //     width: 460%;
-            // }
-            @include mediaM(750px) {
-                width: 100%;
-            }
-            @include mediaM(450px) {
-                width: 118%;
-            }
-            video{
-                width: 100%;
+            @include mediaM(767px) {
+                min-height: 70vh;
             }
         }
     }
-}
-
-@keyframes fading {
-    0% { opacity: 0;}
-    50% { opacity: 1;}
-    100% { opacity: 0;}
 }

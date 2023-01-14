@@ -17,7 +17,7 @@ function ContactSect(props: any) {
                     We understand how important prompt response to your inquiries means to you. The support team is here for You!
                   </p>
                   <Link to={`/${routeConstants.contact}`}>
-                    <button className="solid-button-2c">Contact Us</button>
+                    <button className="hollow-button-2cb">Contact Us</button>
                   </Link>
                 </div>
             </div>

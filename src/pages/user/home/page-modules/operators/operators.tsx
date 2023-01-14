@@ -56,7 +56,7 @@ function Operators(props: any) {
 
         <div className='text-center w96 pb-5'>
           <Link to={routeConstants.operators}>
-            <button className='hollow-button-2cb rad-10' data-aos='fade-up' onClick={openModal}>See Supported Operators in Your Region</button>
+            <button className='hollow-button-2cwo rad-10' data-aos='fade-up' onClick={openModal}>Supported Operators</button>
           </Link>
         </div>
       </div>

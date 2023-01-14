@@ -1,6 +1,6 @@
 import React, {  } from 'react';
 import { Link } from 'react-router-dom';
-import { ServiceLogo } from '../../../../../assets/images';
+import { ServiceLogo, topCurve } from '../../../../../assets/images';
 import { Carousel } from '../../../../../components/block-components/carousel';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { serviceList, serviceList1half, serviceList2half } from './services-data';
@@ -54,13 +54,17 @@ function Services() {
   });
   return (
     <div className='services py-5' id='features'>
+      <div className='curve-holder'>
+        <img src={topCurve} alt="" />
+      </div>
+      <div className='py-5'></div>
       <div className='w96 max1200 py-5'>
         <div className='w96 max800'>
-          <h3 className='text-center'>Manilla Service Suite</h3>
-          <p className='text-center py-3'>
+          <h3 className='text-center pt-3'>Manilla Service Suite</h3>
+          {/* <p className='text-center py-3'>
             Explore Endless Possibilities With Our Service Suite That Gives You the Power to Pay for a Variety 
             of Services Using Cryptocurrency
-          </p>
+          </p> */}
         </div>
         <Carousel
             loop
@@ -76,7 +80,7 @@ function Services() {
         />
         <div className='text-center pt-4'>
           <Link to={routeConstants.userLogin}>
-            <button className='hollow-button-2cw px-5'><span className='px-5'>Join Waitlist</span></button>
+            <button className='hollow-button-2cwo px-5'><span className='px-5'>Join Waitlist</span></button>
           </Link>
         </div>
       </div>

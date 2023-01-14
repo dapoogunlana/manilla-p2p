@@ -977,6 +977,11 @@
     font-size: 0.92em;
   }
 }
+.reduced-mobile {
+  @include mediaM(767px){
+    font-size: 0.8em;
+  }
+}
 .reduced-soft-im {
   font-size: 0.9em !important;
   p {
@@ -991,6 +996,11 @@
 }
 .increased-xl {
   font-size: 1.9em;
+}
+.increased-xl-mobile {
+  @include mediaM(767px){
+    font-size: 1.3em;
+  }
 }
 
 .large {
@@ -1461,6 +1471,11 @@
     text-align: center !important;
   }
 }
+.mb-center{
+  @include mediaM(767px) {
+    margin: auto;
+  }
+}
 
 .grid5 {
   display: grid;
@@ -1636,10 +1651,18 @@
   border-radius: 15px;
   transition: 0.3s ease;
 }
+.hollow-button-2cwo {
+  @include hollow-button-p($orange, $orange, 45px, 10px, 1em);
+  border-radius: 15px;
+  transition: 0.3s ease;
+  color: $white;
+}
 .hollow-button-2cb {
   @include hollow-button($primary-blue, $primary-blue, 45px, 10px, 1em);
   border-radius: 15px;
   transition: 0.3s ease;
+  color: $black;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .solid-button {
@@ -2169,6 +2192,13 @@
   pointer-events: none;
   filter: grayscale(1);
   opacity: 0.7;
+}
+
+.hover-zoom{
+  transition: 0.3s ease;
+  &:hover{
+    transform: scale(1.06);
+  }
 }
 
 .nilla-box{

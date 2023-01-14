@@ -159,6 +159,12 @@ function UserFooter(props: any) {
               <p className="reduced-soft">
                 <Link to={routeConstants.userLogin}>Post Trade</Link>
               </p>
+              <p className="reduced-soft">
+                <Link to={routeConstants.manillaCard}>Manilla Card</Link>
+              </p>
+              <p className="reduced-soft">
+                <Link to={routeConstants.manillaToken}>Manilla Token</Link>
+              </p>
             </div>
             <div className="footer-sect">
               <h6 className="mt-2 mb-3 pb-1 font-weight-bold">Explore</h6>
@@ -235,16 +241,16 @@ function UserFooter(props: any) {
 export default UserFooter;
 
 
-class TestClass extends React.Component {
+// class TestClass extends React.Component {
   
-}
+// }
 
-function TestFunct (props: any) {
+// function TestFunct (props: any) {
 
-  const [focus, setFocus ] = React.useState(props.shouldFocus);
+//   const [focus, setFocus ] = React.useState(props.shouldFocus);
   
-  React.useEffect(()=>{
-    setFocus(props.shouldFocus)
-  })
-  return <input autoFocus={focus} />;
-}
+//   React.useEffect(()=>{
+//     setFocus(props.shouldFocus)
+//   })
+//   return <input autoFocus={focus} />;
+// }

@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate  } from 'react-router-dom';
 import { routeConstants } from '../services/constants/route-constants';
-import ProctedRoutes from './protedted-routes';
+import ProctedRoutes from './protected-routes';
 
 const AdminModule = lazy(() => import("../layout/admin/admin-module"));
 const AdminLogin = lazy(() => import("../pages/admin/login/login"));

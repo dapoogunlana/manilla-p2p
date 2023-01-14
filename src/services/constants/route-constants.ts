@@ -19,6 +19,8 @@
      operators: 'operators',
      placeHolder: 'waiting',
      cryptoCurrencies: 'crypto-currencies',
+     manillaCard: 'card',
+     manillaToken: 'token',
 
      admin: 'admin',
      dashboard: 'dashboard',

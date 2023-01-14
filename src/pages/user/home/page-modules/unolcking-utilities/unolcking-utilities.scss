@@ -46,63 +46,25 @@
             }
         }
     }
-    .ref{
-        margin-bottom: -15vh;
-        position: relative;
-        z-index: 10;
-    }
-    .vid-sect{
-        background-color: $light-blue;
-        position: relative;
-        padding: 20vh 0 10vh;
-        .top-curve{ 
-            position: absolute;
-            width: 100%;
-            left: 0%;
-            bottom: 100%;
-            img{
-                width: 100%;
+
+    .rf-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        @include mediaM(850px) {
+            display: block;
+        }
+        .referal{
+            background-color: $light-blue;
+            span{
+                font-size: 2em;
+            }
+            button{
+                color: $black;
+                box-shadow: 1px 3px 8px 1px $black-faint4;
             }
         }
-        .vid-space{
-            width: 96%;
-            max-width: 600px;
-            margin: auto;
-            position: relative;
-            .top-sphare-curve{
-                width: 100px;
-                height: 80px;
-                border-radius: 25px;
-                background-color: $orange;
-                right: -10px;
-                position: absolute;
-                top: -10px;
-            }
-            .bottom-sphare-curve{
-                width: 100px;
-                height: 80px;
-                border-radius: 25px;
-                background-color: $orange;
-                left: -10px;
-                bottom: -10px;
-                position: absolute;
-            }
-            .vid-holder{
-                width: 100%;
-                position: relative;
-                padding-bottom: 62.25%;;
-                border-radius: 15px;
-                background-color: rgb(0, 27, 66);
-                .stream-vid{
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    border-radius: 15px;
-                    overflow: hidden;
-                }
-            }
+        .sale-info{
+            background-color: $orange;
         }
     }
 }

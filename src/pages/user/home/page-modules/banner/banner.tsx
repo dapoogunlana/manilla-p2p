@@ -1,5 +1,14 @@
 import React, {  } from 'react';
-import { AppleButton, PlaystoreButton, CommingSoon } from '../../../../../assets/images';
+import {
+  AppleButton,
+  PlaystoreButton,
+  CommingSoon,
+  newScrollScreen,
+  topPartnerKirobo,
+  topPartnerReloadly,
+  topPartnerSayfer,
+  topPartnerSumsub,
+} from '../../../../../assets/images';
 import './banner.scss';
 import { WebIntroVid, MobileIntroVid } from '../../../../../assets/videos';
 import { WhitePaper } from '../../../../../assets/files';
@@ -10,33 +19,62 @@ function Hero() {
     window.open(WhitePaper);
   }
 
-  const selectBanner = () => {
-    if(window.innerWidth > 750) {
-      return WebIntroVid;
-    } else {
-      return MobileIntroVid;
-    }
-  }
-
   return (
     <div className='hero-case'>
-      <div className='hero'>
-        <div className="underband">
-            <video muted={true} playsInline={true} autoPlay={true} src={selectBanner()} loop id="myVideo">
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-        <div className='w90 max400 full-button top-space' data-aos='fade-up'>
-          <button className='hollow-button-2cw rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
-          <div className='input-divider mt-4 imh full'>
-            <img src={ AppleButton } className='store-link' alt="" />
-            <span></span>
-            <img src={ PlaystoreButton } className='store-link' alt="" />
+      <div className='hero-case-bg'>
+        <div className='bg-shape'></div>
+      </div>
+      <div className='hero pt-5'>
+        <div className='w90 max700 top-space' data-aos='fade-up'>
+          <h3 className='center-mobile increased-xl-mobile md-close'>
+            Bridging payment solutions from traditional fintech to Web 3.0 & 
+            enabling utility bills settlement in Crypto
+          </h3>
+          <h5 className='center-mobile increased-xl-mobile md-open'>
+            Bridging payment solutions from traditional fintech to Web 3.0 & 
+            enabling utility bills settlement in Crypto
+          </h5>
+          <div className='sect90-max350 mb-center'>
+            <div className='text-center w96 max250'>
+              <button className='download-button py-3 increased rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+            </div>
+            <div className='action-buttons'>
+              <div className='input-divider mt-4 imh full'>
+                <img src={ AppleButton } className='store-link' alt="" />
+                <span></span>
+                <img src={ PlaystoreButton } className='store-link' alt="" />
+              </div>
+              <div className='coming-soon imh max200'>
+                <img src={CommingSoon} alt="" />
+              </div>
+            </div>
           </div>
-          <div className='coming-soon imh max200'>
-            <img src={CommingSoon} alt="" />
+
+          <div className='max500 text-center'>
+            <h6 className='increased trans-soft'>Development Partners</h6>
+            <div className='spread-info'>
+              <div className='imh max100'>
+                <img src={topPartnerKirobo} alt="" />
+              </div>
+              <div className='imh max100 mx-2'>
+                <img src={topPartnerReloadly} alt="" />
+              </div>
+              <div className='imh max100 mx-2'>
+                <img src={topPartnerSayfer} alt="" />
+              </div>
+              <div className='imh max100'>
+                <img src={topPartnerSumsub} alt="" />
+              </div>
+            </div>
           </div>
         </div>
+
+        <div className='w90 max450 md-close'>
+          <div className='imh max350' data-aos='flip-left' data-aos-delay='500'>
+            <img src={newScrollScreen} alt="" />
+          </div>
+        </div>
+
       </div>
     </div>
   );

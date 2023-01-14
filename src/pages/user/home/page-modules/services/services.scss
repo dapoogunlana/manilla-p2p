@@ -5,6 +5,16 @@
     background-image: url(../../../../../assets/images/blue-brick-bg.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
+    .curve-holder{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -5px;
+        img{
+            width: 100%;
+        }
+    }
     h3,h6,p{
         color: $white;
     }

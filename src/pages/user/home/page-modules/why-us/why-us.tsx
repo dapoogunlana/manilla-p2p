@@ -63,7 +63,7 @@ function WhyUs(props: any) {
       </div> */}
       <div className='why-us'>
         {props.spaceUp && <div className='why-spacing'></div>}
-        <div className='w96 max1200 pb-4 pt-5'>
+        <div className='w96 max1200 pb-2 pt-5'>
           <h3 className='text-center pt-4'>Why Choose Us</h3>
           <div className='row'>
             {adjustableChooseList.map((item, index) => {
@@ -85,16 +85,13 @@ function WhyUs(props: any) {
         </div>
         <div className='text-center'>
           <Link to={routeConstants.register}>
-            <button className='solid-button-2c'>
+            <button className='gt-button'>
               <div className='spread-info'>
-                Get Started
+                <h6>Get Started</h6>
                 <i className='fa-solid fa-arrow-right-long increased ml-3'></i>
               </div>
             </button>
           </Link>
-        </div>
-        <div className='bottom-arc'>
-          <img src={BottomWhiteArc} alt="" />
         </div>
       </div>
     </>

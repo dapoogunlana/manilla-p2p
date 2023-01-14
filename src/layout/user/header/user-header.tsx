@@ -4,9 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 import "../../../assets/styles/layout.scss";
 import { AppleIcon, Logo, PlaystoreIcon } from "../../../assets/images";
 import { routeConstants } from "../../../services/constants/route-constants";
+import UserHeaderDropdown from "./header-dropdown";
 
 function UserHeader() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [openWebMenu, setOpenWebMenu] = useState(false);
 
   const toggleMobileMenu = () => {
     setOpenMobileMenu(!openMobileMenu);
@@ -15,13 +17,21 @@ function UserHeader() {
     setOpenMobileMenu(false);
   };
 
+  const openWebDialogue = () => {
+    console.log('Winning');
+    setOpenWebMenu(true);
+  }
+  const closeDialogue = () => {
+    console.log('closing');
+    setOpenWebMenu(false);
+  }
+
   return (
     <>
       <div
         className={
-          openMobileMenu
-            ? "header open-mobile-menu"
-            : "header close-mobile-menu"
+          (openMobileMenu ? "header open-mobile-menu" : "header close-mobile-menu") +
+          (openWebMenu ? ' web-menu-open' : '')
         }
       >
         <div className="sub-layer"></div>
@@ -96,9 +106,15 @@ function UserHeader() {
                   </NavLink>
                 </div>
               </li>
+              <li>
+                <div className="text-center">
+                  <i className="fas fa-bars" onClick={openWebDialogue}></i>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
+        <UserHeaderDropdown closeDialogue={closeDialogue} />
       </div>
     </>
   );

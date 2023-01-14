@@ -26,7 +26,7 @@ function LatestNews() {
     }
   }
   const imageSlide = newsList.map((item, index) => {
-    return <div className='news-slide-holder' key={index} onClick={() => goToItem(item.id)}>
+    return <div className='news-slide-holder' key={index}>
       <div className='news-slide' data-aos='fade-up'>
         <div className='image-holder'>
           <img src={item.image} alt="" />
@@ -37,6 +37,7 @@ function LatestNews() {
             {clipToLength(item.content[0].point || item.content[0].topic || item.content[1].point, 100)}
           </p>
           <p className='faint-font reduced-soft mb-0 faint-font'>{item.date}</p>
+          <button className='hollow-button-2cw stld-btn rad-5' onClick={() => goToItem(item.id)}>Read More</button>
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
 @import '../../../../../assets/styles/variables.scss';
 
 .operators{
-    background-color: $light-blue;
+    // background-color: $light-blue;
+    background-image: url(../../../../../assets/images/blue-brick-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top: 3px dashed $white-faint3;
 
     .operator_image {
       width: 100%;

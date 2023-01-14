@@ -99,6 +99,7 @@ import LogoIcon from './icons/logo-icon.svg';
 import DashboardIconSubscribe from './icons/dashboard-icon-subscribe.svg';
 import DashboardIconTimeLeft from './icons/dashboard-icon-time-left.svg';
 import DashboardIconEmail from './icons/dashboard-icon-email.svg';
+import SwiperNextArrowIcon from './icons/swiper-next-arrow.svg';
 
 import SbCardIconEarn from './icons/sb-card-icon-earn.svg';
 import SbCardIconExperience from './icons/sb-card-icon-experience.svg';
@@ -113,6 +114,16 @@ import WhyIconInterface from './icons/why-icon-interface.svg';
 import WhyIconSecurity from './icons/why-icon-security.svg';
 import WhyIconSpeed from './icons/why-icon-speed.svg';
 import WhyIconSupport from './icons/why-icon-support.svg';
+import mCardIconBankSecurity from './icons/m-card-icon-bank-security.svg';
+import mCardIconCryptoRewards from './icons/m-card-icon-crypto-rewards.svg';
+import mCardIconGrowCashback from './icons/m-card-icon-grow-cashback.svg';
+import mCardIconMultipleOptions from './icons/m-card-icon-multiple-options.svg';
+import mCardIconRealtimeAccess from './icons/m-card-icon-realtime-access.svg';
+import mCardIconZeroFees from './icons/m-card-icon-zero-fees.svg';
+import topPartnerKirobo from './icons/top-partner-kirobo.png';
+import topPartnerReloadly from './icons/top-partner-reloadly.png';
+import topPartnerSayfer from './icons/top-partner-sayfer.png';
+import topPartnerSumsub from './icons/top-partner-sumsub.png';
 
 import SbDottedSpinner from './sb-dotted-spinner.png';
 import SbSpinnerImage from './sb-spinner-image.png';
@@ -203,6 +214,17 @@ import newsImg5Unhackable from './article-images/news-img6-unhackable.jpg';
 import newsImg6InitialCoin from './article-images/news-img5-initial-coin.jpg';
 import newsImg7Wallet from './article-images/news-img7-wallet.jpg';
 import newsImg8Contracts from './article-images/news-img8-contracts.jpg';
+
+import differentFaces from './different-faces.jpg';
+import manillaCardTiles from './manilla-card-tiles.jpg';
+import manillaCoinPhone from './manilla-coin-phone.jpg';
+import stackedCoins from './stacked-coins.png';
+import tokenomicsBook from './tokenomics-book.png';
+import tokenomicsChartLegend from './tokenomics-chart-legend.jpg';
+import tokenomicsChart from './tokenomics-chart.jpg';
+import whereToBuy from './where-to-buy.png';
+import newScrollScreen from './new-scroll-screen.gif';
+import topCurve from './top-curve.svg';
 
 export {
     Logo,
@@ -306,6 +328,7 @@ export {
     DashboardIconSubscribe,
     DashboardIconTimeLeft,
     DashboardIconEmail,
+    SwiperNextArrowIcon,
 
     SbCardIconEarn,
     SbCardIconExperience,
@@ -320,6 +343,17 @@ export {
     WhyIconSecurity,
     WhyIconSpeed,
     WhyIconSupport,
+    // New
+    mCardIconBankSecurity,
+    mCardIconCryptoRewards,
+    mCardIconGrowCashback,
+    mCardIconMultipleOptions,
+    mCardIconRealtimeAccess,
+    mCardIconZeroFees,
+    topPartnerKirobo,
+    topPartnerReloadly,
+    topPartnerSayfer,
+    topPartnerSumsub,
 
     SbDottedSpinner,
     SbSpinnerImage,
@@ -410,4 +444,16 @@ export {
     newsImg6InitialCoin,
     newsImg7Wallet,
     newsImg8Contracts,
+
+    // New
+    differentFaces,
+    manillaCardTiles,
+    manillaCoinPhone,
+    stackedCoins,
+    tokenomicsBook,
+    tokenomicsChartLegend,
+    tokenomicsChart,
+    whereToBuy,
+    newScrollScreen,
+    topCurve,
 }
