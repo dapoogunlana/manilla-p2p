@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate  } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import {
   manillaCardTiles,
   manillaCoinPhone,
@@ -11,6 +11,7 @@ import {
   mCardIconZeroFees,
 } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import { routeConstants } from '../../../services/constants/route-constants';
 import { cardFaqData } from './card-faq-data';
 import './manilla-card.scss';
 
@@ -157,7 +158,9 @@ function ManillaCard(props: any) {
             before the card is issued. Everyone can request for either the virtual card or plastic card that is 
             shipped to eligible locations worldwide.
           </p>
-          <button className='hollow-button-2cb rad-10-im'>Get Card</button>
+          <Link to={routeConstants.userLogin}>
+            <button className='hollow-button-2cb rad-10-im'>Join Waitlist</button>
+          </Link>
         </div>
 
         <hr className='pt-4 mt-5' />

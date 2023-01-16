@@ -16,15 +16,13 @@ import './banner-sub-space.scss';
 
 function SubSpace() {
   return (
-    <div className='sub-hero py-5'>
-      <div className='w90'>
+    <div className='sub-hero pt-5'>
+      <div className='w90 max1200'>
         <div className='row'>
-          <div className='col-lg-8 py-4 center-info'>
-            <div className='row'>
-              <div className='col-md-4'>
+          <div className='col-lg-6 py-4 center-info'>
                 <div className='w96 py-3'>
-                  <div className='sb-card' data-aos="fade-up">
-                    <div className='max50'>
+                  <div className='sb-card' data-aos="fade-right">
+                    <div className='ich'>
                       <img src={SbCardIconExperience} alt="" />
                     </div>
                     <div className='ich'>
@@ -33,12 +31,8 @@ function SubSpace() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className='col-md-4'>
-                <div className='w96 py-3'>
-                  <div className='sb-card' data-aos="fade-up" data-aos-delay='200'>
-                    <div className='max50'>
+                  <div className='sb-card' data-aos="fade-right" data-aos-delay='100'>
+                    <div className='ich'>
                       <img src={SbCardIconEarn} alt="" />
                     </div>
                     <div className='ich'>
@@ -47,12 +41,8 @@ function SubSpace() {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className='col-md-4'>
-                <div className='w96 py-3'>
-                  <div className='sb-card' data-aos="fade-up" data-aos-delay='400'>
-                    <div className='max50'>
+                  <div className='sb-card' data-aos="fade-right" data-aos-delay='200'>
+                    <div className='ich'>
                       <img src={SbCardIconExplore} alt="" />
                     </div>
                     <div className='ich'>
@@ -62,10 +52,8 @@ function SubSpace() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
           </div>
-          <div className='col-lg-4 py-4'>
+          <div className='col-lg-6 py-4 center-info'>
             <div className='vid-space' data-aos='zoom-in' data-aos-delay='800'>
                 <div className='top-sphare-curve' data-aos='zoom-in' data-aos-delay='900'></div>
                 <div className='bottom-sphare-curve' data-aos='zoom-in' data-aos-delay='900'></div>

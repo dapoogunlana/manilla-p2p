@@ -44,10 +44,10 @@ function UnolckingUtilities() {
               Referral Program
             </h6>
             <p className='mb-4'>
-              <span>“</span>If earning passive income is something you desire, then this program is exactly what you need to earn 
+              <span className="px-2">“</span>If earning passive income is something you desire, then this program is exactly what you need to earn 
               consistent income on the go. We offer a 20% single level referral bonus to all registered Manilla traders. 
               Bonuses accumulated through referrals can be withdrawn at any time to your secure wallets. To get started, 
-              simply get a referral link.<span>”</span>
+              simply get a referral link.<span className="px-2">”</span>
             </p>
             <Link to={routeConstants.userLogin}>
               <button className='hollow-button-2cw rad-10-im' data-aos='fade-up' data-aos-delay='500'>Join Waitlist</button>

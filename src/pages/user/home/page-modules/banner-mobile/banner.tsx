@@ -1,50 +1,40 @@
 import React, {  } from 'react';
-import { WhitePaper } from '../../../../../assets/files';
-import { AppleButton, PlaystoreButton } from '../../../../../assets/images';
-import SubSpace from '../banner-sub-space/banner-sub-space';
-import { banner1Item } from './banner-data';
+import { AppleButton, PlaystoreButton, CommingSoon } from '../../../../../assets/images';
 import './banner.scss';
+import { WebIntroVid, MobileIntroVid } from '../../../../../assets/videos';
+import { WhitePaper } from '../../../../../assets/files';
 
 function Hero() {
-  
+
   const downloadPdf = () => {
     window.open(WhitePaper);
   }
-  
+
+  const selectBanner = () => {
+    if(window.innerWidth > 750) {
+      return WebIntroVid;
+    } else {
+      return MobileIntroVid;
+    }
+  }
+
   return (
     <div className='mobile-hero-case'>
-      <div className={'hero ' + banner1Item.styleClass}>
-        <div className='header-spacer'></div>
-        <div className='hero-spread'>
-          <div className='text-content'>
-            <h3>{banner1Item.writeUp}</h3>
-            <div className='img-holder' data-aos="fade-in">
-              <img src={banner1Item.image} alt="" />
-            </div>
-            <div className='action-holder md-close'>
-              <button className='solid-button-2c px-4 my-3' data-aos="zoom-out" onClick={downloadPdf}>
-                Download&nbsp;Whitepaper
-              </button>
-              <div className='info-grid'>
-                <img src={AppleButton} alt="" data-aos="fade-up" />
-                <span></span>
-                <img src={PlaystoreButton} alt="" data-aos="fade-up" data-aos-delay="300" />
-              </div>
-            </div>
-            <div className='action-holder md-open' data-aos="fade-up" data-aos-delay="300">
-              <button className='solid-button-2c px-4 my-3' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
-              <div className='info-grid'>
-                <img src={AppleButton} alt="" />
-                <span></span>
-                <img src={PlaystoreButton} alt="" />
-              </div>
-            </div>
+      <div className='hero'>
+        <div className="underband">
+            <video muted={true} playsInline={true} autoPlay={true} src={selectBanner()} loop id="myVideo">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div className='w90 max400 full-button top-space' data-aos='fade-up'>
+          <button className='hollow-button-2cw rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+          <div className='input-divider mt-4 imh full'>
+            <img src={ AppleButton } className='store-link' alt="" />
+            <span></span>
+            <img src={ PlaystoreButton } className='store-link' alt="" />
           </div>
-          <div className='image' data-aos="fade-in">
-            {/* <img src={BannerImg1} alt="" /> */}
-            <div className='img-holder'>
-              <img src={banner1Item.image} alt="" />
-            </div>
+          <div className='coming-soon imh max200'>
+            <img src={CommingSoon} alt="" />
           </div>
         </div>
       </div>

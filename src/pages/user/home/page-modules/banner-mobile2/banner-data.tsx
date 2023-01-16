@@ -2,25 +2,31 @@
 import { AppleButton, BannerImg1, BannerImg2, BannerImg3, PlaystoreButton } from '../../../../../assets/images';
 
 export const bannerList = [
-    {
-        styleClass: 'banner-1',
-        image: BannerImg1,
-        writeUp: 'Explore & Benefit from Manilla’s Comprehensive e-Service Suite for Reliability, Security & Speed.',
-        showIcons: true,
-    },
-    {
-        styleClass: 'banner-2',
-        image: BannerImg2,
-        writeUp: 'Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card across multiple merchants location worldwide.',
-        showIcons: true,
-    },
-    {
-        styleClass: 'banner-3',
-        image: BannerImg3,
-        writeUp: `Take Advantage of Manilla's Staking & Lending Protocol to Save for the Future or Borrow to Settle Emergency Bills.`,
-        showIcons: false,
-    },
+  {
+      styleClass: 'banner-1',
+      image: BannerImg1,
+      writeUp: `Welcome to Manilla, the World's Fastest & Multipurpose P2P Cryptocurrency Exchange`,
+      showIcons: true,
+  },
+  {
+      styleClass: 'banner-2',
+      image: BannerImg2,
+      writeUp: 'Earn up to 2% cash back in Manilla native token when you use the Manilla Debit Card across multiple merchants location worldwide.',
+      showIcons: true,
+  },
+  {
+      styleClass: 'banner-3',
+      image: BannerImg3,
+      writeUp: `Take Advantage of Manilla's Staking & Lending Protocol to Save for the Future or Borrow to Settle Emergency Bills.`,
+      showIcons: false,
+  },
 ];
+export const banner1Item = {
+  styleClass: 'banner-1',
+  image: BannerImg1,
+  writeUp: `Welcome to Manilla, the World's Fastest & Multipurpose P2P Cryptocurrency Exchange`,
+  showIcons: true,
+};
 
 
 export const imageSlide = bannerList.map((item, index) => {

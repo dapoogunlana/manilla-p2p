@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Banner from './page-modules/banner/banner';
-// import MobileBanner from './page-modules/banner-mobile/banner';
+import MobileBanner from './page-modules/banner-mobile/banner';
 import PreInfo from './page-modules/pre-info/pre-info';
 import HowTo from './page-modules/how-to/how-to';
 import Services from './page-modules/services/services';
@@ -26,8 +26,8 @@ function About(props: any) {
     if(window.innerWidth > 750) {
       return <Banner/>;
     } else {
-      return <Banner/>;
-      // return <MobileBanner/>;
+      // return <Banner/>;
+      return <MobileBanner/>;
     }
   }
 

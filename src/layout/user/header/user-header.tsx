@@ -106,7 +106,7 @@ function UserHeader() {
                   </NavLink>
                 </div>
               </li>
-              <li>
+              <li className="md-close-im">
                 <div className="text-center">
                   <i className="fas fa-bars" onClick={openWebDialogue}></i>
                 </div>

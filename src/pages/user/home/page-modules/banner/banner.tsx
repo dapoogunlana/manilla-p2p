@@ -24,6 +24,11 @@ function Hero() {
       <div className='hero-case-bg'>
         <div className='bg-shape'></div>
       </div>
+      <div className="underband">
+          <video muted={true} playsInline={true} autoPlay={true} src={MobileIntroVid} loop id="myVideo">
+              Your browser does not support HTML5 video.
+          </video>
+      </div>
       <div className='hero pt-5'>
         <div className='w90 max700 top-space' data-aos='fade-up'>
           <h3 className='center-mobile increased-xl-mobile md-close'>
@@ -36,7 +41,7 @@ function Hero() {
           </h5>
           <div className='sect90-max350 mb-center'>
             <div className='text-center w96 max250'>
-              <button className='download-button py-3 increased rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
+              <button className='download-button increased rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
             </div>
             <div className='action-buttons'>
               <div className='input-divider mt-4 imh full'>
@@ -50,19 +55,19 @@ function Hero() {
             </div>
           </div>
 
-          <div className='max500 text-center'>
+          <div className='max550 text-center'>
             <h6 className='increased trans-soft'>Development Partners</h6>
             <div className='spread-info'>
-              <div className='imh max100'>
+              <div className='imh max125'>
                 <img src={topPartnerKirobo} alt="" />
               </div>
-              <div className='imh max100 mx-2'>
+              <div className='imh max125 mx-2'>
                 <img src={topPartnerReloadly} alt="" />
               </div>
-              <div className='imh max100 mx-2'>
+              <div className='imh max125 mx-2'>
                 <img src={topPartnerSayfer} alt="" />
               </div>
-              <div className='imh max100'>
+              <div className='imh max125'>
                 <img src={topPartnerSumsub} alt="" />
               </div>
             </div>

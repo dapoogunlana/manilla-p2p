@@ -25,7 +25,7 @@ function Login() {
               {/* <p className='font-weight-bold'>Fastest Way To Buy, Sell And Trade Cryptocurrencies</p>
               <h3 className=''>Create Your Account</h3> */}
               <p className='font-weight-bold'>Lets keep you up to date on our app launch</p>
-              <h3 className=''>Join Wait List </h3>
+              <h3 className=''>Join Waitlist </h3>
             </div>
           </div>
           <div className='col-lg-6 center-info-col'>

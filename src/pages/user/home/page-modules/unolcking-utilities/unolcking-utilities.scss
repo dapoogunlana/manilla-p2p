@@ -56,7 +56,9 @@
         .referal{
             background-color: $light-blue;
             span{
-                font-size: 2em;
+                // font-size: 2em;
+                transform: scale(5) translateY(4px);
+                display: inline-block;
             }
             button{
                 color: $black;
