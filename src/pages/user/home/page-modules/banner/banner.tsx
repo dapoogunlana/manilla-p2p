@@ -35,10 +35,9 @@ function Hero() {
             Bridging payment solutions from traditional fintech to Web 3.0 & 
             enabling utility bills settlement in Crypto
           </h3>
-          <h5 className='center-mobile increased-xl-mobile md-open'>
-            Bridging payment solutions from traditional fintech to Web 3.0 & 
-            enabling utility bills settlement in Crypto
-          </h5>
+          <h3 className='center-mobile md-open'>
+            Bridging Payment Solutions From Traditional Fintech to Web 3.0
+          </h3>
           <div className='sect90-max350 mb-center'>
             <div className='text-center w96 max250'>
               <button className='download-button increased rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
