@@ -30,7 +30,7 @@ function Hero() {
           </video>
       </div>
       <div className='hero pt-5'>
-        <div className='w90 max700 top-space' data-aos='fade-up'>
+        <div className='w96 max700 top-space' data-aos='fade-up'>
           <h3 className='center-mobile increased-xl-mobile md-close'>
             Bridging payment solutions from traditional fintech to Web 3.0 & 
             enabling utility bills settlement in Crypto
@@ -55,7 +55,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className='max550 text-center'>
+          <div className='max550 text-center parter-sect'>
             <h6 className='increased trans-soft'>Development Partners</h6>
             <div className='spread-info'>
               <div className='imh max125'>

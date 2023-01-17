@@ -121,5 +121,15 @@
                 min-height: 70vh;
             }
         }
+        @include mediaM(750px){
+            padding: 0 2%;
+        }
+    }
+    .parter-sect{
+        @include mediaM(767px) {
+            background-color: $black-faint3;
+            border-radius: 10px;
+            padding: 10px 3.5%;
+        }
     }
 }

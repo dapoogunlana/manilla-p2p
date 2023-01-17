@@ -26,8 +26,8 @@ function About(props: any) {
     if(window.innerWidth > 750) {
       return <Banner/>;
     } else {
-      // return <Banner/>;
-      return <MobileBanner/>;
+      return <Banner/>;
+      // return <MobileBanner/>;
     }
   }
 
