@@ -39,9 +39,9 @@ function Hero() {
             Bridging Payment Solutions From Traditional Fintech to Web 3.0
           </h3>
           <div className='sect90-max350 mb-center'>
-            <div className='text-center w96 max250'>
+            {/* <div className='text-center w96 max250'>
               <button className='download-button increased rad-10-im' onClick={downloadPdf}>Download&nbsp;Whitepaper</button>
-            </div>
+            </div> */}
             <div className='action-buttons'>
               <div className='input-divider mt-4 imh full'>
                 <img src={ AppleButton } className='store-link' alt="" />

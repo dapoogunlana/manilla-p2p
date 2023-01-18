@@ -9,6 +9,7 @@ import { sendRequest } from "../../../services/utils/request";
 import { toast } from 'react-toastify';
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { WhitePaper } from "../../../assets/files";
 
 function UserFooter(props: any) {
   
@@ -185,6 +186,9 @@ function UserFooter(props: any) {
               </p>
               <p className="reduced-soft">
                 <Link to={routeConstants.operators}>Global Operators</Link>
+              </p>
+              <p className="reduced-soft">
+                <a href={WhitePaper} target={'_blank'}>Download Whitepaper</a>
               </p>
             </div>
             <div className="footer-sect">
