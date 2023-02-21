@@ -1,4 +1,5 @@
 import Logo from './logo.png';
+import LogoWhite from './white-logo.png';
 import FooterLogo from './footer-logo.png';
 
 import BlueBrickBg from './blue-brick-bg.jpg';
@@ -12,6 +13,7 @@ import WhiteAngleBackdrop from './white-angle-backdrop.svg';
 import Banner3Bg from './banner-3-bg.jpg';
 import BottomWhiteArc from './bottom-white-arc.svg';
 
+import PhoneHand from './phone-hand.gif';
 import AboutImg from './about-img.png';
 import BannerImg1 from './banner-img-1.png';
 import BannerImg2 from './banner-img-2.jpg';
@@ -100,6 +102,7 @@ import DashboardIconSubscribe from './icons/dashboard-icon-subscribe.svg';
 import DashboardIconTimeLeft from './icons/dashboard-icon-time-left.svg';
 import DashboardIconEmail from './icons/dashboard-icon-email.svg';
 import SwiperNextArrowIcon from './icons/swiper-next-arrow.svg';
+import HamburgerButton from './icons/Hamburger-Button.svg';
 
 import SbCardIconEarn from './icons/sb-card-icon-earn.svg';
 import SbCardIconExperience from './icons/sb-card-icon-experience.svg';
@@ -228,6 +231,7 @@ import topCurve from './top-curve.svg';
 
 export {
     Logo,
+    LogoWhite,
     FooterLogo,
 
     BlueBrickBg,
@@ -241,6 +245,7 @@ export {
     Banner3Bg,
     BottomWhiteArc,
 
+    PhoneHand,
     AboutImg,
     BannerImg1,
     BannerImg2,
@@ -329,6 +334,7 @@ export {
     DashboardIconTimeLeft,
     DashboardIconEmail,
     SwiperNextArrowIcon,
+    HamburgerButton,
 
     SbCardIconEarn,
     SbCardIconExperience,

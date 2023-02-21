@@ -84,7 +84,7 @@ function WhyUs(props: any) {
           </div>
         </div>
         <div className='text-center'>
-          <Link to={routeConstants.register}>
+          <Link to={`/${routeConstants.register}`}>
             <button className='gt-button'>
               <div className='spread-info'>
                 <h6>Get Started</h6>

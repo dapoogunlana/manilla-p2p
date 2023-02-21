@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import {  Routes, Route  } from 'react-router-dom';
+import {  Routes, Route, Navigate  } from 'react-router-dom';
 import { routeConstants } from '../services/constants/route-constants';
 import Loader from '../components/block-components/loader/loader';
 
@@ -28,13 +28,14 @@ const OperatorsPage = lazy(() => import("../pages/user/operators/operators"));
 const CryptoListPage = lazy(() => import("../pages/user/crypto-list/crypto-list"));
 const ManillaCardPage = lazy(() => import("../pages/user/manilla-card/manilla-card"));
 const ManillaTokenPage = lazy(() => import("../pages/user/manilla-token/manilla-token"));
+const ImageResources = lazy(() => import("../pages/user/image-resources/image-resources"));
 
 function UserRoute() {
   return (
     <Suspense fallback={<Loader/>}>
       <Routes>
         <Route path={routeConstants.all} element={<UserModule/>}>
-          <Route path={routeConstants.all} element={<HomePage/>}></Route>
+          <Route path={routeConstants.home2} element={<HomePage/>}></Route>
           <Route path={routeConstants.register} element={<RegisterPage/>}></Route>
           <Route path={routeConstants.userLogin} element={<LoginPage/>}></Route>
           <Route path={routeConstants.about} element={<AboutPage/>}></Route>
@@ -57,6 +58,8 @@ function UserRoute() {
           <Route path={routeConstants.cryptoCurrencies} element={<CryptoListPage/>}></Route>
           <Route path={routeConstants.manillaCard} element={<ManillaCardPage/>}></Route>
           <Route path={routeConstants.manillaToken} element={<ManillaTokenPage/>}></Route>
+          <Route path={routeConstants.imageResources} element={<ImageResources/>}></Route>
+          <Route path={routeConstants.all} element={<Navigate to={routeConstants.home2}/>}></Route>
         </Route>
       </Routes>
     </Suspense>

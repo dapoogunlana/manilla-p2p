@@ -70,7 +70,17 @@ function ProductUpdates() {
       <HalfBannerImaged image={UpdateBanerImg}>Product Updates</HalfBannerImaged>
       <div className='content-body py-5'>
         <div className='w90 max1200'>
-            <div className='update-sect' data-aos="fade-right">
+            <div className='update-text-sect' data-aos="fade-right">
+              <div className='activity-square'></div>
+              <p className='date'>
+                The development of the Manilla Finance ecosystem began in April 2021. By August of that year, the team had 
+                completed the web application for P2P trading. In September 2021, work began on the Manilla Service Suite, 
+                with a focus on expanding the payment capabilities within the application using digital assets. At present, 
+                the application is nearly finished and undergoing private testing, with 95% completion. Upon completion, we 
+                will release versions of the application for web, Android, and iOS.
+              </p>
+            </div>
+            {/* <div className='update-sect' data-aos="fade-right">
               <h6 className='activity'>
                 Manilla Finance Application Development Begins
               </h6>
@@ -135,7 +145,7 @@ function ProductUpdates() {
                 <div className='level r80 f_bl'></div>
               </div>
               <p className='date'>July 14th 2022</p>
-            </div>
+            </div> */}
         </div>
       </div>
 

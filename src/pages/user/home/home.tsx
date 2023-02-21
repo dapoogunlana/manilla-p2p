@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Banner from './page-modules/banner/banner';
+import Banner2 from './page-modules/banner2/banner2';
 import MobileBanner from './page-modules/banner-mobile/banner';
 import PreInfo from './page-modules/pre-info/pre-info';
 import HowTo from './page-modules/how-to/how-to';
@@ -16,17 +17,21 @@ import './home.scss';
 import SubSpace from './page-modules/banner-sub-space/banner-sub-space';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import OperatorPopup from './page-modules/operator-popup/operator-popup';
+import { apiLinks } from '../../../config/environment';
 
 function About(props: any) {
 
   const [viewModal, setViewModal] = useState(false);
   const [viewModal2, setViewModal2] = useState(false);
+  const local = process.env.REACT_APP_ENV;
 
   const selectBanner = () => {
     if(window.innerWidth > 750) {
-      return <Banner/>;
+      return <Banner2/>;
+      // return <Banner/>;
     } else {
-      return <Banner/>;
+      return <Banner2/>;
+      // return <Banner/>;
       // return <MobileBanner/>;
     }
   }
@@ -46,6 +51,7 @@ function About(props: any) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log({local, apiUrl: apiLinks.url});
     // setTimeout(() => setViewModal(true), 3000)
   },[props]);
   

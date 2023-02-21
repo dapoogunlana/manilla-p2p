@@ -4,7 +4,7 @@ import { IrequestFormat } from '../constants/interfaces/request-schema';
 import { routeConstants } from '../constants/route-constants';
 
 export const sendRequest = (params: IrequestFormat, success: Function, failure: Function) => {
-    const request = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.activeUrl });
+    const request = params.external ? axios.create({}) : axios.create({ baseURL: apiLinks.url });
     request.interceptors.request.use((req: any) => {
     
         if(params.header) {
@@ -23,7 +23,7 @@ export const sendRequest = (params: IrequestFormat, success: Function, failure: 
     .then((result) => success(result?.data))
     .catch(error => {
 
-        const errorStatus = error.request.status;
+        const errorStatus = error.request?.status;
 
         if(errorStatus === 401 || errorStatus === 403) {
             sessionStorage.clear();

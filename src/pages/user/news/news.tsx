@@ -1,23 +1,58 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarIcon } from '../../../assets/images';
 import { newsList } from './news-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './news.scss';
-import { clipToLength } from '../../../services/utils/data-manipulation-utilits';
+import { clipToLength, convertStringForUrl, formatDate } from '../../../services/utils/data-manipulation-utilits';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import { sendRequest } from '../../../services/utils/request';
 
-function News() {
+function News(props: any) {
 
   const navigate = useNavigate();
+  const [currentNewsList, setCurrenctNewsList] = useState<any[]>([]);
 
-  const goToItem = (id: number) => {
-    navigate(`/${routeConstants.industryNews}/${id}`);
+  const goToItem = (news: any) => {
+    navigate(`/${routeConstants.industryNews}/${news.id}?${convertStringForUrl(news.title)}`);
+  }
+  
+  const fetchNewsPosts = () => {
+    sendRequest({
+      url: 'blog',
+    }, (res: any) => {
+      const selectedList: any[] = res.data.map((item: any) => {
+        const newItem = {
+          id: item._id,
+          image: item.image,
+          title: item.topic,
+          content: item.body.map((subItem: any) => {
+            return {
+              topic: subItem.sub_topic,
+              point: subItem.writeup,
+              subPoints: [],
+            }
+          }) || [],
+          date: formatDate(item.datePosted),
+        }
+        if (item.brief) {
+          newItem.content.unshift({
+            topic: '',
+            point: item.brief,
+            subPoints: [],
+          })
+        }
+        return newItem;
+      });
+      setCurrenctNewsList(selectedList);
+      console.log({selectedList});
+    }, () => {});
   }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+    fetchNewsPosts();
+  }, [props]);
   
   return (
     <div className='news'>
@@ -27,35 +62,44 @@ function News() {
 
         <hr className='mb-0' />
 
-        <div className='row' data-aos="fade-up">
-          <div className='col-md-6 center-info-front py-4'>
-            <div className='imh max500 shadowed rad-10'>
-              <img src={newsList[0].image} className='rad-10' alt="" />
+        {
+          currentNewsList.length > 0 &&
+          <div className='row' data-aos="fade-up">
+            <div className='col-md-6 center-info-front py-4'>
+              <div className='imh max500 shadowed rad-10'>
+                {/* <img src={currentNewsList[0].image} className='rad-10' alt="" /> */}
+                <div className={"im-enclose shadowed rad-10" + (currentNewsList[0].image ? ' no-bg': '')}>
+                  <img src={currentNewsList[0].image} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className='col-md-6 center-info'>
+              <div className='max500'>
+                <p className='c-faint-font mb-2'>{currentNewsList[0].date}</p>
+                <h3>{currentNewsList[0].title}</h3>
+                <p>{clipToLength(currentNewsList[0].content[0].point || currentNewsList[0].content[0].topic || currentNewsList[0].content[1].point, 100)}</p>
+                <p className='c-pr-blue increased clickable' onClick={() => goToItem(currentNewsList[0])}>Read More</p>
+              </div>
             </div>
           </div>
-          <div className='col-md-6 center-info'>
-            <div className='max500'>
-              <p className='c-faint-font mb-2'>{newsList[0].date}</p>
-              <h3>{newsList[0].title}</h3>
-              <p>{clipToLength(newsList[0].content[0].point || newsList[0].content[0].topic || newsList[0].content[1].point, 100)}</p>
-              <p className='c-pr-blue increased clickable' onClick={() => goToItem(newsList[0].id)}>Read More</p>
-            </div>
-          </div>
-        </div>
+        }
 
         <hr className='pt-0 mt-0' />
 
         <div className='row'>
-            {newsList.map((item, index) => {
+            {currentNewsList.map((item, index) => {
               if (index > 0 && index < 4) {
                 return <div className='col-lg-4 colmd-6 py-3' data-aos="fade-up" key={index}>
                   <div className='imh max500 shadowed rad-10'>
-                    <img src={item.image} className='rad-10' alt="" />
+                    {/* <img src={item.image} className='rad-10' alt="" /> */}
+                    <div className={"im-enclose" + (item.image ? ' no-bg': '')}>
+                      <img src={item.image} alt="" />
+                    </div>
                   </div>
                   <div className='max500 pt-3'>
                     <p className='c-faint-font mb-2'>{item.date}</p>
                     <h4 className='increased'>{item.title}</h4>
-                    <p className='c-pr-blue increased-soft clickable' onClick={() => goToItem(item.id)}>Read More</p>
+                    <p className='c-pr-blue increased-soft clickable' onClick={() => goToItem(item)}>Read More</p>
                   </div>
                 </div>
               }
@@ -65,13 +109,16 @@ function News() {
 
         <hr className='pt-0 mt-0' />
 
-        {newsList.map((item, index) => {
+        {currentNewsList.map((item, index) => {
           if (index > 3 ) {
             return <React.Fragment key={index}>
               <div className='row' >
               <div className='col-md-6 center-info-front py-4' data-aos="fade-up">
                 <div className='imh max500 shadowed rad-10'>
-                  <img src={item.image} className='rad-10' alt="" />
+                  {/* <img src={item.image} className='rad-10' alt="" /> */}
+                    <div className={"im-enclose" + (item.image ? ' no-bg': '')}>
+                      <img src={item.image} alt="" />
+                    </div>
                 </div>
               </div>
               <div className='col-md-6 center-info'>
@@ -79,7 +126,7 @@ function News() {
                   <p className='c-faint-font mb-2'>{item.date}</p>
                   <h3>{item.title}</h3>
                   <p>{clipToLength(item.content[0].point || item.content[0].topic || item.content[1].point, 100)}</p>
-                  <p className='c-pr-blue increased clickable' onClick={() => goToItem(item.id)}>Read More</p>
+                  <p className='c-pr-blue increased clickable' onClick={() => goToItem(item)}>Read More</p>
                 </div>
               </div>
             </div>
@@ -92,7 +139,7 @@ function News() {
         <div className='w90 max1200 py-5'></div>
         <div className='w90 max1200'>
           <div className='row'>
-            {newsList.map((item, index) => {
+            {currentNewsList.map((item, index) => {
               return   <div className='col-lg-4 col-md-6 py-3' key={index}>
               <div className='cover' data-aos="fade-up">
                 <div className='display-img'>

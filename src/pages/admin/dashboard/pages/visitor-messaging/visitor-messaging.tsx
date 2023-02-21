@@ -65,7 +65,7 @@ function VisitorMessaging(props: any) {
               <div className="card-hover">
                   <div className="db-card-body cover">
                       <div className="content-holder item-card">
-                          <h5 className="mb-3 text-center">New Broadcast Email To Visitors</h5>
+                          <h5 className="mb-3 text-center">New Broadcast Email To News Letter Subscribers</h5>
                           <Formik
                             initialValues={{
                               mail_title: '',
@@ -174,12 +174,12 @@ function VisitorMessaging(props: any) {
           </div>
       </div>
 
-      <h3 className="mt-5">Visitor List Email History</h3>
+      <h3 className="mt-5">News Letter Subscribers Email History</h3>
       <div className="row">
           <div className="col-lg-12">
               {
                 emailPosts.map((post, index) => {
-                  return <div className=" db-table-card card-hover" key={index} data-aos="zoom-in" data-aos-delay="500">
+                  return <div className="db-table-card card-hover" key={index} data-aos="zoom-in" data-aos-delay="500">
                   <div className="db-card-body">
                       <div className={"content-holder2" + (!post.active ? 'compress-answer' : '')} onClick={() => openQuestion(index)}>
                           <div className='spread-info'>

@@ -158,7 +158,7 @@ function ManillaCard(props: any) {
             before the card is issued. Everyone can request for either the virtual card or plastic card that is 
             shipped to eligible locations worldwide.
           </p>
-          <Link to={routeConstants.userLogin}>
+          <Link to={`/${routeConstants.userLogin}`}>
             <button className='hollow-button-2cb rad-10-im'>Join Waitlist</button>
           </Link>
         </div>

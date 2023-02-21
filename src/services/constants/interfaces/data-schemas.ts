@@ -1,6 +1,6 @@
 export interface IindustryNews {
     id: number,
-    image: string,
+    image: string | undefined,
     title: string,
     content: {
         topic: string,

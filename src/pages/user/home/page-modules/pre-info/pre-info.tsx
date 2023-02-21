@@ -64,7 +64,7 @@ function About(props: any) {
             })}
           </div>
           <div className='text-center'>
-            <Link to={routeConstants.cryptoCurrencies}>
+            <Link to={`/${routeConstants.cryptoCurrencies}`}>
               <button className='solid-button-2c'>View More</button>
             </Link>
           </div>

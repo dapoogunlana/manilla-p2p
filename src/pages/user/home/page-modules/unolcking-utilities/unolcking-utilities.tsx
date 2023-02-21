@@ -40,7 +40,7 @@ function UnolckingUtilities() {
       <div className='rf-grid'>
         <div className='referal center-info center-mobile'>
           <div className='w90 max500 py-5'>
-            <h6 className='increased-xl mb-3'>
+            <h6 className='increased-x mb-3'>
               Referral Program
             </h6>
             <p className='mb-4'>
@@ -49,21 +49,22 @@ function UnolckingUtilities() {
               Bonuses accumulated through referrals can be withdrawn at any time to your secure wallets. To get started, 
               simply get a referral link.<span className="px-2">”</span>
             </p>
-            <Link to={routeConstants.userLogin}>
+            <Link to={`/${routeConstants.userLogin}`}>
               <button className='hollow-button-2cw rad-10-im' data-aos='fade-up' data-aos-delay='500'>Join Waitlist</button>
             </Link>
           </div>
         </div>
         <div className='sale-info center-info center-mobile'>
           <div className='w90 max500 py-5'>
-            <h6 className='increased-xl mb-3'>
-              Manilla Finance is built by traders for traders. Exchange your digital assets seamlessly with your peers.
+            <h6 className='increased-x mb-3'>
+              Manilla Finance offers a practical application for digital assets, allowing for seamless payment of utility 
+              bills and real-time exchange of fiat for assets.
             </h6>
             <p className='mb-0'>
-              Begin trading with confidence and ease as our platform will enable anybody who is an early adopter to join 
-              the digital currency revolution in a truly decentralized environment with automated processes. You can purchase, 
-              sell, and exchange digital assets on the Manilla P2P platform without interruption as we maintain a 99% uptime. 
-              Manilla has you secured, whether you are a first-time customer or a return trader.
+              With our platform, early adopters can confidently and easily engage in bill payment and trading within a truly 
+              decentralized environment that utilizes automated processes. The Manilla P2P platform provides uninterrupted 
+              purchasing, selling, and exchanging of digital assets with a 99% uptime. Whether you're a new or returning 
+              customer, Manilla has you covered.
             </p>
           </div>
         </div>

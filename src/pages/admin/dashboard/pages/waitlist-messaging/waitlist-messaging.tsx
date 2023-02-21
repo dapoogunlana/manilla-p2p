@@ -174,7 +174,7 @@ function WaitlistMessaging(props: any) {
           </div>
       </div>
 
-      <h3 className="mt-5">Wait List Email History</h3>
+      <h3 className="mt-5">Wait List Subscribers Email History</h3>
       <div className="row">
           <div className="col-lg-12">
               {

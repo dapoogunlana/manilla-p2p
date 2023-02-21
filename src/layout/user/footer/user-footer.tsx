@@ -60,7 +60,6 @@ function UserFooter(props: any) {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((location) => {
-      console.log({location});
       setLocation({
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,

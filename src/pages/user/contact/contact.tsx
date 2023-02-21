@@ -15,7 +15,7 @@ function Contact() {
       <HalfBannerImaged image={ContactBanerImg}>Contact Us</HalfBannerImaged>
       <div className='content-body py-5'>
         <div className='w90 max1200 pb-5'>
-            <h6 className='text-center'>For Business & Partnership Inquiries, Kindly Fill the Form Below to Reach Out to Us</h6>
+          <h6 className='text-center'>For Business & Partnership Inquiries, Kindly Fill the Form Below to Reach Out to Us</h6>
           <div className='cover w96 max600' data-aos="fade-up">
             <div className='item-card'>
               <div className='row'>
@@ -65,6 +65,28 @@ function Contact() {
                     <button className='solid-button-2c rad-10 px-5 shadowed'>Send</button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className='cover mt-5 w96 max600'>
+            <h6 className="pb-1 text-center font-weight-bold increased">Our Address</h6>
+            <div className='row'>
+              <div className='col-sm-6'>
+                <span className="mb-0 font-weight-bold">Nigeria</span>
+                <p className="reduced-soft">
+                  6B, Yomi Oshikoya Street, 
+                  Lekki Phase 1
+                  Lagos State 
+                  105102
+                </p>
+              </div>
+              <div className='col-sm-6'>
+                <span className="mb-0 font-weight-bold">Cyprus</span>
+                <p className="reduced-soft">
+                  30, Peiraios, Floor 1, Apt 1
+                  101. 2023, Strovolos 
+                  Cyprus
+                </p>
               </div>
             </div>
           </div>

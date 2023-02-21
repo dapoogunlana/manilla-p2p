@@ -3,6 +3,7 @@
  export const routeConstants = {
      all: '*',
      home: '/',
+     home2: 'home',
      about: 'about',
      userLogin: 'log-in',
      register: 'register',
@@ -21,6 +22,7 @@
      cryptoCurrencies: 'crypto-currencies',
      manillaCard: 'card',
      manillaToken: 'token',
+     imageResources: 'image-resources',
 
      admin: 'admin',
      dashboard: 'dashboard',

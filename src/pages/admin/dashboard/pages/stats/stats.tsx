@@ -47,11 +47,11 @@ function Stats(props: any) {
   }
 
   const downloadWaitlist = () => {
-    window.open(`${apiLinks.activeUrl}whitelist-subscriber/download`);
+    window.open(`${apiLinks.url}whitelist-subscriber/download`);
   }
   const downloadVisitorlist = () => {
     // toast.error( 'Feature Under Development');
-    window.open(`${apiLinks.activeUrl}visitor/download`);
+    window.open(`${apiLinks.url}visitor/download`);
   }
 
   const loadSubscribers = () => {

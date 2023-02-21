@@ -47,7 +47,7 @@ function Media() {
                 Through a combination of next generation fintech & blockchain technology gateways, we provide 
                 our users the Manilla Debit Card so they can pay for transactions digitally using crypto
               </p>
-              <Link to={routeConstants.manillaCard}>
+              <Link to={`/${routeConstants.manillaCard}`}>
                 <button className='hollow-button-2cb rad-10-im' data-aos='fade-up' data-aos-delay='500'>Read More</button>
               </Link>
             </div>
