@@ -22,6 +22,9 @@ function Sidebar(props: any) {
       <NavLink to={`/${routeConstants.admin}/${routeConstants.adminPosts}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
         <span>News</span>
       </NavLink>
+      <NavLink to={`/${routeConstants.admin}/${routeConstants.adminLearn}`} className={({isActive}) => isActive ? 'bar-link selected' : 'bar-link'} onClick={props.toggleSidebarVisible}>
+        <span>Learn</span>
+      </NavLink>
     </div>
   );
 }

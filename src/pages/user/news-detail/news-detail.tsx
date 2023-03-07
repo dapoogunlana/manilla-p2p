@@ -45,11 +45,7 @@ function NewsDetail(props: any) {
     textarea.select();
     document.execCommand('copy');
     document.body.removeChild(textarea);
-    if (document.execCommand('copy')) {
-      toast.success('News link copied to clipboard!');
-    } else {
-      toast.error('News link could not be copied!');
-    }
+    toast.success('News link copied to clipboard!');
   }
   
   const fetchNewsPosts = () => {

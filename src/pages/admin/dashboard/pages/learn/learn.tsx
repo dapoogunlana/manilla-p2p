@@ -7,9 +7,9 @@ import { routeConstants } from '../../../../../services/constants/route-constant
 import { convertStringForUrl, formatDate } from '../../../../../services/utils/data-manipulation-utilits';
 import { sendRequest } from '../../../../../services/utils/request';
 import { swal } from '../../../../../services/utils/swal-utils';
-import './posts.scss';
+import './learn.scss';
 
-function Posts(props: any) {
+function Learn(props: any) {
   
   const [loading, setLoading] = useState(false);
   const [postLoading, setPostLoading] = useState(false);
@@ -24,12 +24,12 @@ function Posts(props: any) {
 
   const getBlogPosts = () => {
     sendRequest({
-      url: 'blog',
+      url: 'learn',
     }, (res: any) => {
       setLoading(false);
       setBlogPosts(res.data || []);
-      // const posts = res.data || [];
-      // this.blogPosts = posts.map((item) => {
+      // const learn = res.data || [];
+      // this.blogPosts = learn.map((item) => {
       //   if (item.image) {
       //     item.image = this.path + item.image;
       //   }
@@ -74,7 +74,7 @@ function Posts(props: any) {
     setSubmitMsg('processing');
     setPostLoading(true);
     sendRequest({
-      url: `blog/`,
+      url: `learn/`,
       method: 'POST',
       body: form,
     }
@@ -99,7 +99,7 @@ function Posts(props: any) {
   const removeImage = (id: number) => {
     setLoading(true);
     sendRequest({
-      url: `blog/base-image/${id}`,
+      url: `learn/base-image/${id}`,
       method: 'DELETE'
     }
     , (res: any) => {
@@ -152,7 +152,7 @@ function Posts(props: any) {
   const sendImage = (file: any, id: number | undefined) => {
     setLoading(true);
     sendRequest({
-      url: `blog/base-image/${id}`,
+      url: `learn/base-image/${id}`,
       // method: 'PUT FILE',
       method: 'PUT',
       body: file
@@ -167,7 +167,7 @@ function Posts(props: any) {
 
   const copyLink = (post: any) => {
     const textarea = document.createElement('textarea');
-    textarea.value = `https://manilla-backend.herokuapp.com/api/v4/blog/link/${post._id}?qp=${convertStringForUrl(post.topic)}`;
+    textarea.value = `https://manilla-backend.herokuapp.com/api/v4/learn/link/${post._id}?qp=${convertStringForUrl(post.topic)}`;
     textarea.id = 'textId';
     textarea.style.opacity = '0';
     textarea.style.position = 'fixed';
@@ -178,22 +178,22 @@ function Posts(props: any) {
     document.execCommand('copy');
     document.body.removeChild(textarea);
     if (document.execCommand('copy')) {
-      toast.success('News link copied to clipboard!');
+      toast.success('Learn link copied to clipboard!');
     } else {
-      toast.error('News link could not be copied!');
+      toast.error('Learn link could not be copied!');
     }
   }
 
   const deletePost = (id: number) => {
     swal.fire({
         title: 'Delete Post',
-        text: `Are you sure you want to delete this news post?`,
+        text: `Are you sure you want to delete this learn post?`,
         icon: 'error',
     }).then((result: any) => {
         if (result.isConfirmed) {
           setLoading(true);
           sendRequest({
-            url: `blog/base/${id}`,
+            url: `learn/base/${id}`,
             method: 'DELETE'
           }
           , (res: any) => {
@@ -218,7 +218,7 @@ function Posts(props: any) {
               <div className="card-hover">
                   <div className="db-card-body cover">
                       <div className="content-holder item-card">
-                          <h5 className="mb-3 text-center">New News Article</h5>
+                          <h5 className="mb-3 text-center">New Learn Article</h5>
                     
                     <form method="POST" className="register-form" name="news_form" onSubmit={createBlogPost} id="news_form">
                         <div className="input-grp">
@@ -231,7 +231,7 @@ function Posts(props: any) {
                               value={form.topic}
                               onChange={(e) => updateField(e, 'topic')}
                               id="blog_title"
-                              placeholder="Blog Title"
+                              placeholder="Learn Title"
                             />
                         </div>
                         <div className="input-grp pt-1">
@@ -294,7 +294,7 @@ function Posts(props: any) {
           </div>
       </div>
 
-      <h3 className="mt-5">Saved News Articles</h3>
+      <h3 className="mt-5">Saved Learn Articles</h3>
       <div className="row">
           <div className="col-lg-12">
               {
@@ -302,7 +302,7 @@ function Posts(props: any) {
                   return <div className="db-table-card card-hover" key={index}>
                   <div className="db-card-body">
                       <div className="sizer">
-                          <div className={"im-enclose" + (post.image ? ' no-bg': '')}>
+                          <div className={"im-enclose-learn" + (post.image ? ' no-bg': '')}>
                               <div className="imh">
                                   <img src={post.image} alt=""/>
                               </div>
@@ -364,7 +364,7 @@ function Posts(props: any) {
           <div className="col-lg-12" data-aos="zoom-in">
               {
                 blogPosts.length === 0 && <div className='main-card pt-3 mt-4'>
-                  <h5 className='text-center'>No news posts sent yet</h5>
+                  <h5 className='text-center'>No learn posts sent yet</h5>
                 </div>
               }
           </div>
@@ -373,4 +373,4 @@ function Posts(props: any) {
   );
 }
 
-export default Posts;
+export default Learn;

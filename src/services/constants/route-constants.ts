@@ -30,6 +30,7 @@
      adminLogin: 'log-in',
      adminStatistics: 'stats',
      adminPosts: 'posts',
+     adminLearn: 'learn-posts',
      adminWaitlistMessages: 'waitlist-messages',
      adminVisitorMessages: 'visitor-messages',
  };

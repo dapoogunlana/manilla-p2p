@@ -1,34 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarIcon } from '../../../assets/images';
-import { learnList } from './learn-data';
+import { learnList as staticLearnList } from './learn-data';
 import { routeConstants } from '../../../services/constants/route-constants';
 import './learn.scss';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import { sendRequest } from '../../../services/utils/request';
+import { clipToLength, formatDate } from '../../../services/utils/data-manipulation-utilits';
 
-function Learn() {
+function Learn(props: any) {
 
   const navigate = useNavigate();
-
-  const clipToLength = (item: string, length: number) => {
-    if (!item) {
-      return '';
-    }
-    if(item.length > length) {
-      const trimedItem = item.substring(0, (length - 2));
-      return trimedItem + '..';
-    } else {
-      return item;
-    }
-  }
+  const [learnList, setLearnlist] = useState<any[]>([]);
 
   const goToItem = (id: number) => {
     navigate(`/${routeConstants.learn}/${id}`);
   }
+  
+  const fetchNewsPosts = () => {
+    sendRequest({
+      url: 'learn',
+    }, (res: any) => {
+      const selectedList: any[] = res.data.map((item: any) => {
+        const newItem = {
+          id: item._id,
+          image: item.image,
+          title: item.topic,
+          content: item.body.map((subItem: any) => {
+            return {
+              topic: subItem.sub_topic,
+              point: subItem.writeup,
+              subPoints: [],
+            }
+          }) || [],
+          date: formatDate(item.datePosted),
+        }
+        if (item.brief) {
+          newItem.content.unshift({
+            topic: '',
+            point: item.brief,
+            subPoints: [],
+          })
+        }
+        return newItem;
+      });
+      setLearnlist(selectedList);
+      console.log({selectedList});
+    }, () => {});
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+    // fetchNewsPosts();
+    setLearnlist(staticLearnList);
+  }, [props]);
   
   return (
     <div className='learn'>
@@ -38,10 +63,14 @@ function Learn() {
 
         <hr className='mb-0' />
 
-        <div className='row' data-aos="fade-up">
+        {
+          learnList.length > 0 &&
+          <div className='row' data-aos="fade-up">
           <div className='col-md-6 center-info-front py-4'>
             <div className='imh max500 shadowed rad-10'>
-              <img src={learnList[0].image} className='rad-10' alt="" />
+                <div className={"im-enclose shadowed rad-10" + (learnList[0].image ? ' no-bg': '')}>
+                  <img src={learnList[0].image} alt="" />
+                </div>
             </div>
           </div>
           <div className='col-md-6 center-info'>
@@ -53,6 +82,7 @@ function Learn() {
             </div>
           </div>
         </div>
+        }
 
         <hr className='pt-0 mt-0' />
 
@@ -61,7 +91,9 @@ function Learn() {
               if (index > 0 && index < 4) {
                 return <div className='col-lg-4 colmd-6 py-3' data-aos="fade-up" key={index}>
                   <div className='imh max500 shadowed rad-10'>
-                    <img src={item.image} className='rad-10' alt="" />
+                    <div className={"im-enclose shadowed rad-10" + (item.image ? ' no-bg': '')}>
+                      <img src={item.image} alt="" />
+                    </div>
                   </div>
                   <div className='max500 pt-3'>
                     {/* <p className='c-faint-font mb-2'>{item.date}</p> */}
@@ -82,7 +114,9 @@ function Learn() {
               <div className='row' >
               <div className='col-md-6 center-info-front py-4' data-aos="fade-up">
                 <div className='imh max500 shadowed rad-10'>
-                  <img src={item.image} className='rad-10' alt="" />
+                  <div className={"im-enclose shadowed rad-10" + (item.image ? ' no-bg': '')}>
+                    <img src={item.image} alt="" />
+                  </div>
                 </div>
               </div>
               <div className='col-md-6 center-info'>
@@ -116,7 +150,9 @@ function Learn() {
               return   <div className='col-lg-4 col-md-6 py-3' key={index}>
               <div className='cover' data-aos="fade-up">
                 <div className='display-img'>
-                  <img src={item.image} alt="" />
+                  <div className={"im-enclose shadowed rad-10" + (item.image ? ' no-bg': '')}>
+                    <img src={item.image} alt="" />
+                  </div>
                 </div>
                 <div className='content'>
                   <h6 className='mb- increased'>{item.title}</h6>

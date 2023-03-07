@@ -11,6 +11,7 @@ const AdminStats = lazy(() => import("../pages/admin/dashboard/pages/stats/stats
 const AdminWhitelistMessaging = lazy(() => import("../pages/admin/dashboard/pages/waitlist-messaging/waitlist-messaging"));
 const AdminVisitorMessaging = lazy(() => import("../pages/admin/dashboard/pages/visitor-messaging/visitor-messaging"));
 const AdminPosts = lazy(() => import("../pages/admin/dashboard/pages/posts/posts"));
+const AdminLearn = lazy(() => import("../pages/admin/dashboard/pages/learn/learn"));
 
 function AdminRoute() {
   return (
@@ -25,6 +26,7 @@ function AdminRoute() {
                 <Route path={routeConstants.adminWaitlistMessages} element={<AdminWhitelistMessaging/>}></Route>
                 <Route path={routeConstants.adminVisitorMessages} element={<AdminVisitorMessaging/>}></Route>
                 <Route path={routeConstants.adminPosts} element={<AdminPosts/>}></Route>
+                <Route path={routeConstants.adminLearn} element={<AdminLearn/>}></Route>
                 <Route path={routeConstants.all} element={<Navigate to={routeConstants.adminStatistics}/>}></Route>
               </Route>
             </Route>
