@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { findConfigFile } from 'typescript';
 import Loader from '../../../../../components/block-components/loader/loader';
 import { routeConstants } from '../../../../../services/constants/route-constants';
-import { convertStringForUrl, formatDate } from '../../../../../services/utils/data-manipulation-utilits';
+import { convertStringForUrl, filterUnsecureHTML, formatDate } from '../../../../../services/utils/data-manipulation-utilits';
 import { sendRequest } from '../../../../../services/utils/request';
 import { swal } from '../../../../../services/utils/swal-utils';
 import './learn.scss';
@@ -319,13 +319,13 @@ function Learn(props: any) {
                             <h3>{ post.topic }</h3>
                             <p className="italic reduced-soft pl-3 pr-1">{formatDate(post.datePosted)}</p>
                           </div>
-                          <p dangerouslySetInnerHTML={{ __html: post.brief}}></p>
+                          <p>{post.brief}</p>
                           <div className="post-container">
                               {
                                 post.body.map((content: any, index2: number) => (
                                   <div className="post-content" key={index2}>
                                     <h5>{content.sub_topic}</h5>
-                                    <p>{content.writeup}</p>
+                                    <p dangerouslySetInnerHTML={{ __html: filterUnsecureHTML(content.writeup)}}></p>
                                   </div>
                                 ))
                               }

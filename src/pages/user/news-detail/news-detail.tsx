@@ -4,7 +4,7 @@ import { CalendarIcon } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import HalfBanner from '../../../components/block-components/half-banner/half-banner';
 import { IindustryNews } from '../../../services/constants/interfaces/data-schemas';
-import { convertStringForUrl, formatDate } from '../../../services/utils/data-manipulation-utilits';
+import { convertStringForUrl, filterUnsecureHTML, formatDate } from '../../../services/utils/data-manipulation-utilits';
 import { sendRequest } from '../../../services/utils/request';
 import { Helmet } from 'react-helmet';
 import { newsList } from '../news/news-data';
@@ -124,7 +124,7 @@ function NewsDetail(props: any) {
             <div className='content'>
                 {currentItem.content?.map((item, index: number) => <React.Fragment key={index}>
                   <h6 className='increased mb-1'>{item.topic}</h6>
-                  <p dangerouslySetInnerHTML={{ __html: item.point}}></p>
+                  <p dangerouslySetInnerHTML={{ __html: filterUnsecureHTML(item.point)}}></p>
                 </React.Fragment>)}
             </div>
           </div>

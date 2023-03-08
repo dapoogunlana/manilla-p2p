@@ -165,3 +165,18 @@ export function generateMaxDate(customYear = 18) {
   const newDate = new Date().setFullYear(new Date().getFullYear() - customYear);
   return new Date(newDate).toISOString().split('T')[0];
 }
+
+export function filterUnsecureHTML(inputString: string) {
+  if(!inputString || typeof(inputString) !== 'string') {
+    return '';
+  }
+  const outputString = inputString
+    .replace(/</g, '&lt;')
+    .replace(/</g, '&gt;')
+    .replace(/{{{/g, '<a target="_blank" href="')
+    .replace(/}}}/g, '">')
+    .replace(/{}/g, '</a>')
+    .replace(/{/g, '')
+    .replace(/}/g, '');
+  return outputString;
+}
