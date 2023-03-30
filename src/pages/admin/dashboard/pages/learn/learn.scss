@@ -79,10 +79,9 @@
         width: 100%;
         transform: translateY(-50%);
     }
-    .remove-img-box{
+    .edit-img-box, .remove-img-box{
         position: absolute;
         top: 10px;
-        left: 10px;
         width: 36px;
         height: 36px;
         display: flex;
@@ -103,6 +102,17 @@
         .remove-img-box{
             opacity: 1;
         }
+    }
+    .edit-img-box{
+        left: 10px;
+        background-color: $primary-blue;
+        opacity: 1;
+        &:hover{
+            background-color: $primary-blue-hover;
+        }
+    }
+    .remove-img-box{
+        right: 10px;
     }
 }
 .delete-box, .edit-box, .copy-box{
