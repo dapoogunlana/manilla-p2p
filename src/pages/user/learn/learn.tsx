@@ -51,8 +51,8 @@ function Learn(props: any) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // fetchNewsPosts();
-    setLearnlist(staticLearnList);
+    fetchNewsPosts();
+    // setLearnlist(staticLearnList);
   }, [props]);
   
   return (

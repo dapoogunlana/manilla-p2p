@@ -65,9 +65,9 @@ function LearnDetail(props: any) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // fetchLearnPosts();
-    const activeItem = learnList.find((item) => id === (item.id + '')) || learnDataInitialState;
-    setCurrentItem(activeItem);
+    fetchLearnPosts();
+    // const activeItem = learnList.find((item) => id === (item.id + '')) || learnDataInitialState;
+    // setCurrentItem(activeItem);
   }, [props]);
   
   return (
