@@ -105,7 +105,7 @@ function LearnDetail(props: any) {
             <div className='content'>
                 {currentItem.content?.map((item, index: number) => {
                   return <React.Fragment key={index}>
-                    <h6 className='increased text-center mt-3'>{item.topic}</h6>
+                    <h6 className='increased mt-3'>{item.topic}</h6>
                     <p key={index}>{item.point && (<span dangerouslySetInnerHTML={{ __html: filterUnsecureHTML(item.point)}}></span>)}</p>
                     {item.subPoints?.length > 0 && (
                       <ul className='pl-4'>

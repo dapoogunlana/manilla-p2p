@@ -12,7 +12,6 @@ export const externalLinkConstants = {
     partnershipForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4-DQOsZ-H-DpVHrHZc0nTzp3I2jgNWN94eynNy646pjZ0RA/viewform'
 }
  
- 
 export const socialLinks = {
     telegram: 'http://t.me/manilla_finance',
     twitter: 'https://twitter.com/manilla_finance',
