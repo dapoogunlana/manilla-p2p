@@ -190,7 +190,6 @@ import TeamBen from './team/team-ben.jpg';
 import TeamDapo from './team/team-dapo.jpg';
 import TeamEliko from './team/team-eliko.jpg';
 import TeamEtenikang from './team/team-etenikang.jpg';
-import TeamMohammad from './team/team-mohammad.jpg';
 import TeamObinna from './team/team-obinna.jpg';
 import TeamOyakhire from './team/team-oyakhire.jpg';
 import TeamRutherford from './team/team-rutherford.jpg';
@@ -427,7 +426,6 @@ export {
     TeamDapo,
     TeamEliko,
     TeamEtenikang,
-    TeamMohammad,
     TeamObinna,
     TeamOyakhire,
     TeamRutherford,

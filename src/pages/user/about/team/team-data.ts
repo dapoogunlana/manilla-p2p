@@ -1,13 +1,6 @@
 import {
     TeamRutherford,
     TeamTunde,
-    TeamEtenikang,
-    TeamObinna,
-    TeamOyakhire,
-    TeamBen,
-    TeamAdeshina,
-    TeamEliko,
-    TeamMohammad,
     TeamDapo,
 
     AdviserMar,
