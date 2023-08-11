@@ -3,6 +3,7 @@ import { AboutImg, OurTech } from '../../../assets/images';
 import './about.scss';
 import { advisorList, teamList } from './about-data';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
+import Team from './team/team';
 
 function Home() {
 
@@ -92,7 +93,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='team-sect py-5' id='our-people'>
+      <Team/>
+      {/* <div className='team-sect py-5' id='our-people'>
         <div className='w96 max1200 py-5'>
           <h3 className='text-center'>Our Team</h3>
           <p className='text-center'>
@@ -146,7 +148,7 @@ function Home() {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
 
       <ContactSect/>
     </div>

@@ -127,6 +127,9 @@ import topPartnerKirobo from './icons/top-partner-kirobo.png';
 import topPartnerReloadly from './icons/top-partner-reloadly.png';
 import topPartnerSayfer from './icons/top-partner-sayfer.png';
 import topPartnerSumsub from './icons/top-partner-sumsub.png';
+import topPartnerChainanalysis from './icons/top-partner-chainanalysis.png';
+import topPartnerFireblocks from './icons/top-partner-fireblocks.png';
+import topPartnerHacken from './icons/top-partner-hacken.png';
 
 import SbDottedSpinner from './sb-dotted-spinner.png';
 import SbSpinnerImage from './sb-spinner-image.png';
@@ -218,6 +221,7 @@ import newsImg6InitialCoin from './article-images/news-img5-initial-coin.jpg';
 import newsImg7Wallet from './article-images/news-img7-wallet.jpg';
 import newsImg8Contracts from './article-images/news-img8-contracts.jpg';
 
+import rewards from './rewards.png';
 import differentFaces from './different-faces.jpg';
 import manillaCardTiles from './manilla-card-tiles.jpg';
 import manillaCoinPhone from './manilla-coin-phone.jpg';
@@ -360,6 +364,9 @@ export {
     topPartnerReloadly,
     topPartnerSayfer,
     topPartnerSumsub,
+    topPartnerChainanalysis,
+    topPartnerFireblocks,
+    topPartnerHacken,
 
     SbDottedSpinner,
     SbSpinnerImage,
@@ -452,6 +459,7 @@ export {
     newsImg8Contracts,
 
     // New
+    rewards,
     differentFaces,
     manillaCardTiles,
     manillaCoinPhone,

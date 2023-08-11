@@ -205,6 +205,11 @@
         @include mediaM(767px) {
             border-radius: 8px;
             padding: 10px 3.5%;
+            overflow: auto;
+            .spread-info{
+                width: 800px;
+                // flex-wrap: wrap;
+            }
         }
     }
 }

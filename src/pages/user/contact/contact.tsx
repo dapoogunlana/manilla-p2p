@@ -71,7 +71,7 @@ function Contact() {
           <div className='cover mt-5 w96 max600'>
             <h6 className="pb-1 text-center font-weight-bold increased">Our Address</h6>
             <div className='row'>
-              <div className='col-sm-6'>
+              {/* <div className='col-sm-6'>
                 <span className="mb-0 font-weight-bold">Nigeria</span>
                 <p className="reduced-soft">
                   6B, Yomi Oshikoya Street, 
@@ -86,6 +86,12 @@ function Contact() {
                   30, Peiraios, Floor 1, Apt 1
                   101. 2023, Strovolos 
                   Cyprus
+                </p>
+              </div> */}
+              <div className='col-sm-12'>
+                <span className="mb-0 font-weight-bold">Seychelles</span>
+                <p className="reduced-soft">
+                  Suite23,Eden Plaza, Eden Island, Mahe’, Republic of Seychelles
                 </p>
               </div>
             </div>

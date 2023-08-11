@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate  } from 'react-router-dom';
 import {
   differentFaces,
+  // rewards,
   stackedCoins,
   tokenomicsBook,
   tokenomicsChartLegend,
@@ -9,7 +9,6 @@ import {
   whereToBuy,
 } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
-import { routeConstants } from '../../../services/constants/route-constants';
 import { tokenFaqData } from './manilla-token-data';
 import './manilla-token.scss';
 import { Tokenomics } from '../../../assets/files';
@@ -179,6 +178,7 @@ function ManillaToken(props: any) {
             </div>
             <div className='col-md-5 center-info'>
               <div className='face-images-holder w90 max350 py-4' data-aos='zoom-out'>
+                {/* <img src={rewards} className='' alt="" /> */}
                 <img src={differentFaces} className='' alt="" />
               </div>
             </div>

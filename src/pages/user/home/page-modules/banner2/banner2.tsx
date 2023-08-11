@@ -8,9 +8,11 @@ import {
   topPartnerReloadly,
   topPartnerSayfer,
   topPartnerSumsub,
+  topPartnerChainanalysis,
+  topPartnerFireblocks,
+  topPartnerHacken,
 } from '../../../../../assets/images';
 import './banner2.scss';
-import { WebIntroVid, MobileIntroVid } from '../../../../../assets/videos';
 import { WhitePaper } from '../../../../../assets/files';
 
 function Hero2() {
@@ -70,19 +72,28 @@ function Hero2() {
         </div>
 
       </div>
-      <div className='max550 text-center parter-sect'>
+      <div className='max900 text-center parter-sect'>
         <div className='spread-info'>
           <div className='imh max125'>
             <img src={topPartnerKirobo} alt="" />
           </div>
-          <div className='imh max125 mx-2'>
+          <div className='imh max125 mx-2 px-2'>
             <img src={topPartnerReloadly} alt="" />
           </div>
-          <div className='imh max125 mx-2'>
+          <div className='imh max125 mx-2 px-2'>
             <img src={topPartnerSayfer} alt="" />
           </div>
-          <div className='imh max125'>
+          <div className='imh max125 mx-2 px-2'>
             <img src={topPartnerSumsub} alt="" />
+          </div>
+          <div className='imh max125 mx-2 px-2'>
+            <img src={topPartnerChainanalysis} alt="" />
+          </div>
+          <div className='imh max125 mx-2 px-2'>
+            <img src={topPartnerFireblocks} alt="" />
+          </div>
+          <div className='imh max125 px-2'>
+            <img src={topPartnerHacken} alt="" />
           </div>
         </div>
       </div>
