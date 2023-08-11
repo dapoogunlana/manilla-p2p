@@ -7,7 +7,6 @@ import {
     TeamBen,
     TeamAdeshina,
     TeamEliko,
-    TeamMohammad,
     TeamDapo,
 
     AdviserMar,
@@ -79,14 +78,14 @@ export const teamList = [
         faceBook: 'facebook',
         twitter: 'twitter',
     },
-    {
-        name: 'Muhammad Nazif',
-        image: TeamMohammad,
-        position: 'Content Strategy Lead',
-        linkedIn: 'https://www.linkedin.com/in/nazifma',
-        faceBook: 'facebook',
-        twitter: 'twitter',
-    },
+    // {
+    //     name: 'Muhammad Nazif',
+    //     image: TeamMohammad,
+    //     position: 'Content Strategy Lead',
+    //     linkedIn: 'https://www.linkedin.com/in/nazifma',
+    //     faceBook: 'facebook',
+    //     twitter: 'twitter',
+    // },
     {
         name: 'Dapo Paul Ogunlana',
         image: TeamDapo,
