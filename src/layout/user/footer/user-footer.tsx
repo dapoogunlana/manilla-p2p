@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FooterLogo } from "../../../assets/images";
 import { routeConstants } from "../../../services/constants/route-constants";
 import { useNavigate } from "react-router-dom";
-import { socialLinks } from "../../../config/environment";
+import { externalLinkConstants, socialLinks } from "../../../config/environment";
 import { sendRequest } from "../../../services/utils/request";
 import { toast } from 'react-toastify';
 import { Formik } from "formik";
@@ -164,6 +164,9 @@ function UserFooter(props: any) {
               </p>
               <p className="reduced-soft">
                 <Link to={routeConstants.manillaToken}>Manilla Token</Link>
+              </p>
+              <p className="reduced-soft">
+                <a href={externalLinkConstants.presaleLink}>Presale</a>
               </p>
             </div>
             <div className="footer-sect">

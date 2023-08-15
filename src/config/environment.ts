@@ -9,7 +9,8 @@ export const apiLinks = {
 
 export const externalLinkConstants = {
     whiteListForm: 'https://docs.google.com/forms/d/e/1FAIpQLSeTTNMBOEw0C_5P_Xu1Rn8dKIHE3Fm16uF0GuAFIhhNFuutjQ/viewform?usp=sf_link',
-    partnershipForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4-DQOsZ-H-DpVHrHZc0nTzp3I2jgNWN94eynNy646pjZ0RA/viewform'
+    partnershipForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4-DQOsZ-H-DpVHrHZc0nTzp3I2jgNWN94eynNy646pjZ0RA/viewform',
+    presaleLink: 'http://presale.manilla.finance',
 }
  
 export const socialLinks = {

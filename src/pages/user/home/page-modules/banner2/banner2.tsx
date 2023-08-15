@@ -14,6 +14,7 @@ import {
 } from '../../../../../assets/images';
 import './banner2.scss';
 import { WhitePaper } from '../../../../../assets/files';
+import Marquee from 'react-fast-marquee';
 
 function Hero2() {
 
@@ -34,7 +35,7 @@ function Hero2() {
             Bills Settlement in Cryptocurrency
           </h3>
           <h3 className='center-mobile md-open'>
-            Bridging Payment Solutions From Traditional Fintech to Web 3.0
+            Bridging Payment Solutions From Traditional Fintech to Web 3.0 & Enabling Bills Settlement in Cryptocurrency
           </h3>
           <div className='sect90-max500 mb-center'>
             <p className='md-close'>
@@ -43,10 +44,10 @@ function Hero2() {
             </p>
           </div>
           <div className='sect90-max350 mb-center-in-flex'>
-            <p className='md-open'>
+            {/* <p className='md-open'>
               Maximize Your Crypto Potential with Our Saving & Loan
               Solutions, Achieve Financial Stability 
-            </p>
+            </p> */}
             <div className='action-buttons'>
               <div className='input-divider mt-4 imh full'>
                 <img src={ PlaystoreButtonWhite } className='store-link' alt="" />
@@ -72,7 +73,7 @@ function Hero2() {
         </div>
 
       </div>
-      <div className='max900 text-center parter-sect'>
+      <div className='max900 text-center parter-sect md-close'>
         <div className='spread-info'>
           <div className='imh max125'>
             <img src={topPartnerKirobo} alt="" />
@@ -96,6 +97,33 @@ function Hero2() {
             <img src={topPartnerHacken} alt="" />
           </div>
         </div>
+      </div>
+      <div className='max900 text-center parter-sect md-open'>
+        <Marquee speed={50} gradient={false}>
+          <div className='spread-info'>
+            <div className='imh max125'>
+              <img src={topPartnerKirobo} alt="" />
+            </div>
+            <div className='imh max125 mx-2 px-2'>
+              <img src={topPartnerReloadly} alt="" />
+            </div>
+            <div className='imh max125 mx-2 px-2'>
+              <img src={topPartnerSayfer} alt="" />
+            </div>
+            <div className='imh max125 mx-2 px-2'>
+              <img src={topPartnerSumsub} alt="" />
+            </div>
+            <div className='imh max125 mx-2 px-2'>
+              <img src={topPartnerChainanalysis} alt="" />
+            </div>
+            <div className='imh max125 mx-2 px-2'>
+              <img src={topPartnerFireblocks} alt="" />
+            </div>
+            <div className='imh max125 px-2'>
+              <img src={topPartnerHacken} alt="" />
+            </div>
+          </div>
+        </Marquee>
       </div>
     </div>
   );
