@@ -26,9 +26,9 @@ function Home() {
         <div className='top-grid'>
           <div className='text-sect md-open text-center'>
             <p>
-              Manilla Finance is an innovative and highly scalable project bridging traditional fintech solutions from Web2.0 
-              to Web3.0 and enabling multiple bills settlement in cryptocurrency. The platform also sports an intuitive P2P 
-              exchange. 
+            Manilla Finance is a project pioneering the migration of utility bills payment solutions from the traditional Web 2.0 
+            framework to the cutting-edge Web 3.0 environment. This groundbreaking endeavor involves leveraging digital currency 
+            for seamless bills settlement, revolutionizing the way transactions are conducted in the digital realm.
             </p>
             <p>
               With intent to serve millions of people in 44 countries, we are providing a safe and trustworthy 
@@ -42,10 +42,9 @@ function Home() {
           </div>
           <div className='text-sect md-close'>
             <p>
-              Manilla Finance is an innovative cryptocurrency exchange with advancements from conventional 
-              financial services on the blockchain. You can be a part of the family that takes passion in disrupting the rather 
-              unfavorable status quo and further decentralizing purchase and sale of cryptocurrencies as you enjoy a dozen 
-              tokens to buy and sell on Manilla Finance. 
+              Manilla Finance is a project pioneering the migration of utility bills payment solutions from the traditional Web 2.0 
+              framework to the cutting-edge Web 3.0 environment. This groundbreaking endeavor involves leveraging digital currency 
+              for seamless bills settlement, revolutionizing the way transactions are conducted in the digital realm.
             </p>
             <p>
               With intent to serve millions of people in 44 countries, we are providing a safe and trustworthy 
