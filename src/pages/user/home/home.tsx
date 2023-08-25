@@ -18,6 +18,7 @@ import SubSpace from './page-modules/banner-sub-space/banner-sub-space';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import OperatorPopup from './page-modules/operator-popup/operator-popup';
 import { apiLinks } from '../../../config/environment';
+import IcoPopupComp from './page-modules/ico-popup/ico-popup';
 
 function About(props: any) {
 
@@ -73,6 +74,7 @@ function About(props: any) {
       {viewModal2 && <AppModal onCloseModal={toggleModal2} ref={childRef} styleClass="m80-im">
         <OperatorPopup onCloseModal={closeChildModal}/>
       </AppModal>}
+      <IcoPopupComp/>
     </div>
   );
 }

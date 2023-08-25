@@ -47,6 +47,7 @@ import ContactBanerImg from './contact-baner-img.png';
 import FaqBanerImg from './faq-baner-img.png';
 import UpdateBanerImg from './update-baner-img.png';
 import OperatorCurve from './operator-curve.svg';
+import IcoPopup from './ico-popup.jpg';
 
 import AppleButton from './icons/apple-button.svg';
 import AppleButtonWhite from './icons/apple-button-white.svg';
@@ -282,6 +283,7 @@ export {
     FaqBanerImg,
     UpdateBanerImg,
     OperatorCurve,
+    IcoPopup,
 
     AppleButton,
     AppleButtonWhite,
