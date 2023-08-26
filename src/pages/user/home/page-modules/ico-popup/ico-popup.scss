@@ -20,7 +20,7 @@
         height: 100%;
         left: 0;
         top: 0;
-        background-color: $black-faint3;
+        background-color: $black-faint2;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,7 +28,14 @@
         h4{
             color: $white;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1em;
+            margin-bottom: 0;
+            span{
+                display: block;
+                font-size: 1.4em;
+                font-weight: 700;
+                padding-top: 0.3em;
+            }
         }
     }
     .close-botton{

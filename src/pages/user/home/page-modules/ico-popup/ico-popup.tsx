@@ -23,7 +23,10 @@ function IcoPopupComp(props: any) {
     <div className={'ico-popup' + (popUpClosed ? ' ico-closed' : '')}>
       <img src={IcoPopup} alt="" />
       <div className='overlay' onClick={gotoPresaleLink}>
-        <h4>ICO Sales Ongoing</h4>
+        <h4>
+          Click to participate in the 
+          <span>MNLA ICO</span>
+        </h4>
       </div>
       <div className='close-botton' onClick={closePopup}>
         <i className='fas fa-times'></i>

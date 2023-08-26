@@ -4,6 +4,7 @@ import Header from './header/user-header';
 import Header2 from './header/user-header2';
 import Footer from './footer/user-footer';
 import ScrollToTop from '../../components/block-components/scroll-to-top/scroll-to-top';
+import IcoPopupComp from '../../pages/user/home/page-modules/ico-popup/ico-popup';
 
 function UserModule() {
   return (
@@ -13,6 +14,7 @@ function UserModule() {
       <Outlet/>
       <Footer/>
       <ScrollToTop/>
+      <IcoPopupComp/>
     </div>
   );
 }
