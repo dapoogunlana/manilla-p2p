@@ -13,7 +13,8 @@ import WhiteAngleBackdrop from './white-angle-backdrop.svg';
 import Banner3Bg from './banner-3-bg.jpg';
 import BottomWhiteArc from './bottom-white-arc.svg';
 
-import PhoneHand from './phone-hand.gif';
+// import PhoneHand from './phone-hand.gif';
+import PhoneHand from './banner-phone.png';
 import AboutImg from './about-img.png';
 import BannerImg1 from './banner-img-1.png';
 import BannerImg2 from './banner-img-2.jpg';
