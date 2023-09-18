@@ -93,6 +93,7 @@ function LatestNews(props: any) {
   },[currentNewsList]);
   
   return (
+    currentNewsList.length > 0 ?
     <div className='latest-news py-5'>
       <div className='w96 max1200 py-4'>
         <h3 className='text-center'>Latest News</h3>
@@ -109,7 +110,7 @@ function LatestNews(props: any) {
           />
         }
       </div>
-    </div>
+    </div> : <></>
   );
 }
 

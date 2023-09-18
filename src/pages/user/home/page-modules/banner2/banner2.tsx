@@ -28,7 +28,7 @@ function Hero2() {
           <div className='imh absolute-hand' data-aos='fade-left' data-aos-delay='500'>
             <img src={PhoneHand} alt="" />
           </div>
-        <div className='w96 max700 top-space' data-aos='fade-up'>
+        <div className='w96 max600 top-space' data-aos='fade-up'>
           <h3 className='center-mobile md-close'>
             Bridging Payment Solution from Traditional 
             Fintech to Web 3.0 & Enabling 

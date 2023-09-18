@@ -55,9 +55,9 @@
         .absolute-hand{
             position: absolute;
             width: 60%;
-            max-width: 580px;
+            max-width: 660px;
             right: 0;
-            bottom: -10%;
+            bottom: 0%;
             @include mediaM(890px) {
                 opacity: 0;
             }
@@ -65,6 +65,7 @@
                 opacity: 1;
                 width: 80%;
                 bottom: 10%;
+                right: 8%;
             }
             @include mediaM(480px) {
                 width: 85%;
@@ -81,10 +82,14 @@
             margin-bottom: 1.5em;
             font-size: 1.55rem;
             @include mediaW(1150px){
-                font-size: 1.6rem;
+                padding-top: 1em;
+                font-size: 1.5rem;
+                max-width: 520px;
             }
             @include mediaW(1250px){
-                font-size: 2rem;
+                padding-top: 1em;
+                font-size: 1.8rem;
+                max-width: 600px;
             }
             @include mediaM(767px){
                 text-align: center;
