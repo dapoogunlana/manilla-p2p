@@ -1,9 +1,12 @@
-import React, {  } from 'react';
+import React, { useState } from 'react';
 import {
   AppleButtonWhite,
   PlaystoreButtonWhite,
+  AppleIconWhiteFaint,
+  PlaystoreIconWhiteFaint,
   CommingSoon,
   PhoneHand,
+  PhoneMobile,
   topPartnerKirobo,
   topPartnerReloadly,
   topPartnerSayfer,
@@ -15,18 +18,23 @@ import {
 import './banner2.scss';
 import { WhitePaper } from '../../../../../assets/files';
 import Marquee from 'react-fast-marquee';
+import { Link } from 'react-router-dom';
+import { routeConstants } from '../../../../../services/constants/route-constants';
 
 function Hero2() {
 
-  const downloadPdf = () => {
-    window.open(WhitePaper);
+  const [comingSoon, setComingSoon] = useState(false);
+
+  const toggleComingSoon = (status: boolean) => {
+    setComingSoon(status);
   }
 
   return (
     <div className='hero2-case'>
       <div className='hero2 pt-5'>
           <div className='imh absolute-hand' data-aos='fade-left' data-aos-delay='500'>
-            <img src={PhoneHand} alt="" />
+            <img src={PhoneHand} className='md-close' alt="" />
+            <img src={PhoneMobile} className='md-open' alt="" />
           </div>
         <div className='w96 max600 top-space' data-aos='fade-up'>
           <h3 className='center-mobile md-close'>
@@ -49,14 +57,23 @@ function Hero2() {
               Solutions, Achieve Financial Stability 
             </p> */}
             <div className='action-buttons'>
-              <div className='input-divider mt-4 imh full'>
-                <img src={ PlaystoreButtonWhite } className='store-link' alt="" />
+              <Link to={`/${routeConstants.userLogin}`}><button>Get Started</button></Link>
+              <div className='download-icons imh full'>
+                <img 
+                  src={ AppleIconWhiteFaint } className='store-link' alt="" 
+                  onClick={() => toggleComingSoon(true)}
+                  onMouseLeave={() => toggleComingSoon(false)} 
+                />
                 <span></span>
-                <img src={ AppleButtonWhite } className='store-link' alt="" />
+                <img 
+                  src={ PlaystoreIconWhiteFaint } className='store-link' alt="" 
+                  onClick={() => toggleComingSoon(true)}
+                  onMouseLeave={() => toggleComingSoon(false)}
+                />
               </div>
-              <div className='coming-soon imh max200'>
-                <img src={CommingSoon} alt="" />
-              </div>
+            </div>
+            <div className={'coming-soon imh max200' + (comingSoon ? ' coming-soon-active' : '')}>
+              <img src={CommingSoon} alt="" />
             </div>
           </div>
 

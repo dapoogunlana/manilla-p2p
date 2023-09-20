@@ -159,16 +159,51 @@
             }
             .coming-soon{
                 width: 60%;
-                margin: 5px auto;
+                margin: 5px 0;
                 transition: 0.3s ease;
                 max-height: 0;
                 overflow: hidden;
+                @include mediaM(767px) {
+                    width: 40%;
+                    margin: 5px auto;
+                }
+            }
+            .coming-soon-active{
+                max-height: 100px;
             }
             .action-buttons{
-                &:hover{
-                    .coming-soon{
-                        max-height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                button{
+                    border: none;
+                    border-radius: 6px;
+                    background-color: $orange;
+                    padding: 8px 20px ;
+                    font-size: 0.9em;
+                    font-weight: 700;
+                    transition: 0.3s ease;
+                    white-space: nowrap;
+                    &:hover{
+                        filter: contrast(0.4);
                     }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .download-icons{
+                    width: 100px;
+                    img{
+                        width: 30px;
+                        margin: 0 10px;
+                        transition: 0.3s ease;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+                @include mediaM(767px) {
+                    justify-content: center;
                 }
             }
             @include mediaM(767px) {

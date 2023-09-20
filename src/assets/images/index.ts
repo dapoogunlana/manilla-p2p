@@ -15,6 +15,7 @@ import BottomWhiteArc from './bottom-white-arc.svg';
 
 // import PhoneHand from './phone-hand.gif';
 import PhoneHand from './banner-phone.png';
+import PhoneMobile from './banner-phone-mobile.png';
 import AboutImg from './about-img.png';
 import BannerImg1 from './banner-img-1.png';
 import BannerImg2 from './banner-img-2.jpg';
@@ -53,9 +54,11 @@ import IcoPopup from './ico-popup.jpg';
 import AppleButton from './icons/apple-button.svg';
 import AppleButtonWhite from './icons/apple-button-white.svg';
 import AppleIcon from './icons/apple-icon.svg';
+import AppleIconWhiteFaint from './icons/apple-icon-white-faint.svg';
 import PlaystoreButton from './icons/playstore-button.svg';
 import PlaystoreButtonWhite from './icons/playstore-button-white.svg';
 import PlaystoreIcon from './icons/playstore-icon.svg';
+import PlaystoreIconWhiteFaint from './icons/playstore-icon-white-faint.svg';
 import BulletKiteIcon from './icons/bullet-kite-icon.svg';
 import ExchangeIconEtherium from './icons/exchange-icon-etherium.png';
 import HeroIcon1 from './icons/hero-icon-1.png';
@@ -251,6 +254,7 @@ export {
     BottomWhiteArc,
 
     PhoneHand,
+    PhoneMobile,
     AboutImg,
     BannerImg1,
     BannerImg2,
@@ -289,9 +293,11 @@ export {
     AppleButton,
     AppleButtonWhite,
     AppleIcon,
+    AppleIconWhiteFaint,
     PlaystoreButton,
     PlaystoreButtonWhite,
     PlaystoreIcon,
+    PlaystoreIconWhiteFaint,
     BulletKiteIcon,
     ExchangeIconEtherium,
     HeroIcon1,
