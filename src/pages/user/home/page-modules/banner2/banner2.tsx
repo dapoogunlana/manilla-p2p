@@ -58,7 +58,7 @@ function Hero2() {
               Maximize Your Crypto Potential with Our Saving & Loan
               Solutions, Achieve Financial Stability 
             </p> */}
-            <div className='action-buttons'>
+            <div className='action-buttons mb-3'>
               <Link to={`/${routeConstants.userLogin}`}><button>Get Started</button></Link>
               <div className='download-icons imh full'>
                 <img 
