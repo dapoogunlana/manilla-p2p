@@ -208,7 +208,7 @@
             }
             @include mediaM(767px) {
                 min-height: 70vh;
-                justify-content: space-between;
+                justify-content: center;
             }
         }
         @include mediaM(750px){

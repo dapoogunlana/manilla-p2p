@@ -32,9 +32,8 @@ function Hero2() {
   return (
     <div className='hero2-case'>
       <div className='hero2 pt-5'>
-          <div className='imh absolute-hand' data-aos='fade-left' data-aos-delay='500'>
-            <img src={PhoneHand} className='md-close' alt="" />
-            <img src={PhoneMobile} className='md-open' alt="" />
+          <div className='imh absolute-hand md-close' data-aos='fade-left' data-aos-delay='500'>
+            <img src={PhoneHand} alt="" />
           </div>
         <div className='w96 max600 top-space' data-aos='fade-up'>
           <h3 className='center-mobile md-close'>
@@ -42,10 +41,13 @@ function Hero2() {
             Fintech to Web 3.0 & Enabling 
             Bills Settlement in Cryptocurrency
           </h3>
-          <h3 className='center-mobile md-open'>
+          <h3 className='center-mobile md-open mb-4'>
             Bridging Payment Solutions From Traditional Fintech to Web 3.0 & Enabling Bills Settlement in Cryptocurrency
           </h3>
-          <div className='sect90-max500 mb-center'>
+          <div className='imh md-open mb-4' data-aos='fade-left' data-aos-delay='500'>
+            <img src={PhoneMobile} alt="" />
+          </div>
+          <div className='sect90-max500 mb-center md-close'>
             <p className='md-close'>
               Maximize Your Crypto Potential with Our Saving & Loan
               Solutions, Achieve Financial Stability 
