@@ -37,9 +37,8 @@ function Hero2() {
           </div>
         <div className='w96 max600 top-space' data-aos='fade-up'>
           <h3 className='center-mobile md-close'>
-            Bridging Payment Solution from Traditional 
-            Fintech to Web 3.0 & Enabling 
-            Bills Settlement in Cryptocurrency
+            Bridging Payment Solution from Traditional Fintech to Web 3.0 & 
+            Enabling Bills Settlement in Cryptocurrency
           </h3>
           <h3 className='center-mobile md-open mb-4'>
             Bridging Payment Solutions From Traditional Fintech to Web 3.0 & Enabling Bills Settlement in Cryptocurrency
