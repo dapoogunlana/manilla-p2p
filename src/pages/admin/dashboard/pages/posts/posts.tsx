@@ -317,7 +317,7 @@ function Posts(props: any) {
             <div className="col-lg-12">
                 {
                   blogPosts.map((post, index) => {
-                    return <div className="db-table-card card-hover" key={index}>
+                    return <div className="db-post-card card-hover" key={index}>
                     <div className="db-card-body">
                         <div className="sizer">
                             <div className={"im-enclose" + (post.image ? ' no-bg': '')}>

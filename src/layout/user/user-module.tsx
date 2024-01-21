@@ -14,7 +14,7 @@ function UserModule() {
       <Outlet/>
       <Footer/>
       <ScrollToTop/>
-      <IcoPopupComp/>
+      {/* <IcoPopupComp/> */}
     </div>
   );
 }
