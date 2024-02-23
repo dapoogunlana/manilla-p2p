@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { CalendarIcon } from '../../../assets/images';
 import ContactSect from '../../../components/block-components/contact-sect/contact-sect';
 import HalfBanner from '../../../components/block-components/half-banner/half-banner';
@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import { newsList } from '../news/news-data';
 import './news-detail.scss';
 import { toast } from 'react-toastify';
+import { routeConstants } from '../../../services/constants/route-constants';
 
 function NewsDetail(props: any) {
 
@@ -28,6 +29,7 @@ function NewsDetail(props: any) {
 
   const { id } = useParams();
   const [currentItem, setCurrentItem] = useState<IindustryNews>(initialState);
+  const navigate = useNavigate();
 
   const returnToList = () => {
     window.history.back();
@@ -52,7 +54,6 @@ function NewsDetail(props: any) {
     sendRequest({
       url: 'blog/' + id,
     }, (res: any) => {
-      console.log({started: true});
       const newItem = {
         id: res.data._id,
         image: res.data.image,
@@ -74,7 +75,12 @@ function NewsDetail(props: any) {
         })
       }
       setCurrentItem(newItem);
-    }, () => {});
+    }, (err: any, status: number) => {
+      toast(err?.message);
+      if(status === 404) {
+        navigate(`/${routeConstants.industryNews}`)
+      }
+    });
   }
 
   useEffect(() => {

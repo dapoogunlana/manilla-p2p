@@ -2,7 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Link  } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { findConfigFile } from 'typescript';
-import AppDataModal from '../../../../../components/block-components/edit-post-modal/edit-post-modal';
+import EditPostModal from '../../../../../components/block-components/edit-post-modal/edit-post-modal';
 import Loader from '../../../../../components/block-components/loader/loader';
 import { routeConstants } from '../../../../../services/constants/route-constants';
 import { convertStringForUrl, filterUnsecureHTML, formatDate } from '../../../../../services/utils/data-manipulation-utilits';
@@ -10,13 +10,25 @@ import { sendRequest } from '../../../../../services/utils/request';
 import { swal } from '../../../../../services/utils/swal-utils';
 import './posts.scss';
 
+interface iBlogPost {
+  body: any[]
+  brief: string;
+  datePosted: string;
+  id: number;
+  image: string;
+  topic: string;
+  __v: any;
+  _id: any;
+}
+
 function Posts(props: any) {
   
   const [loading, setLoading] = useState(false);
   const [postLoading, setPostLoading] = useState(false);
   const [submitMsg, setSubmitMsg] = useState('Send Post');
-  const [blogPosts, setBlogPosts] = useState<any[]>([]);
+  const [blogPosts, setBlogPosts] = useState<iBlogPost[]>([]);
   const [editModalVisible, setEditModalVisible] = useState(false);
+  const [imageDeletable, setImageDeletable] = useState(false);
   const [activePost, setActivePost] = useState<any>({});
   const [form, setForm] = useState<any>({
     topic: '',
@@ -39,7 +51,9 @@ function Posts(props: any) {
       //   }
       //   return item;
       // });
-    }, (err: any) => {});
+    }, (err: any) => {
+      setLoading(false);
+    });
   }
 
   const updateField = (change: any, field: string, index?: number) => {
@@ -100,10 +114,12 @@ function Posts(props: any) {
     });
   }
 
-  const removeImage = (id: number) => {
+  const removeImage = (post: iBlogPost) => {
     setLoading(true);
+    const formatString = post.image?.substring(post.image?.lastIndexOf('.')).substring(0, 5);
+    const format = formatString ? `?format=${formatString}` : '';
     sendRequest({
-      url: `blog/base-image/${id}`,
+      url: `blog/image/${post._id}${format}`,
       method: 'DELETE'
     }
     , (res: any) => {
@@ -138,16 +154,21 @@ function Posts(props: any) {
         ev.target.value = '';
         return;
       }
-      const payload = {
-        image: undefined
-      };
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = (image: any) => {
-        payload.image = image.target.result;
-        sendImage(payload, postId);
-        ev.target.value = '';
-      };
+      // const payload = {
+      //   image: undefined
+      // };
+      // const reader = new FileReader();
+      // reader.readAsDataURL(file);
+      // reader.onload = (image: any) => {
+      //   payload.image = image.target.result;
+      //   sendImage(payload, postId);
+      //   ev.target.value = '';
+      // };
+      // return;
+      const formData = new FormData();
+      formData.append('Image_' + postId, file)
+      sendImage(formData, postId);
+      ev.target.value = '';
     } else {
       ev.target.value = '';
     }
@@ -156,7 +177,7 @@ function Posts(props: any) {
   const sendImage = (file: any, id: number | undefined) => {
     setLoading(true);
     sendRequest({
-      url: `blog/base-image/${id}`,
+      url: `blog/image/${id}`,
       // method: 'PUT FILE',
       method: 'PUT',
       body: file
@@ -167,6 +188,38 @@ function Posts(props: any) {
     }, () => {
       setLoading(false);
     });
+  }
+
+  const deleteAllImages = () => {
+    if(!imageDeletable){
+      toast.warning('Can not procced');
+      return;
+    }
+    setLoading(true);
+    sendRequest({
+      url: `blog/images/delete-all`,
+      method: 'DELETE'
+    }
+    , (res: any) => {
+      toast.success(res.message);
+      getBlogPosts();
+    }, () => {
+      setLoading(false);
+    });
+  }
+
+  const canDeleteImage = () => {
+    sendRequest({
+      url: `blog/images/can-delete`,
+      method: 'GET',
+    }
+    , (res: any) => {
+      if(res.status) {
+        setImageDeletable(true);
+      } else {
+        setImageDeletable(false);
+      }
+    }, () => {});
   }
 
   const copyLink = (post: any) => {
@@ -188,7 +241,7 @@ function Posts(props: any) {
     }
   }
 
-  const openEditModal = (post: boolean) => {
+  const openEditModal = (post: iBlogPost) => {
     setActivePost(post);
     setEditModalVisible(true);
   }
@@ -202,7 +255,7 @@ function Posts(props: any) {
         if (result.isConfirmed) {
           setLoading(true);
           sendRequest({
-            url: `blog/base/${id}`,
+            url: `blog/${id}`,
             method: 'DELETE'
           }
           , (res: any) => {
@@ -218,13 +271,12 @@ function Posts(props: any) {
     setEditModalVisible(false);
     if (status) {
       getBlogPosts();
-    } else {
-      getBlogPosts();
     }
   }
 
   useEffect(() => {
     getBlogPosts();
+    canDeleteImage();
   }, [props]);
 
   return (
@@ -312,7 +364,18 @@ function Posts(props: any) {
             </div>
         </div>
 
-        <h3 className="mt-5">Saved News Articles</h3>
+        {
+          imageDeletable ?
+          <div className='row mt-5'>
+            <div className='col-lg-9'>
+              <h3 className="mt-2">Saved News Articles</h3>
+            </div>
+            <div className='col-lg-3 text-right'>
+              <button className="mt-2 mb-2 delete-button" onClick={deleteAllImages}>Delete Images</button>
+            </div>
+          </div>:
+          <h3 className="mt-5">Saved News Articles</h3>
+        }
         <div className="row">
             <div className="col-lg-12">
                 {
@@ -320,7 +383,9 @@ function Posts(props: any) {
                     return <div className="db-post-card card-hover" key={index}>
                     <div className="db-card-body">
                         <div className="sizer">
-                            <div className={"im-enclose" + (post.image ? ' no-bg': '')}>
+                            {
+                              !loading &&
+                              <div className={"im-enclose" + (post.image ? ' no-bg': '')}>
                                 <div className="imh">
                                     <img src={post.image} alt=""/>
                                 </div>
@@ -329,11 +394,12 @@ function Posts(props: any) {
                                 </div>
                                 {
                                   post.image &&
-                                  <div className="remove-img-box" onClick={() => removeImage(post._id)} title="Remove Post Image">
+                                  <div className="remove-img-box" onClick={() => removeImage(post)} title="Remove Post Image">
                                     <i className="fas fa-times"></i>
                                   </div>
                                 }
-                            </div>
+                              </div>
+                            }
                         </div>
                         <div className="content-holder2">
                             <div className='spread-info pt-2'>
@@ -392,7 +458,7 @@ function Posts(props: any) {
         </div>
       </div>
       {
-        editModalVisible && <AppDataModal editKey={'blog'} post={activePost} closeModal={closeEditModal} />
+        editModalVisible && <EditPostModal editKey={'blog'} post={activePost} closeModal={closeEditModal} />
       }
     </>
   );

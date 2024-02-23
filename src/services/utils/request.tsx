@@ -32,6 +32,6 @@ export const sendRequest = (params: IrequestFormat, success: Function, failure: 
             }, 500);
             return
         }
-        return failure(error.response?.data);
+        return failure(error.response?.data, error.response?.status);
     });
 }

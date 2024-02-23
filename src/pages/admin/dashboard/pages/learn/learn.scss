@@ -43,7 +43,7 @@
     }
 }
 
-.db-table-card {
+.db-post-card {
     position: relative;
     width: 100%;
     margin: 2vh auto 3vh;
@@ -113,6 +113,18 @@
     }
     .remove-img-box{
         right: 10px;
+    }
+}
+.delete-button{
+    padding: 5px 15px;
+    border-radius: 6px;
+    background-color: #ff0000;
+    border: none;
+    transition: 0.2s ease;
+    color: #ffffff;
+    cursor: pointer;
+    &:hover{
+        background-color: #c90000;
     }
 }
 .delete-box, .edit-box, .copy-box{
